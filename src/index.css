@@ -1,5 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
 @import "tailwindcss";
 
-body{
-    background-color: #FFF9EE;
+body {
+  background-color: #fff9ee;
+}
+
+@keyframes heroZoom {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.08);
+  }
 }
