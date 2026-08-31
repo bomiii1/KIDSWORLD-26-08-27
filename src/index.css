@@ -14,3 +14,26 @@ body {
     transform: scale(1.08);
   }
 }
+
+.section2-pagination {
+  position: static !important;
+  width: 100% !important;
+}
+
+.section2-pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  margin: 0 4px !important;
+  background: #d9d9d9;
+  opacity: 1;
+}
+
+.section2-pagination .swiper-pagination-bullet-active {
+  background: #39a96b;
+}
+
+.section2-prev.swiper-button-disabled,
+.section2-next.swiper-button-disabled {
+  opacity: 0.25;
+  pointer-events: none;
+}

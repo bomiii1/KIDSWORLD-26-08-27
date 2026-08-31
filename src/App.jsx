@@ -1,24 +1,32 @@
-import { Route, Routes } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+
 import Home from "./pages/home/Home";
-import About from "./pages/about/About";
-import Header from "./pages/components/Header";
+
 import Guides from "./pages/guides/Guides";
-import Facilities from "./pages/facilities/Facilities";
+import UsageInfo from "./pages/guides/guides_components/UsageInfo";
+import Admission from "./pages/guides/guides_components/Admission";
+import Parking from "./pages/guides/guides_components/Parking";
+import Rules from "./pages/guides/guides_components/Rules";
+import Header from "./pages/components/Header";
+import Footer from "./pages/components/Footer";
 import Support from "./pages/support/Support";
 
-function App() {
+export default function App() {
   return (
     <div>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/guides" element={<Guides />} />
-        <Route path="/facilities" element={<Facilities />} />
-        <Route path="/support" element={<Support />} />
-      </Routes>
+    <Routes>
+      <Route path="/" element={<Home />} />
+
+      <Route path="/guides" element={<Guides />}>
+        <Route index element={<UsageInfo />} />
+        <Route path="admission" element={<Admission />} />
+        <Route path="parking" element={<Parking />} />
+        <Route path="rules" element={<Rules />} />
+      </Route>
+      <Route path="/support" element={<Support />} />
+    </Routes>
+    <Footer />
     </div>
   );
 }
-
-export default App;
