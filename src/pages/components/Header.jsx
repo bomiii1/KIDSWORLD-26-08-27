@@ -15,7 +15,7 @@ export default function Header() {
   return (
     <>
       <header
-        className="fixed left-0 top-0 z-[10000] h-[90px] w-full border-b border-white/10 bg-[#292929]/70 px-[20px] text-[#FFF9EE] backdrop-blur-xl sm:px-[30px] md:px-[50px] lg:px-[80px] xl:px-[150px]"
+        className="fixed left-0 top-0 z-[10000] h-[90px] w-full border-b border-white/10 bg-[#white9]/70 px-[20px] text-[#FFF9EE] backdrop-blur-xl sm:px-[30px] md:px-[50px] lg:px-[80px] xl:px-[150px]"
         onMouseLeave={() => setActiveMenu(null)}
       >
         <div className="flex h-full w-full items-center justify-between">
@@ -25,11 +25,7 @@ export default function Header() {
             onClick={closeMobileMenu}
             className="w-[65px] shrink-0 sm:w-[75px] lg:w-[70px]"
           >
-            <img
-              src={logoImg}
-              alt="키즈월드 로고"
-              className="w-full"
-            />
+            <img src={logoImg} alt="키즈월드 로고" className="w-full" />
           </Link>
 
           {/* PC 메뉴 */}
@@ -49,9 +45,8 @@ export default function Header() {
                   }`}
                 >
                   소개
-
                   <span
-                    className={`absolute bottom-[22px] left-0 h-[2px] bg-[#F5A623] transition-all duration-300 ${
+                    className={`absolute bottom-[22px] left-0 h-[2px] bg-[#F5A623] ${
                       activeMenu === "about" ? "w-full" : "w-0"
                     }`}
                   />
@@ -72,9 +67,8 @@ export default function Header() {
                   }`}
                 >
                   이용안내
-
                   <span
-                    className={`absolute bottom-[22px] left-0 h-[2px] bg-[#F5A623] transition-all duration-300 ${
+                    className={`absolute bottom-[22px] left-0 h-[2px] bg-[#F5A623] ${
                       activeMenu === "guides" ? "w-full" : "w-0"
                     }`}
                   />
@@ -95,9 +89,8 @@ export default function Header() {
                   }`}
                 >
                   시설안내
-
                   <span
-                    className={`absolute bottom-[22px] left-0 h-[2px] bg-[#F5A623] transition-all duration-300 ${
+                    className={`absolute bottom-[22px] left-0 h-[2px] bg-[#F5A623] ${
                       activeMenu === "facilities" ? "w-full" : "w-0"
                     }`}
                   />
@@ -118,9 +111,8 @@ export default function Header() {
                   }`}
                 >
                   문의
-
                   <span
-                    className={`absolute bottom-[22px] left-0 h-[2px] bg-[#F5A623] transition-all duration-300 ${
+                    className={`absolute bottom-[22px] left-0 h-[2px] bg-[#F5A623] ${
                       activeMenu === "support" ? "w-full" : "w-0"
                     }`}
                   />
@@ -175,14 +167,6 @@ export default function Header() {
                         className="text-[18px] font-medium text-[#FFF9EE]/65 transition-colors hover:text-[#F5A623]"
                       >
                         키즈월드
-                      </Link>
-
-                      <Link
-                        to="/directions"
-                        onClick={() => setActiveMenu(null)}
-                        className="text-[18px] font-medium text-[#FFF9EE]/65 transition-colors hover:text-[#F5A623]"
-                      >
-                        오시는길
                       </Link>
                     </div>
                   )}
@@ -446,7 +430,6 @@ export default function Header() {
             className="group mt-[10px] flex w-full items-center justify-between rounded-[12px] bg-[#E53935] px-[20px] py-[16px] text-[16px] font-bold"
           >
             온라인 예매
-
             <ArrowUpRight className="h-[18px] w-[18px] transition-transform duration-300 group-hover:translate-x-[2px] group-hover:-translate-y-[2px]" />
           </a>
         </div>

@@ -8,7 +8,6 @@ export default function Section3() {
     <section className="relative mx-auto h-[330px] w-full overflow-hidden bg-[#FFF9EE] sm:h-[310px] lg:h-[300px]">
       {/* 초록색 영역 */}
       <div className="absolute left-0 top-[55px] h-[240px] w-full bg-[#138D4B] sm:top-[60px] sm:h-[215px] lg:top-[68px] lg:h-[175px]">
-        
         {/* 왼쪽 구름 */}
         <img
           src={cloud1Img}
@@ -17,13 +16,13 @@ export default function Section3() {
         />
 
         {/* 텍스트 */}
-        <div className="relative z-20 mx-auto h-full max-w-[1228px] px-5 pt-7 pl-[105px] sm:px-10 sm:pl-[150px] sm:pt-8 md:pl-[175px] lg:flex lg:items-center lg:pl-[250px] lg:pt-0">
+        <div className="relative z-20 mx-auto h-full max-w-[1228px] px-5 pt-7 sm:px-10 sm:pl-[150px] sm:pt-8 md:pl-[20px] lg:flex lg:items-center lg:pl-[20px] lg:pt-0">
           <div>
-            <h2 className="text-[30px] font-bold tracking-[-1px] text-[#FFF9EE] sm:text-[38px] lg:text-[52px]">
+            <h2 className="text-[30px] font-[Jua] tracking-[-1px] text-[#FFF9EE] sm:text-[38px] lg:text-[52px]">
               맞춤 놀이 찾기
             </h2>
 
-            <p className="mt-3 text-[15px] font-semibold leading-[1.65] text-[#FFAD21] sm:text-[17px] lg:mt-4 lg:text-[21px]">
+            <p className="text-[15px] font-bold leading-[1.65] text-[#FFAD21] sm:text-[17px]  lg:text-[21px]">
               <span className="block lg:inline">
                 키, 나이, 보호자동반 탑승 여부에 맞춰
               </span>
@@ -49,7 +48,6 @@ export default function Section3() {
 
           <span className="absolute bottom-[23px] left-1/2 z-10 flex -translate-x-1/2 items-center whitespace-nowrap text-[13px] font-bold text-[#292929] sm:bottom-[30px] sm:text-[15px] lg:bottom-[38px] lg:text-[18px]">
             맞춤 놀이 찾기
-
             <span className="ml-2 inline-block transition-transform duration-300 group-hover:translate-x-1 group-focus-visible:translate-x-1">
               →
             </span>

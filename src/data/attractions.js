@@ -2,49 +2,61 @@ export const AttractionsData = [
   {
     id: 1,
     AttractionName: "UFO 바이킹",
-    AttractionImg:
-      "https://search.pstatic.net/common/?src=https%3A%2F%2Fblogfiles.pstatic.net%2FMjAyNjA4MjBfNDMg%2FMDAxNzg3MjMzMjM4MDgw.Sk4-SxhFK8sZoFQ7t7_vQdUAluzqWGYRs_ivp-sKwtEg.wykNKVcTXM5ujLvZVIbzkapMlm-ermAnzJx-N-f5tDMg.JPEG%2F1787233237792.jpg%2F1079x1440",
+    AttractionImg: "",
+    popular: true,
+    description: "",
+    adult: true,
+    height: false,
+    duration: "약 3분",
+    capacity: "어린이기준 10명",
+    lunchtime: "11:30-12:00",
+    breaktime: "14:30-14:45 / 16:30-16:45",
+    precautions: [
+      "기구운행중에는 벨트를 풀거나 일어서는 등 위험한 행동은 삼가해주세요.",
+      "보호자 탑승시 보호자 옆 한칸은 비워두고 이용해주세요",
+      "",
+    ],
   },
   {
     id: 2,
     AttractionName: "암벽체험",
-    AttractionImg:
-      "https://search.pstatic.net/common/?src=https%3A%2F%2Fblogfiles.pstatic.net%2FMjAyNjA4MjBfNDMg%2FMDAxNzg3MjMzMjM4MDgw.Sk4-SxhFK8sZoFQ7t7_vQdUAluzqWGYRs_ivp-sKwtEg.wykNKVcTXM5ujLvZVIbzkapMlm-ermAnzJx-N-f5tDMg.JPEG%2F1787233237792.jpg%2F1079x1440",
+    AttractionImg: "",
+    popular: true,
   },
   {
     id: 3,
     AttractionName: "자동차바이킹",
-    AttractionImg:
-      "https://search.pstatic.net/common/?src=https%3A%2F%2Fblogfiles.pstatic.net%2FMjAyNjA4MjBfNDMg%2FMDAxNzg3MjMzMjM4MDgw.Sk4-SxhFK8sZoFQ7t7_vQdUAluzqWGYRs_ivp-sKwtEg.wykNKVcTXM5ujLvZVIbzkapMlm-ermAnzJx-N-f5tDMg.JPEG%2F1787233237792.jpg%2F1079x1440",
+    AttractionImg: "",
+    popular: true,
   },
   {
     id: 4,
     AttractionName: "RC보트",
-    AttractionImg:
-      "https://search.pstatic.net/common/?src=https%3A%2F%2Fblogfiles.pstatic.net%2FMjAyNjA4MjBfNDMg%2FMDAxNzg3MjMzMjM4MDgw.Sk4-SxhFK8sZoFQ7t7_vQdUAluzqWGYRs_ivp-sKwtEg.wykNKVcTXM5ujLvZVIbzkapMlm-ermAnzJx-N-f5tDMg.JPEG%2F1787233237792.jpg%2F1079x1440",
+    AttractionImg: "",
+    popular: true,
   },
   {
     id: 5,
     AttractionName: "RC탱크/RC카",
-    AttractionImg:
-      "https://search.pstatic.net/common/?src=https%3A%2F%2Fblogfiles.pstatic.net%2FMjAyNjA4MjBfNDMg%2FMDAxNzg3MjMzMjM4MDgw.Sk4-SxhFK8sZoFQ7t7_vQdUAluzqWGYRs_ivp-sKwtEg.wykNKVcTXM5ujLvZVIbzkapMlm-ermAnzJx-N-f5tDMg.JPEG%2F1787233237792.jpg%2F1079x1440",
+    AttractionImg: "",
+    popular: true,
   },
   {
     id: 6,
     AttractionName: "튜브썰매",
-    AttractionImg:
-      "https://search.pstatic.net/common/?src=https%3A%2F%2Fblogfiles.pstatic.net%2FMjAyNjA4MjBfNDMg%2FMDAxNzg3MjMzMjM4MDgw.Sk4-SxhFK8sZoFQ7t7_vQdUAluzqWGYRs_ivp-sKwtEg.wykNKVcTXM5ujLvZVIbzkapMlm-ermAnzJx-N-f5tDMg.JPEG%2F1787233237792.jpg%2F1079x1440",
+    AttractionImg: "",
+    popular: true,
   },
   {
     id: 7,
     AttractionName: "회전그네",
-    AttractionImg:
-      "https://search.pstatic.net/common/?src=https%3A%2F%2Fblogfiles.pstatic.net%2FMjAyNjA4MjBfNDMg%2FMDAxNzg3MjMzMjM4MDgw.Sk4-SxhFK8sZoFQ7t7_vQdUAluzqWGYRs_ivp-sKwtEg.wykNKVcTXM5ujLvZVIbzkapMlm-ermAnzJx-N-f5tDMg.JPEG%2F1787233237792.jpg%2F1079x1440",
+    AttractionImg: "",
+    popular: true,
   },
   {
     id: 8,
     AttractionName: "회전관람차",
-    AttractionImg:
-      "https://search.pstatic.net/common/?src=https%3A%2F%2Fblogfiles.pstatic.net%2FMjAyNjA4MjBfNDMg%2FMDAxNzg3MjMzMjM4MDgw.Sk4-SxhFK8sZoFQ7t7_vQdUAluzqWGYRs_ivp-sKwtEg.wykNKVcTXM5ujLvZVIbzkapMlm-ermAnzJx-N-f5tDMg.JPEG%2F1787233237792.jpg%2F1079x1440",
+    AttractionImg: "",
+    popular: true,
   },
 ];

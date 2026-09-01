@@ -45,24 +45,22 @@ export default function UsageInfo() {
 
               <div className="mt-[16px] flex flex-wrap gap-[10px]">
                 <a
-                  href="#"
+                  href="https://map.naver.com/p/entry/place/1801736280?c=15.00,0,0,0,dh&placePath=%2Fhome%3Ffrom%3Dmap%26fromPanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202609010922%26locale%3Dko%26svcName%3Dmap_pcv5"
                   target="_blank"
                   rel="noreferrer"
                   className="group flex items-center gap-[6px] rounded-[8px] border border-[#292929]/20 px-[14px] py-[9px] text-[16px] font-medium text-[#292929] transition-all duration-300 hover:border-[#E53935] hover:text-[#E53935]"
                 >
                   네이버 지도
-
                   <ArrowUpRight className="h-[16px] w-[16px] transition-transform duration-300 group-hover:translate-x-[2px] group-hover:-translate-y-[2px]" />
                 </a>
 
                 <a
-                  href="#"
+                  href="https://kko.to/Zded0GIQtd"
                   target="_blank"
                   rel="noreferrer"
                   className="group flex items-center gap-[6px] rounded-[8px] border border-[#292929]/20 px-[14px] py-[9px] text-[16px] font-medium text-[#292929] transition-all duration-300 hover:border-[#E53935] hover:text-[#E53935]"
                 >
                   카카오맵
-
                   <ArrowUpRight className="h-[16px] w-[16px] transition-transform duration-300 group-hover:translate-x-[2px] group-hover:-translate-y-[2px]" />
                 </a>
               </div>
@@ -161,9 +159,7 @@ export default function UsageInfo() {
 
               <p>
                 보조배터리 대여
-                <span className="ml-[8px] text-[#292929]/55">
-                  유료
-                </span>
+                <span className="ml-[8px] text-[#292929]/55">유료</span>
               </p>
             </div>
           </div>

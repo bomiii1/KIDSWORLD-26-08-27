@@ -37,3 +37,32 @@ body {
   opacity: 0.25;
   pointer-events: none;
 }
+
+@keyframes circleUp {
+  0% {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.circle-up {
+  opacity: 0;
+  animation: circleUp 0.8s ease-out forwards;
+}
+
+.circle-delay-1 {
+  animation-delay: 0.15s;
+}
+
+.circle-delay-2 {
+  animation-delay: 0.35s;
+}
+
+.circle-delay-3 {
+  animation-delay: 0.55s;
+}

@@ -17,7 +17,7 @@ export default function Support() {
       {/* 자주 묻는 질문 */}
       <section
         id="faq"
-        className="bg-[#EEE8DE] px-5 py-[60px] sm:px-8 md:px-10 lg:px-[80px] lg:py-[80px] xl:px-[150px]"
+        className="bg-[#EEE8DE] px-5 py-[60px] sm:px-8 md:px-10 lg:px-[80px] lg:py-[80px] xl:px-[250px]"
       >
         <div className="inline-block">
           <h2 className="text-[30px] font-bold text-[#292929] lg:text-[34px]">
@@ -45,8 +45,6 @@ export default function Support() {
 
               <p className="mt-[18px] text-[18px] font-medium leading-[1.8] text-[#292929]/70 lg:text-[19px]">
                 네 가능합니다.
-                <br />
-                1층 벡스코 안내소에서 유모차 대여도 가능합니다.
               </p>
             </div>
           </div>
@@ -88,7 +86,7 @@ export default function Support() {
               </h3>
 
               <p className="mt-[18px] text-[18px] font-medium leading-[1.8] text-[#292929]/70 lg:text-[19px]">
-                퇴장 후 재입장은 불가합니다.
+                퇴장 후 재입장은 불가합니다. (성인만 입구에서 도장받고 외출가능)
               </p>
             </div>
           </div>
@@ -130,7 +128,7 @@ export default function Support() {
               </h3>
 
               <p className="mt-[18px] text-[18px] font-medium leading-[1.8] text-[#292929]/70 lg:text-[19px]">
-                키즈월드 내부에는 없으며 벡스코 건물 1층 수유실을 이용해주세요.
+                행사장 내부에는 없으며 본 건물 1층 수유실을 이용해주세요.
               </p>
             </div>
           </div>

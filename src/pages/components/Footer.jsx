@@ -28,8 +28,7 @@ export default function Footer() {
             <p>운영시간 10:30 - 18:00</p>
 
             <p>
-              입장마감{" "}
-              <span className="font-bold text-[#F5A623]">17:00</span>
+              입장마감 <span className="font-bold">17:00</span>
             </p>
           </div>
         </div>
@@ -78,7 +77,6 @@ export default function Footer() {
             className="group flex items-center gap-[6px] text-[16px] font-bold text-[#F5A623]"
           >
             예매 바로가기
-
             <ArrowUpRight className="h-[17px] w-[17px] transition-transform duration-300 group-hover:translate-x-[2px] group-hover:-translate-y-[2px]" />
           </a>
         </div>
@@ -92,8 +90,8 @@ export default function Footer() {
           </p>
 
           <p className="max-w-[650px] text-[16px] font-medium leading-[1.7] text-[#FFF9EE]/40 lg:text-right">
-            본 사이트는 포트폴리오 목적으로 제작된 리뉴얼 사이트이며,
-            실제 운영 정보와 차이가 있을 수 있습니다.
+            본 사이트는 포트폴리오 목적으로 제작된 리뉴얼 사이트이며, 실제 운영
+            정보와 차이가 있을 수 있습니다.
           </p>
         </div>
       </div>
