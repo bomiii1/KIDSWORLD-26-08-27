@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom";
+import FacilitiesBg from "../../img/facilities_bg.png";
 
 export default function Facilities() {
   const menuStyle = ({ isActive }) =>
@@ -11,7 +12,14 @@ export default function Facilities() {
   return (
     <main className="min-h-screen bg-[#FFF9EE] pt-[90px]">
       {/* 타이틀 */}
-      <section className="relative overflow-hidden bg-[#777777] px-5 py-[65px] sm:px-8 md:px-10 lg:px-[80px] lg:py-[75px] xl:px-[150px]">
+      <section
+        className="relative overflow-hidden bg-cover bg-[center_62%] bg-no-repeat px-5 py-[65px] sm:px-8 md:px-10 lg:px-[80px] lg:py-[75px] xl:px-[150px]"
+        style={{
+          backgroundImage: `url(${FacilitiesBg})`,
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+
         <div className="relative z-10">
           <h1 className="font-['Jua'] text-[46px] text-[#FFF9EE] sm:text-[52px] lg:text-[60px]">
             시설안내

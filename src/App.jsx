@@ -18,9 +18,11 @@ import Facilities from "./pages/facilities/Facilities";
 import Attractions from "./pages/facilities/facilities_components/Attractions";
 import RestArea from "./pages/facilities/facilities_components/RestArea";
 import Amenities from "./pages/facilities/facilities_components/Amenities";
+import Custom from "./pages/facilities/facilities_components/Custom";
 
 import Support from "./pages/support/Support";
-import Custom from "./pages/facilities/facilities_components/Custom";
+
+import Error from "./pages/Error/Error";
 
 export default function App() {
   return (
@@ -53,6 +55,9 @@ export default function App() {
 
         {/* 문의 */}
         <Route path="/support" element={<Support />} />
+
+        {/* 404 */}
+        <Route path="*" element={<Error />} />
       </Routes>
 
       <Footer />

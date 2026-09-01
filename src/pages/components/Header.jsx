@@ -15,7 +15,7 @@ export default function Header() {
   return (
     <>
       <header
-        className="fixed left-0 top-0 z-[10000] h-[90px] w-full border-b border-white/10 bg-[#white9]/70 px-[20px] text-[#FFF9EE] backdrop-blur-xl sm:px-[30px] md:px-[50px] lg:px-[80px] xl:px-[150px]"
+        className="fixed left-0 top-0 z-[10000] h-[90px] w-full border-b border-white/10 bg-[#292929]/70 px-[20px] text-[#FFF9EE] backdrop-blur-xl sm:px-[30px] md:px-[50px] lg:px-[80px] xl:px-[150px]"
         onMouseLeave={() => setActiveMenu(null)}
       >
         <div className="flex h-full w-full items-center justify-between">
