@@ -7,4 +7,6 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+
+  base: "/KIDSWORLD-26-08-27/",
 });
