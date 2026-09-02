@@ -2,10 +2,11 @@ import giraffeImg from "../../../img/giraffe.png";
 import cloud1Img from "../../../img/cloud1.png";
 import cloud2Img from "../../../img/cloud2.png";
 import cloud3Img from "../../../img/cloud3.png";
+import { Link } from "react-router-dom";
 
 export default function Section3() {
   return (
-    <section className="relative mx-auto h-[330px] w-full overflow-hidden bg-[#FFF9EE] sm:h-[310px] lg:h-[300px]">
+    <section className="relative mx-auto h-[330px] w-full overflow-hidden bg-[white] sm:h-[310px] lg:h-[300px]">
       {/* 초록색 영역 */}
       <div className="absolute left-0 top-[55px] h-[240px] w-full bg-[#138D4B] sm:top-[60px] sm:h-[215px] lg:top-[68px] lg:h-[175px]">
         {/* 왼쪽 구름 */}
@@ -18,7 +19,7 @@ export default function Section3() {
         {/* 텍스트 */}
         <div className="relative z-20 mx-auto h-full max-w-[1228px] px-5 pt-7 sm:px-10 sm:pl-[150px] sm:pt-8 md:pl-[20px] lg:flex lg:items-center lg:pl-[20px] lg:pt-0">
           <div>
-            <h2 className="text-[30px] font-[Jua] tracking-[-1px] text-[#FFF9EE] sm:text-[38px] lg:text-[52px]">
+            <h2 className="text-[30px] font-[Jua] tracking-[-1px] text-[white] sm:text-[38px] lg:text-[52px]">
               맞춤 놀이 찾기
             </h2>
 
@@ -35,9 +36,8 @@ export default function Section3() {
         </div>
 
         {/* 오른쪽 흰 구름 버튼 */}
-        <button
-          type="button"
-          aria-label="맞춤 놀이 찾기"
+        <Link
+          to={"/facilities/custom"}
           className="group absolute bottom-0 right-0 z-10 h-[90px] w-[215px] origin-bottom-right cursor-pointer border-0 bg-transparent p-0 transition-transform duration-300 ease-out hover:scale-[1.04] focus-visible:scale-[1.04] focus-visible:outline-none sm:h-[110px] sm:w-[280px] lg:h-[138px] lg:w-[370px]"
         >
           <img
@@ -52,7 +52,7 @@ export default function Section3() {
               →
             </span>
           </span>
-        </button>
+        </Link>
 
         {/* 오른쪽 하늘색 구름 */}
         <img

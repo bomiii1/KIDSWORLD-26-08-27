@@ -10,7 +10,7 @@ export default function Guides() {
     }`;
 
   return (
-    <div className="mt-[90px] min-h-screen bg-[#FFF9EE]">
+    <div className="mt-[90px] min-h-screen bg-[white]">
       <section
         className="relative bg-cover bg-[center_90%] bg-no-repeat px-5 py-[65px] sm:px-8 md:px-10 lg:px-[80px] lg:py-[75px] xl:px-[150px]"
         style={{
@@ -22,7 +22,7 @@ export default function Guides() {
 
         {/* 타이틀 */}
         <div className="relative z-10">
-          <h1 className="font-['Jua'] text-[46px] text-[#FFF9EE] sm:text-[52px] lg:text-[60px]">
+          <h1 className="font-['Jua'] text-[46px] text-[white] sm:text-[52px] lg:text-[60px]">
             이용안내
           </h1>
 
@@ -32,7 +32,7 @@ export default function Guides() {
         </div>
       </section>
 
-      <div className="border-b border-[#292929]/10 bg-[#FFF9EE]">
+      <div className="border-b border-[#292929]/10 bg-[white]">
         <nav className="flex gap-[10px] overflow-x-auto px-5 py-[24px] sm:px-8 md:px-10 lg:justify-center lg:gap-[14px] lg:px-[60px] lg:py-[28px] xl:px-[90px]">
           <NavLink to="/guides" end className={menuStyle}>
             이용정보

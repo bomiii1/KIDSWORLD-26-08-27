@@ -7,7 +7,7 @@ export default function About() {
   const [activeKeyword, setActiveKeyword] = useState("2500");
 
   return (
-    <main className="min-h-screen bg-[#FFF9EE] pt-[90px]">
+    <main className="min-h-screen bg-[white] pt-[90px]">
       {/* 상단 타이틀 */}
       <section
         className="relative bg-cover bg-[center_50%] bg-no-repeat px-5 py-[65px] sm:px-8 md:px-10 lg:px-[80px] lg:py-[75px] xl:px-[150px]"
@@ -21,7 +21,7 @@ export default function About() {
 
         {/* 타이틀 */}
         <div className="relative z-10">
-          <h1 className="font-['Jua'] text-[46px] text-[#FFF9EE] sm:text-[52px] lg:text-[60px]">
+          <h1 className="font-['Jua'] text-[46px] text-[white] sm:text-[52px] lg:text-[60px]">
             상상체험 키즈월드
           </h1>
 
@@ -32,15 +32,15 @@ export default function About() {
 
         {/* 동그라미 */}
         <div className="absolute bottom-[-85px] right-[30px] z-20 hidden gap-[22px] md:flex lg:right-[80px] xl:right-[150px]">
-          <div className="circle-up circle-delay-1 flex h-[160px] w-[160px] items-center justify-center rounded-full bg-[#F5A623] text-[15px] font-bold text-[#FFF9EE] shadow-2xl lg:h-[180px] lg:w-[180px] lg:text-[17px]">
+          <div className="circle-up circle-delay-1 flex h-[160px] w-[160px] items-center justify-center rounded-full bg-[#F5A623] text-[15px] font-bold text-[white] shadow-2xl lg:h-[180px] lg:w-[180px] lg:text-[17px]">
             EXPERIENCE
           </div>
 
-          <div className="circle-up circle-delay-2 flex h-[160px] w-[160px] items-center justify-center rounded-full bg-[#16864B] text-[15px] font-bold text-[#FFF9EE] shadow-2xl lg:h-[180px] lg:w-[180px] lg:text-[17px]">
+          <div className="circle-up circle-delay-2 flex h-[160px] w-[160px] items-center justify-center rounded-full bg-[#16864B] text-[15px] font-bold text-[white] shadow-2xl lg:h-[180px] lg:w-[180px] lg:text-[17px]">
             PLAY
           </div>
 
-          <div className="circle-up circle-delay-3 flex h-[160px] w-[160px] items-center justify-center rounded-full bg-[#F5A623] text-[15px] font-bold text-[#FFF9EE] shadow-2xl lg:h-[180px] lg:w-[180px] lg:text-[17px]">
+          <div className="circle-up circle-delay-3 flex h-[160px] w-[160px] items-center justify-center rounded-full bg-[#F5A623] text-[15px] font-bold text-[white] shadow-2xl lg:h-[180px] lg:w-[180px] lg:text-[17px]">
             EMOTION
           </div>
         </div>

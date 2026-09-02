@@ -10,7 +10,7 @@ export default function Facilities() {
     }`;
 
   return (
-    <main className="min-h-screen bg-[#FFF9EE] pt-[90px]">
+    <main className="min-h-screen bg-[white] pt-[90px]">
       {/* 타이틀 */}
       <section
         className="relative overflow-hidden bg-cover bg-[center_62%] bg-no-repeat px-5 py-[65px] sm:px-8 md:px-10 lg:px-[80px] lg:py-[75px] xl:px-[150px]"
@@ -21,7 +21,7 @@ export default function Facilities() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
 
         <div className="relative z-10">
-          <h1 className="font-['Jua'] text-[46px] text-[#FFF9EE] sm:text-[52px] lg:text-[60px]">
+          <h1 className="font-['Jua'] text-[46px] text-[white] sm:text-[52px] lg:text-[60px]">
             시설안내
           </h1>
 
@@ -32,7 +32,7 @@ export default function Facilities() {
       </section>
 
       {/* 세부메뉴 */}
-      <div className="border-b border-[#292929]/10 bg-[#FFF9EE]">
+      <div className="border-b border-[#292929]/10 bg-[white]">
         <nav className="flex gap-[10px] overflow-x-auto px-5 py-[24px] sm:px-8 md:px-10 lg:justify-center lg:gap-[14px] lg:px-[60px] lg:py-[28px] xl:px-[90px]">
           <NavLink to="/facilities" end className={menuStyle}>
             놀이시설

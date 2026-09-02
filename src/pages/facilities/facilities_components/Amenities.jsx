@@ -1,13 +1,9 @@
 export default function Amenities() {
   return (
-    <section className="bg-[#FFF9EE] px-5 py-[70px] sm:px-8 md:px-10 lg:px-[80px] lg:py-[90px] xl:px-[150px]">
+    <section className="bg-[white] px-5 py-[70px] sm:px-8 md:px-10 lg:px-[80px] lg:py-[90px] xl:px-[150px]">
       {/* 타이틀 */}
       <div className="mx-auto max-w-[1250px]">
         <div>
-          <p className="text-[15px] font-bold text-[#F5A623] lg:text-[17px]">
-            AMENITIES
-          </p>
-
           <h2 className="mt-[8px] text-[30px] font-bold text-[#292929] sm:text-[34px] lg:text-[40px]">
             부대시설
           </h2>

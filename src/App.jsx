@@ -23,6 +23,7 @@ import Custom from "./pages/facilities/facilities_components/Custom";
 import Support from "./pages/support/Support";
 
 import Error from "./pages/Error/Error";
+import AttractionDetail from "./pages/facilities/facilities_components/AttractionsDetail";
 
 export default function App() {
   return (
@@ -51,6 +52,10 @@ export default function App() {
           <Route path="rest" element={<RestArea />} />
           <Route path="amenities" element={<Amenities />} />
           <Route path="custom" element={<Custom />} />
+          <Route
+            path="/facilities/attractions/:id"
+            element={<AttractionDetail />}
+          />
         </Route>
 
         {/* 문의 */}

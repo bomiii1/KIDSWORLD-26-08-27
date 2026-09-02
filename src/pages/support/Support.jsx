@@ -1,6 +1,6 @@
 export default function Support() {
   return (
-    <main className="min-h-screen bg-[#FFF9EE] pt-[90px]">
+    <main className="min-h-screen bg-[white] pt-[90px]">
       {/* 타이틀 */}
       <section className="px-5 py-[65px] sm:px-8 md:px-10 lg:px-[80px] xl:px-[150px]">
         <div>
@@ -29,7 +29,7 @@ export default function Support() {
 
         <div className="mt-[35px] grid grid-cols-1 gap-[22px] lg:grid-cols-2">
           {/* 질문 1 */}
-          <div className="relative overflow-hidden rounded-[18px] bg-[#FFF9EE] px-[28px] py-[30px]">
+          <div className="relative overflow-hidden rounded-[18px] bg-[white] px-[28px] py-[30px]">
             <span className="absolute left-[20px] top-[12px] text-[82px] font-bold leading-none text-[#16864B]/20">
               Q
             </span>
@@ -50,7 +50,7 @@ export default function Support() {
           </div>
 
           {/* 질문 2 */}
-          <div className="relative overflow-hidden rounded-[18px] bg-[#FFF9EE] px-[28px] py-[30px]">
+          <div className="relative overflow-hidden rounded-[18px] bg-[white] px-[28px] py-[30px]">
             <span className="absolute left-[20px] top-[12px] text-[82px] font-bold leading-none text-[#16864B]/20">
               Q
             </span>
@@ -71,7 +71,7 @@ export default function Support() {
           </div>
 
           {/* 질문 3 */}
-          <div className="relative overflow-hidden rounded-[18px] bg-[#FFF9EE] px-[28px] py-[30px]">
+          <div className="relative overflow-hidden rounded-[18px] bg-[white] px-[28px] py-[30px]">
             <span className="absolute left-[20px] top-[12px] text-[82px] font-bold leading-none text-[#16864B]/20">
               Q
             </span>
@@ -92,7 +92,7 @@ export default function Support() {
           </div>
 
           {/* 질문 4 */}
-          <div className="relative overflow-hidden rounded-[18px] bg-[#FFF9EE] px-[28px] py-[30px]">
+          <div className="relative overflow-hidden rounded-[18px] bg-[white] px-[28px] py-[30px]">
             <span className="absolute left-[20px] top-[12px] text-[82px] font-bold leading-none text-[#16864B]/20">
               Q
             </span>
@@ -113,7 +113,7 @@ export default function Support() {
           </div>
 
           {/* 질문 5 */}
-          <div className="relative overflow-hidden rounded-[18px] bg-[#FFF9EE] px-[28px] py-[30px]">
+          <div className="relative overflow-hidden rounded-[18px] bg-[white] px-[28px] py-[30px]">
             <span className="absolute left-[20px] top-[12px] text-[82px] font-bold leading-none text-[#16864B]/20">
               Q
             </span>
@@ -134,7 +134,7 @@ export default function Support() {
           </div>
 
           {/* 질문 6 */}
-          <div className="relative overflow-hidden rounded-[18px] bg-[#FFF9EE] px-[28px] py-[30px]">
+          <div className="relative overflow-hidden rounded-[18px] bg-[white] px-[28px] py-[30px]">
             <span className="absolute left-[20px] top-[12px] text-[82px] font-bold leading-none text-[#16864B]/20">
               Q
             </span>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Section5() {
   return (
-    <section className="mt-[70px] bg-[#FFF9EE] px-5 py-[45px] sm:px-8 md:px-10 lg:px-[60px] xl:px-[90px]">
+    <section className="mt-[70px] bg-[white] px-5 py-[45px] sm:px-8 md:px-10 lg:px-[60px] xl:px-[150px]">
       {/* 타이틀 */}
       <div className="flex flex-col gap-[16px] sm:flex-row sm:items-end sm:justify-between">
         <div>
@@ -21,17 +21,16 @@ export default function Section5() {
           className="group flex w-fit items-center gap-[8px] text-[16px] font-medium text-[#292929] transition-colors duration-300 hover:text-[#E53935]"
         >
           전체 이용수칙 보기
-
           <ArrowUpRight className="h-[18px] w-[18px] transition-transform duration-300 group-hover:translate-x-[3px] group-hover:-translate-y-[3px]" />
         </Link>
       </div>
 
       {/* 이용수칙 박스 */}
-      <div className="mt-[28px] overflow-hidden rounded-[20px] bg-[#16864B] px-[24px] py-[30px] sm:px-[40px] sm:py-[36px] lg:px-[55px] lg:py-[42px]">
+      <div className="mt-[28px] overflow-hidden rounded-[20px] bg-[#292929] px-[24px] py-[30px] sm:px-[40px] sm:py-[36px] lg:px-[55px] lg:py-[42px]">
         <div className="mx-auto max-w-[1100px]">
           {/* 수칙 1 */}
           <div className="text-center">
-            <h3 className="text-[18px] font-bold text-[#FFF9EE] sm:text-[20px]">
+            <h3 className="text-[18px] font-bold text-[white] sm:text-[20px]">
               양말을 꼭 챙겨주세요
             </h3>
 
@@ -44,7 +43,7 @@ export default function Section5() {
 
           {/* 수칙 2 */}
           <div className="text-center">
-            <h3 className="text-[18px] font-bold text-[#FFF9EE] sm:text-[20px]">
+            <h3 className="text-[18px] font-bold text-[white] sm:text-[20px]">
               외부 음식물은 반입할 수 없어요
             </h3>
 
@@ -57,7 +56,7 @@ export default function Section5() {
 
           {/* 수칙 3 */}
           <div className="text-center">
-            <h3 className="text-[18px] font-bold text-[#FFF9EE] sm:text-[20px]">
+            <h3 className="text-[18px] font-bold text-[white] sm:text-[20px]">
               아이와 함께 줄을 서주세요
             </h3>
 

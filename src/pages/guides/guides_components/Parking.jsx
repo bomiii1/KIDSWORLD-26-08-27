@@ -2,20 +2,17 @@ import parkingImg from "../../../img/parking.png";
 
 export default function Parking() {
   return (
-    <section className="bg-[#FFF9EE] px-5 py-[60px] sm:px-8 md:px-10 lg:px-[80px] lg:py-[80px] xl:px-[150px]">
-      {/* 타이틀 */}
-      <div>
-        <h2 className="text-[28px] font-bold text-[#292929] sm:text-[30px] lg:text-[32px]">
+    <section className="bg-[white] px-5 py-[60px] sm:px-8 md:px-10 lg:px-[80px] lg:py-[80px] xl:px-[150px]">
+      <div className="border-l-[4px] border-[#5E9F45] pl-[18px]">
+        <p className="mt-[5px] text-[20px] font-bold leading-[1.6] text-[#292929] sm:text-[28px]">
           주차안내
-        </h2>
-
-        <p className="mt-[8px] text-[16px] font-medium text-[#292929]/60 lg:text-[18px]">
+        </p>
+        <p className="text-[18px] font-bold text-[#5E9F45]">
           벡스코 주차장 이용 및 주차지원 안내입니다.
         </p>
       </div>
 
-      {/* 상단 안내 */}
-      <div className="mt-[35px] rounded-[18px] border border-[#292929]/10 bg-white/50 px-[24px] py-[22px] sm:px-[30px]">
+      <div className="mt-[35px] rounded-[18px] border border-[#292929]/10 bg-white/50 px-[24px] py-[22px] sm:px-[30px] flex justify-center">
         <p className="text-[18px] font-bold leading-[1.7] text-[#292929] lg:text-[20px]">
           벡스코 주차장
           <span className="mx-[6px] text-[#F5A623]">제1전시장 / 제2전시장</span>

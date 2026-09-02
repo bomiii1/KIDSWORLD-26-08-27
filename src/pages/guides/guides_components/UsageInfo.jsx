@@ -2,7 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function UsageInfo() {
   return (
-    <section className="bg-[#FFF9EE] px-5 py-[60px] sm:px-8 md:px-10 lg:px-[80px] lg:py-[80px] xl:px-[150px]">
+    <section className="bg-[white] px-5 py-[60px] sm:px-8 md:px-10 lg:px-[80px] lg:py-[80px] xl:px-[150px]">
       {/* 타이틀 */}
       <h2 className="text-[28px] font-bold text-[#292929] sm:text-[30px] lg:text-[32px]">
         이용정보

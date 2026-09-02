@@ -5,20 +5,12 @@ export default function RestArea() {
   const [activeTab, setActiveTab] = useState("tent");
 
   return (
-    <section className="bg-[#FFF9EE] px-5 py-[60px] sm:px-8 md:px-10 lg:px-[80px] lg:py-[80px] xl:px-[250px]">
+    <section className="bg-[white] px-5 py-[60px] sm:px-8 md:px-10 lg:px-[80px] lg:py-[80px] xl:px-[250px]">
       {/* 타이틀 */}
       <div>
-        <p className="text-[14px] font-bold tracking-[0.18em] text-[#16864B]">
-          REST AREA
-        </p>
-
         <h2 className="mt-[8px] text-[28px] font-bold text-[#292929] sm:text-[32px] lg:text-[36px]">
           휴게공간
         </h2>
-
-        <p className="mt-[10px] text-[15px] font-medium leading-[1.7] text-[#292929]/55 sm:text-[16px]">
-          아이들이 신나게 노는 동안 가족과 함께 편안하게 쉬어가세요.
-        </p>
       </div>
 
       {/* 탭 */}
@@ -76,10 +68,6 @@ export default function RestArea() {
 
               {/* 내용 */}
               <div className="flex flex-col justify-center px-[24px] py-[35px] sm:px-[40px] lg:px-[50px] lg:py-[50px]">
-                <p className="text-[13px] font-bold tracking-[0.16em] text-[#16864B]">
-                  REST AREA 01
-                </p>
-
                 <h3 className="mt-[7px] text-[32px] font-bold text-[#292929] lg:text-[42px]">
                   잔디존
                 </h3>
@@ -180,10 +168,6 @@ export default function RestArea() {
 
               {/* 내용 */}
               <div className="flex flex-col justify-center px-[24px] py-[35px] sm:px-[40px] lg:px-[50px] lg:py-[50px]">
-                <p className="text-[13px] font-bold tracking-[0.16em] text-[#16864B]">
-                  REST AREA 02
-                </p>
-
                 <h3 className="mt-[7px] text-[32px] font-bold text-[#292929] lg:text-[42px]">
                   텐트존
                 </h3>
@@ -285,10 +269,6 @@ export default function RestArea() {
 
               {/* 내용 */}
               <div className="flex flex-col justify-center px-[24px] py-[35px] sm:px-[40px] lg:px-[50px] lg:py-[50px]">
-                <p className="text-[13px] font-bold tracking-[0.16em] text-[16864B]">
-                  REST AREA 03
-                </p>
-
                 <h3 className="mt-[7px] text-[32px] font-bold text-[#292929] lg:text-[42px]">
                   컬러펜스존
                 </h3>

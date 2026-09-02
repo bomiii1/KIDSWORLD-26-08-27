@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 
@@ -7,6 +7,21 @@ import logoImg from "../../img/logo.png";
 export default function Header() {
   const [activeMenu, setActiveMenu] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY >= 90);
+    };
+
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const closeMobileMenu = () => {
     setMobileMenuOpen(false);
@@ -15,7 +30,11 @@ export default function Header() {
   return (
     <>
       <header
-        className="fixed left-0 top-0 z-[10000] h-[90px] w-full border-b border-white/10 bg-[#292929]/70 px-[20px] text-[#FFF9EE] backdrop-blur-xl sm:px-[30px] md:px-[50px] lg:px-[80px] xl:px-[150px]"
+        className={`left-0 top-0 z-[10000] h-[90px] w-full px-[20px] text-white transition-[background-color,box-shadow,backdrop-filter] duration-300 sm:px-[30px] md:px-[50px] lg:px-[80px] xl:px-[150px] ${
+          isScrolled
+            ? "fixed border-b border-white/10 bg-[#292929]/40 shadow-[0_8px_25px_rgba(0,0,0,0.12)] backdrop-blur-xl"
+            : "absolute border-b border-white/10 bg-[#292929]"
+        }`}
         onMouseLeave={() => setActiveMenu(null)}
       >
         <div className="flex h-full w-full items-center justify-between">
@@ -124,7 +143,7 @@ export default function Header() {
                 href="https://map.naver.com/p/search/%EB%B2%A1%EC%8A%A4%EC%BD%94%20%ED%82%A4%EC%A6%88%EC%9B%94%EB%93%9C/place/1801736280"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center justify-center whitespace-nowrap rounded-[10px] bg-[#E53935] px-[18px] py-[12px] text-[16px] font-bold text-[#FFF9EE] transition-all duration-300 hover:bg-[#C92F2C]"
+                className="flex items-center justify-center whitespace-nowrap rounded-[10px] bg-[#E53935] px-[18px] py-[12px] text-[16px] font-bold text-white transition-all duration-300 hover:bg-[#C92F2C]"
               >
                 온라인 예매
               </a>
@@ -164,7 +183,7 @@ export default function Header() {
                       <Link
                         to="/about"
                         onClick={() => setActiveMenu(null)}
-                        className="text-[18px] font-medium text-[#FFF9EE]/65 transition-colors hover:text-[#F5A623]"
+                        className="text-[18px] font-medium text-white/65 transition-colors hover:text-[#F5A623]"
                       >
                         키즈월드
                       </Link>
@@ -179,7 +198,7 @@ export default function Header() {
                       <Link
                         to="/guides"
                         onClick={() => setActiveMenu(null)}
-                        className="text-[18px] font-medium text-[#FFF9EE]/65 transition-colors hover:text-[#F5A623]"
+                        className="text-[18px] font-medium text-white/65 transition-colors hover:text-[#F5A623]"
                       >
                         이용정보
                       </Link>
@@ -187,7 +206,7 @@ export default function Header() {
                       <Link
                         to="/guides/admission"
                         onClick={() => setActiveMenu(null)}
-                        className="text-[18px] font-medium text-[#FFF9EE]/65 transition-colors hover:text-[#F5A623]"
+                        className="text-[18px] font-medium text-white/65 transition-colors hover:text-[#F5A623]"
                       >
                         이용요금
                       </Link>
@@ -195,7 +214,7 @@ export default function Header() {
                       <Link
                         to="/guides/parking"
                         onClick={() => setActiveMenu(null)}
-                        className="text-[18px] font-medium text-[#FFF9EE]/65 transition-colors hover:text-[#F5A623]"
+                        className="text-[18px] font-medium text-white/65 transition-colors hover:text-[#F5A623]"
                       >
                         주차안내
                       </Link>
@@ -203,7 +222,7 @@ export default function Header() {
                       <Link
                         to="/guides/rules"
                         onClick={() => setActiveMenu(null)}
-                        className="text-[18px] font-medium text-[#FFF9EE]/65 transition-colors hover:text-[#F5A623]"
+                        className="text-[18px] font-medium text-white/65 transition-colors hover:text-[#F5A623]"
                       >
                         이용수칙
                       </Link>
@@ -218,7 +237,7 @@ export default function Header() {
                       <Link
                         to="/facilities"
                         onClick={() => setActiveMenu(null)}
-                        className="text-[18px] font-medium text-[#FFF9EE]/65 transition-colors hover:text-[#F5A623]"
+                        className="text-[18px] font-medium text-white/65 transition-colors hover:text-[#F5A623]"
                       >
                         놀이시설
                       </Link>
@@ -226,7 +245,7 @@ export default function Header() {
                       <Link
                         to="/facilities/rest"
                         onClick={() => setActiveMenu(null)}
-                        className="text-[18px] font-medium text-[#FFF9EE]/65 transition-colors hover:text-[#F5A623]"
+                        className="text-[18px] font-medium text-white/65 transition-colors hover:text-[#F5A623]"
                       >
                         휴게공간
                       </Link>
@@ -234,7 +253,7 @@ export default function Header() {
                       <Link
                         to="/facilities/amenities"
                         onClick={() => setActiveMenu(null)}
-                        className="text-[18px] font-medium text-[#FFF9EE]/65 transition-colors hover:text-[#F5A623]"
+                        className="text-[18px] font-medium text-white/65 transition-colors hover:text-[#F5A623]"
                       >
                         부대시설
                       </Link>
@@ -242,7 +261,7 @@ export default function Header() {
                       <Link
                         to="/facilities/custom"
                         onClick={() => setActiveMenu(null)}
-                        className="whitespace-nowrap text-[18px] font-medium text-[#FFF9EE]/65 transition-colors hover:text-[#F5A623]"
+                        className="whitespace-nowrap text-[18px] font-medium text-white/65 transition-colors hover:text-[#F5A623]"
                       >
                         아이맞춤 시설안내
                       </Link>
@@ -257,7 +276,7 @@ export default function Header() {
                       <Link
                         to="/support"
                         onClick={() => setActiveMenu(null)}
-                        className="text-[18px] font-medium text-[#FFF9EE]/65 transition-colors hover:text-[#F5A623]"
+                        className="text-[18px] font-medium text-white/65 transition-colors hover:text-[#F5A623]"
                       >
                         문의
                       </Link>
@@ -275,7 +294,7 @@ export default function Header() {
 
       {/* 모바일 메뉴 */}
       <div
-        className={`fixed left-0 top-[90px] z-[9999] w-full overflow-y-auto bg-[#292929] text-[#FFF9EE] transition-all duration-300 lg:hidden ${
+        className={`fixed left-0 top-[90px] z-[9999] w-full overflow-y-auto bg-[#292929]/95 text-white backdrop-blur-xl transition-all duration-300 lg:hidden ${
           mobileMenuOpen
             ? "visible h-[calc(100vh-90px)] opacity-100"
             : "invisible h-0 opacity-0"

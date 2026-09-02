@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#292929] px-5 py-[45px] mt-[100px] text-[#FFF9EE] sm:px-8 md:px-10 lg:px-[60px] lg:py-[55px] xl:px-[90px]">
+    <footer className="bg-[#292929] px-5 py-[45px] mt-[100px] text-[white] sm:px-8 md:px-10 lg:px-[60px] lg:py-[55px] xl:px-[150px]">
       <div className="flex flex-col gap-[35px] lg:flex-row lg:items-start lg:justify-between">
         {/* 왼쪽 */}
         <div className="max-w-[520px]">
@@ -15,11 +15,11 @@ export default function Footer() {
             상상체험 키즈월드
           </p>
 
-          <p className="mt-[18px] text-[16px] font-medium leading-[1.7] text-[#FFF9EE]/65">
+          <p className="mt-[18px] text-[16px] font-medium leading-[1.7] text-[white]/65">
             아이들의 상상이 현실이 되는 즐거운 놀이공간
           </p>
 
-          <div className="mt-[28px] space-y-[8px] text-[16px] font-medium leading-[1.7] text-[#FFF9EE]/70">
+          <div className="mt-[28px] space-y-[8px] text-[16px] font-medium leading-[1.7] text-[white]/70">
             <p>
               부산 해운대구 APEC로 30
               <br className="sm:hidden" /> 벡스코 제2전시장 3층
@@ -37,35 +37,35 @@ export default function Footer() {
         <div className="grid grid-cols-2 gap-x-[45px] gap-y-[14px] sm:grid-cols-3 lg:gap-x-[55px]">
           <Link
             to="/guides"
-            className="text-[16px] font-medium text-[#FFF9EE]/70 transition-colors duration-300 hover:text-[#F5A623]"
+            className="text-[16px] font-medium text-[white]/70 transition-colors duration-300 hover:text-[#F5A623]"
           >
             이용안내
           </Link>
 
           <Link
             to="/facilities"
-            className="text-[16px] font-medium text-[#FFF9EE]/70 transition-colors duration-300 hover:text-[#F5A623]"
+            className="text-[16px] font-medium text-[white]/70 transition-colors duration-300 hover:text-[#F5A623]"
           >
             시설안내
           </Link>
 
           <Link
             to="/directions"
-            className="text-[16px] font-medium text-[#FFF9EE]/70 transition-colors duration-300 hover:text-[#F5A623]"
+            className="text-[16px] font-medium text-[white]/70 transition-colors duration-300 hover:text-[#F5A623]"
           >
             오시는길
           </Link>
 
           <Link
             to="/faq"
-            className="text-[16px] font-medium text-[#FFF9EE]/70 transition-colors duration-300 hover:text-[#F5A623]"
+            className="text-[16px] font-medium text-[white]/70 transition-colors duration-300 hover:text-[#F5A623]"
           >
             FAQ
           </Link>
 
           <Link
             to="/guides"
-            className="text-[16px] font-medium text-[#FFF9EE]/70 transition-colors duration-300 hover:text-[#F5A623]"
+            className="text-[16px] font-medium text-[white]/70 transition-colors duration-300 hover:text-[#F5A623]"
           >
             단체문의
           </Link>
@@ -85,11 +85,11 @@ export default function Footer() {
       {/* 하단 */}
       <div className="mt-[40px] border-t border-white/10 pt-[22px]">
         <div className="flex flex-col gap-[10px] lg:flex-row lg:items-center lg:justify-between">
-          <p className="text-[16px] font-medium text-[#FFF9EE]/40">
+          <p className="text-[16px] font-medium text-[white]/40">
             © KIDS WORLD. All rights reserved.
           </p>
 
-          <p className="max-w-[650px] text-[16px] font-medium leading-[1.7] text-[#FFF9EE]/40 lg:text-right">
+          <p className="max-w-[650px] text-[16px] font-medium leading-[1.7] text-[white]/40 lg:text-right">
             본 사이트는 포트폴리오 목적으로 제작된 리뉴얼 사이트이며, 실제 운영
             정보와 차이가 있을 수 있습니다.
           </p>

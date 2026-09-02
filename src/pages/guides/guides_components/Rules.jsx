@@ -1,28 +1,22 @@
-import socks from "../../../img/socks.png"
-import mat from "../../../img/mat.png"
-import water from "../../../img/water.png"
-import clothes from "../../../img/clothes.png"
+import socks from "../../../img/socks.png";
+import mat from "../../../img/mat.png";
+import water from "../../../img/water.png";
+import clothes from "../../../img/clothes.png";
 
 export default function Rules() {
   return (
-    <section className="bg-[#FFF9EE] px-5 py-[50px] sm:px-8 md:px-10 lg:px-[80px] lg:py-[70px] xl:px-[150px]">
-      
-      {/* 상단 안내 */}
+    <section className="bg-[white] px-5 py-[50px] sm:px-8 md:px-10 lg:px-[80px] lg:py-[70px] xl:px-[150px]">
       <div className="border-l-[4px] border-[#5E9F45] pl-[18px]">
-        <p className="text-[15px] font-bold text-[#5E9F45]">
-          방문 전 꼭 확인해주세요
+        <p className="mt-[5px] text-[20px] font-bold leading-[1.6] text-[#292929] sm:text-[28px]">
+          이용수칙
         </p>
-
-        <p className="mt-[5px] text-[20px] font-bold leading-[1.6] text-[#292929] sm:text-[22px]">
-          모두가 안전하고 즐거운 이용을 위해
-          <br className="sm:hidden" /> 이용수칙을 지켜주세요.
+        <p className="text-[18px] font-bold text-[#5E9F45]">
+          모두가 안전하고 즐거운 이용을 위해 이용수칙을 지켜주세요.
         </p>
       </div>
 
-
       {/* 이용수칙 */}
       <div className="mt-[38px] grid grid-cols-1 gap-x-[70px] lg:grid-cols-2">
-
         {/* 수칙 1 */}
         <div className="flex gap-[14px] border-b border-[#292929]/10 py-[27px]">
           <span className="mt-[9px] h-[7px] w-[7px] shrink-0 rounded-full bg-[#5E9F45]" />
@@ -41,7 +35,6 @@ export default function Rules() {
           </div>
         </div>
 
-
         {/* 수칙 2 */}
         <div className="flex gap-[14px] border-b border-[#292929]/10 py-[27px]">
           <span className="mt-[9px] h-[7px] w-[7px] shrink-0 rounded-full bg-[#E53935]" />
@@ -58,7 +51,6 @@ export default function Rules() {
             </p>
           </div>
         </div>
-
 
         {/* 수칙 3 */}
         <div className="flex gap-[14px] border-b border-[#292929]/10 py-[27px]">
@@ -77,7 +69,6 @@ export default function Rules() {
           </div>
         </div>
 
-
         {/* 수칙 4 */}
         <div className="flex gap-[14px] border-b border-[#292929]/10 py-[27px]">
           <span className="mt-[9px] h-[7px] w-[7px] shrink-0 rounded-full bg-[#5E9F45]" />
@@ -88,14 +79,13 @@ export default function Rules() {
             </h3>
 
             <p className="mt-[8px] text-[16px] font-medium leading-[1.8] text-[#292929]/60 lg:text-[17px]">
-              어린이가 안전하게 시설을 이용할 수 있도록 보호자의 주의와
-              관찰이 필요합니다.
+              어린이가 안전하게 시설을 이용할 수 있도록 보호자의 주의와 관찰이
+              필요합니다.
               <br className="hidden xl:block" />
               이용 중 아이가 혼자 이동하지 않도록 확인해주세요.
             </p>
           </div>
         </div>
-
 
         {/* 수칙 5 */}
         <div className="flex gap-[14px] border-b border-[#292929]/10 py-[27px]">
@@ -114,7 +104,6 @@ export default function Rules() {
           </div>
         </div>
 
-
         {/* 수칙 6 */}
         <div className="flex gap-[14px] border-b border-[#292929]/10 py-[27px]">
           <span className="mt-[9px] h-[7px] w-[7px] shrink-0 rounded-full bg-[#F5A623]" />
@@ -125,8 +114,7 @@ export default function Rules() {
             </h3>
 
             <p className="mt-[8px] text-[16px] font-medium leading-[1.8] text-[#292929]/60 lg:text-[17px]">
-              안전하고 즐거운 이용을 위해 각 시설의 안전요원 안내를
-              따라주세요.
+              안전하고 즐거운 이용을 위해 각 시설의 안전요원 안내를 따라주세요.
               <br className="hidden xl:block" />
               안전수칙을 지키지 않을 경우 시설 이용이 제한될 수 있습니다.
             </p>
@@ -134,10 +122,8 @@ export default function Rules() {
         </div>
       </div>
 
-
       {/* 준비물 */}
       <div className="mt-[80px]">
-
         {/* 준비물 타이틀 */}
         <div>
           <div className="flex items-center gap-[12px]">
@@ -151,10 +137,8 @@ export default function Rules() {
           </div>
         </div>
 
-
         {/* 준비물 목록 */}
         <div className="mt-[30px] grid grid-cols-1 gap-[20px] sm:grid-cols-2 lg:grid-cols-4">
-
           {/* 양말 */}
           <div className="overflow-hidden rounded-[16px] bg-white shadow-[0_8px_25px_rgba(41,41,41,0.05)]">
             <div className="flex h-[240px] items-center justify-center bg-[#D9D9D9] sm:h-[250px] lg:h-[260px]">
@@ -162,12 +146,9 @@ export default function Rules() {
             </div>
 
             <div className="px-[18px] py-[18px] text-center">
-              <p className="text-[18px] font-bold text-[#292929]">
-                양말
-              </p>
+              <p className="text-[18px] font-bold text-[#292929]">양말</p>
             </div>
           </div>
-
 
           {/* 돗자리 */}
           <div className="overflow-hidden rounded-[16px] bg-white shadow-[0_8px_25px_rgba(41,41,41,0.05)]">
@@ -176,12 +157,9 @@ export default function Rules() {
             </div>
 
             <div className="px-[18px] py-[18px] text-center">
-              <p className="text-[18px] font-bold text-[#292929]">
-                돗자리
-              </p>
+              <p className="text-[18px] font-bold text-[#292929]">돗자리</p>
             </div>
           </div>
-
 
           {/* 물 */}
           <div className="overflow-hidden rounded-[16px] bg-white shadow-[0_8px_25px_rgba(41,41,41,0.05)]">
@@ -190,12 +168,9 @@ export default function Rules() {
             </div>
 
             <div className="px-[18px] py-[18px] text-center">
-              <p className="text-[18px] font-bold text-[#292929]">
-                물
-              </p>
+              <p className="text-[18px] font-bold text-[#292929]">물</p>
             </div>
           </div>
-
 
           {/* 기타 준비물 */}
           <div className="overflow-hidden rounded-[16px] bg-white shadow-[0_8px_25px_rgba(41,41,41,0.05)]">
@@ -204,12 +179,9 @@ export default function Rules() {
             </div>
 
             <div className="px-[18px] py-[18px] text-center">
-              <p className="text-[18px] font-bold text-[#292929]">
-                편한 복장
-              </p>
+              <p className="text-[18px] font-bold text-[#292929]">편한 복장</p>
             </div>
           </div>
-
         </div>
       </div>
     </section>

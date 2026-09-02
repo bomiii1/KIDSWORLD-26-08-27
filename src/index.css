@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 body {
-  background-color: #fff9ee;
+  background-color: white;
 }
 
 @keyframes heroZoom {

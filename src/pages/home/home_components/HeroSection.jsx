@@ -13,7 +13,6 @@ export default function HeroSection() {
 
       <div className="relative min-h-screen w-full bg-black/78 pt-[90px] backdrop-blur-[3px]">
         <div className="mx-auto flex min-h-[calc(100vh-90px)] w-full max-w-[1600px] flex-col items-center justify-center gap-[40px] px-5 py-[50px] sm:px-10 md:px-12 lg:flex-row lg:gap-[60px] lg:px-[80px] lg:py-0 xl:px-[150px]">
-          
           {/* 포스터 */}
           <div className="flex w-full justify-center lg:w-[40%]">
             <img
@@ -24,7 +23,7 @@ export default function HeroSection() {
           </div>
 
           {/* 텍스트 영역 */}
-          <div className="w-full text-center text-[#FFF9EE] lg:w-[60%] lg:text-left">
+          <div className="w-full text-center text-[white] lg:w-[60%] lg:text-left">
             <p className="mb-[18px] text-[16px] font-bold text-[#E53935] sm:text-[18px] md:text-[20px] lg:mb-[30px] lg:text-[22px]">
               아이들을 위한 대규모 실내 놀이공간
             </p>
@@ -41,7 +40,7 @@ export default function HeroSection() {
               2025.12.06 - 2026.10.18
             </p>
 
-            <p className="mt-[25px] text-[15px] leading-[1.8] text-[#FFF9EE]/80 sm:text-[16px] md:text-[17px] lg:mt-[40px] lg:text-[18px]">
+            <p className="mt-[25px] text-[15px] leading-[1.8] text-[white]/80 sm:text-[16px] md:text-[17px] lg:mt-[40px] lg:text-[18px]">
               다양한 놀이시설과 즐거운 체험이 가득!
               <br />
               온가족이 함께 즐기는 실내 놀이터!

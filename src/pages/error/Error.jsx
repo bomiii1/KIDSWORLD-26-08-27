@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Error() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-[#FFF9EE] px-[20px]">
+    <main className="flex min-h-screen items-center justify-center bg-[white] px-[20px]">
       <div className="text-center">
         <p className="mb-[10px] text-[16px] font-bold tracking-[2px] text-[#F5A623]">
           KIDS WORLD

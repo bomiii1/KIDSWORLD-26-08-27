@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Section4() {
   return (
-    <section className="mt-[70px] bg-[#FFF9EE] px-5 py-[45px] sm:px-8 md:px-10 lg:px-[60px] xl:px-[90px]">
+    <section className="mt-[70px] bg-[white] px-5 py-[45px] sm:px-8 md:px-10 lg:px-[60px] xl:px-[150px]">
       {/* 타이틀 */}
       <div className="flex flex-col gap-[16px] sm:flex-row sm:items-end sm:justify-between">
         <div>
@@ -21,7 +21,6 @@ export default function Section4() {
           className="group flex w-fit items-center gap-[8px] text-[16px] font-medium text-[#292929] transition-colors duration-300 hover:text-[#E53935]"
         >
           안내사항 전체보기
-
           <ArrowUpRight className="h-[18px] w-[18px] transition-transform duration-300 group-hover:translate-x-[3px] group-hover:-translate-y-[3px]" />
         </Link>
       </div>
@@ -30,9 +29,7 @@ export default function Section4() {
       <div className="mt-[30px] grid grid-cols-1 items-stretch gap-[28px] lg:grid-cols-[0.8fr_1.2fr] lg:gap-[40px]">
         {/* 운영시간 */}
         <div className="flex flex-col">
-          <h3 className="text-[24px] font-bold text-[#292929]">
-            운영시간
-          </h3>
+          <h3 className="text-[24px] font-bold text-[#292929]">운영시간</h3>
 
           {/* 운영시간 유리 카드 */}
           <div
@@ -56,9 +53,7 @@ export default function Section4() {
             {/* 오픈 / 마감 */}
             <div className="relative z-10 grid grid-cols-2 gap-[20px]">
               <div className="px-[6px] py-[6px]">
-                <p className="text-[16px] font-bold text-[#292929]/55">
-                  오픈
-                </p>
+                <p className="text-[16px] font-bold text-[#292929]/55">오픈</p>
 
                 <p className="mt-[6px] text-[34px] font-bold tracking-[-1px] text-[#292929] sm:text-[38px] lg:text-[40px]">
                   10:30
@@ -66,9 +61,7 @@ export default function Section4() {
               </div>
 
               <div className="border-l border-[#292929]/10 px-[20px] py-[6px]">
-                <p className="text-[16px] font-bold text-[#292929]/55">
-                  마감
-                </p>
+                <p className="text-[16px] font-bold text-[#292929]/55">마감</p>
 
                 <p className="mt-[6px] text-[34px] font-bold tracking-[-1px] text-[#292929] sm:text-[38px] lg:text-[40px]">
                   18:00
@@ -92,16 +85,13 @@ export default function Section4() {
         {/* 입장료 */}
         <div className="flex flex-col">
           <div className="flex flex-col gap-[12px] sm:flex-row sm:items-end sm:justify-between">
-            <h3 className="text-[24px] font-bold text-[#292929]">
-              입장료
-            </h3>
+            <h3 className="text-[24px] font-bold text-[#292929]">입장료</h3>
 
             <Link
               to="/guides"
               className="group flex w-fit items-center gap-[6px] rounded-[8px] border border-[#292929]/15 bg-white/20 px-[12px] py-[8px] text-[16px] font-medium text-[#292929] transition-all duration-300 hover:border-[#E53935] hover:text-[#E53935]"
             >
               무료/할인 대상 자세히보기
-
               <ArrowUpRight className="h-[16px] w-[16px] transition-transform duration-300 group-hover:translate-x-[2px] group-hover:-translate-y-[2px]" />
             </Link>
           </div>
@@ -128,9 +118,7 @@ export default function Section4() {
             {/* 종일권 */}
             <div className="relative z-10 grid grid-cols-1 gap-[20px] md:grid-cols-[110px_1fr] md:items-center">
               <div>
-                <p className="text-[18px] font-bold text-[#E59A16]">
-                  종일권
-                </p>
+                <p className="text-[18px] font-bold text-[#E59A16]">종일권</p>
               </div>
 
               <div className="grid grid-cols-1 gap-[20px] sm:grid-cols-2">
@@ -174,9 +162,7 @@ export default function Section4() {
             {/* 오후권 */}
             <div className="relative z-10 grid grid-cols-1 gap-[20px] md:grid-cols-[110px_1fr] md:items-center">
               <div>
-                <p className="text-[18px] font-bold text-[#E59A16]">
-                  오후권
-                </p>
+                <p className="text-[18px] font-bold text-[#E59A16]">오후권</p>
               </div>
 
               <div>
@@ -208,9 +194,7 @@ export default function Section4() {
             시간제한 없이 이용 가능
           </span>
           하며, 퇴장 시{" "}
-          <span className="font-bold text-[#E53935]">
-            재입장은 불가
-          </span>
+          <span className="font-bold text-[#E53935]">재입장은 불가</span>
           합니다.
         </p>
       </div>

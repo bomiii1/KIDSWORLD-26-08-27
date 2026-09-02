@@ -1,6 +1,6 @@
 export default function Admission() {
   return (
-    <section className="bg-[#FFF9EE] px-5 py-[60px] sm:px-8 md:px-10 lg:py-[80px]">
+    <section className="bg-[white] px-5 py-[60px] sm:px-8 md:px-10 lg:py-[80px]">
       <div className="mx-auto max-w-[1250px]">
         {/* 타이틀 */}
         <div className="text-center">
