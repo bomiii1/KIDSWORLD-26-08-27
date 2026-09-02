@@ -1,10 +1,37 @@
 import att7 from "../img/att_7.png";
+import bumpercar from "../img/bumpercar.jpeg"
+import waterball from "../img/waterball.jpeg"
+import boat from "../img/boat.jpeg"
+import ufo from "../img/ufo.jpeg"
+import bounce_l from "../img/bounce_l.jpeg"
+import toddler from "../img/toddler.jpeg"
+import ghost from "../img/ghost.jpeg"
+import swing from "../img/swing.jpeg"
+import tube from "../img/tube.jpeg"
+import daramg from "../img/daramg.jpeg"
+import rc_car from "../img/rc_car.jpeg"
+import rotate from "../img/rotate.jpeg"
+import battle from "../img/battle.jpeg"
+import racing from "../img/racing.jpeg"
+import picky from "../img/picky.jpeg"
+import fishing from "../img/fishing.jpeg"
+import lego from "../img/lego.jpeg"
+import ddr from "../img/ddr.jpeg"
+import dino from "../img/dino.jpeg"
+import rc_boat from "../img/rc_boat.jpeg"
+import castle from "../img/castle.jpeg"
+import zip from "../img/zip.jpeg"
+import climbing from "../img/climbing.png"
+import interstella from "../img/interstella.jpeg"
+import racing_bounce from "../img/racing_bounce.jpeg"
+import train from "../img/train.jpeg"
+import car_biking from "../img/car_biking.jpeg"
 
 export const AttractionsData = [
   {
     id: 1,
     AttractionName: "일반 에어바운스",
-    AttractionImg: null,
+    AttractionImg: bounce_l,
 
     category: "에어바운스",
     target: "general",
@@ -38,7 +65,7 @@ export const AttractionsData = [
   {
     id: 2,
     AttractionName: "유아전용 에어바운스",
-    AttractionImg: null,
+    AttractionImg: toddler,
 
     category: "에어바운스",
     target: "toddler",
@@ -72,7 +99,7 @@ export const AttractionsData = [
   {
     id: 3,
     AttractionName: "궁전시티슬라이드",
-    AttractionImg: null,
+    AttractionImg: castle,
 
     category: "에어바운스",
     target: "general",
@@ -108,7 +135,7 @@ export const AttractionsData = [
   {
     id: 4,
     AttractionName: "RC존",
-    AttractionImg: null,
+    AttractionImg: rc_car,
 
     category: "RC",
     target: "general",
@@ -142,7 +169,7 @@ export const AttractionsData = [
   {
     id: 5,
     AttractionName: "RC보트",
-    AttractionImg: null,
+    AttractionImg: rc_boat,
 
     category: "RC",
     target: "general",
@@ -176,7 +203,7 @@ export const AttractionsData = [
   {
     id: 6,
     AttractionName: "회전그네",
-    AttractionImg: null,
+    AttractionImg: swing,
 
     category: "놀이기구",
     target: "general",
@@ -247,13 +274,14 @@ export const AttractionsData = [
     precautions: [
       "운행 중 자리에서 일어나지 말아주세요.",
       "안전벨트와 안전장치를 반드시 착용해주세요.",
+      "떨어질수 있는 소지품은 보관함에 보관 후 탑승해주세요"
     ],
   },
 
   {
     id: 8,
     AttractionName: "워터볼",
-    AttractionImg: null,
+    AttractionImg: waterball,
 
     category: "놀이시설",
     target: "general",
@@ -287,7 +315,7 @@ export const AttractionsData = [
   {
     id: 9,
     AttractionName: "회전관람차",
-    AttractionImg: null,
+    AttractionImg: rotate,
 
     category: "놀이기구",
     target: "general",
@@ -321,7 +349,7 @@ export const AttractionsData = [
   {
     id: 10,
     AttractionName: "베틀킹",
-    AttractionImg: null,
+    AttractionImg: battle,
 
     category: "놀이기구",
     target: "general",
@@ -355,7 +383,7 @@ export const AttractionsData = [
   {
     id: 11,
     AttractionName: "레이싱 장애물바운스",
-    AttractionImg: null,
+    AttractionImg: racing_bounce,
 
     category: "에어바운스",
     target: "general",
@@ -389,7 +417,7 @@ export const AttractionsData = [
   {
     id: 12,
     AttractionName: "부스터트럭 장애물바운스",
-    AttractionImg: null,
+    AttractionImg: train,
 
     category: "에어바운스",
     target: "general",
@@ -423,7 +451,7 @@ export const AttractionsData = [
   {
     id: 13,
     AttractionName: "귀신장애물바운스",
-    AttractionImg: null,
+    AttractionImg: ghost,
 
     category: "에어바운스",
     target: "general",
@@ -457,7 +485,7 @@ export const AttractionsData = [
   {
     id: 14,
     AttractionName: "회전짚라인",
-    AttractionImg: null,
+    AttractionImg: zip,
 
     category: "놀이기구",
     target: "general",
@@ -491,7 +519,7 @@ export const AttractionsData = [
   {
     id: 15,
     AttractionName: "레이싱존",
-    AttractionImg: null,
+    AttractionImg: racing,
 
     category: "놀이시설",
     target: "general",
@@ -527,7 +555,7 @@ export const AttractionsData = [
   {
     id: 16,
     AttractionName: "피키포키",
-    AttractionImg: null,
+    AttractionImg: picky,
 
     category: "놀이시설",
     target: "general",
@@ -564,7 +592,7 @@ export const AttractionsData = [
   {
     id: 17,
     AttractionName: "암벽",
-    AttractionImg: null,
+    AttractionImg: climbing,
 
     category: "체험",
     target: "general",
@@ -598,7 +626,7 @@ export const AttractionsData = [
   {
     id: 18,
     AttractionName: "자동차바이킹",
-    AttractionImg: null,
+    AttractionImg: car_biking,
 
     category: "놀이기구",
     target: "general",
@@ -633,7 +661,7 @@ export const AttractionsData = [
   {
     id: 19,
     AttractionName: "UFO 바이킹",
-    AttractionImg: null,
+    AttractionImg: ufo,
 
     category: "놀이기구",
     target: "general",
@@ -668,7 +696,7 @@ export const AttractionsData = [
   {
     id: 20,
     AttractionName: "페달보트",
-    AttractionImg: null,
+    AttractionImg: boat,
 
     category: "놀이시설",
     target: "general",
@@ -704,7 +732,7 @@ export const AttractionsData = [
   {
     id: 21,
     AttractionName: "범버카존",
-    AttractionImg: null,
+    AttractionImg: bumpercar,
 
     category: "놀이기구",
     target: "general",
@@ -738,7 +766,7 @@ export const AttractionsData = [
   {
     id: 22,
     AttractionName: "인터스텔라",
-    AttractionImg: null,
+    AttractionImg: interstella,
 
     category: "놀이기구",
     target: "general",
@@ -772,7 +800,7 @@ export const AttractionsData = [
   {
     id: 23,
     AttractionName: "DDR",
-    AttractionImg: null,
+    AttractionImg: ddr,
 
     category: "게임",
     target: "general",
@@ -806,7 +834,7 @@ export const AttractionsData = [
   {
     id: 24,
     AttractionName: "회전공룡",
-    AttractionImg: null,
+    AttractionImg: dino,
 
     category: "놀이기구",
     target: "general",
@@ -841,25 +869,25 @@ export const AttractionsData = [
   {
     id: 25,
     AttractionName: "회전다람쥐통",
-    AttractionImg: null,
+    AttractionImg: daramg,
 
     category: "놀이기구",
     target: "general",
     location: "",
 
-    popular: false,
+    popular: true,
 
     description:
       "다람쥐통 모양의 기구를 타고 빙글빙글 회전하는 재미를 즐길 수 있는 놀이기구입니다.",
 
-    adult: null,
+    adult: true,
     guardianAllowed: false,
     guardianRequiredUnderMonths: null,
     guardianCondition: "",
 
-    minHeight: null,
+    minHeight: 120,
     maxHeight: null,
-    heightText: "현장 안내 기준",
+    heightText: "120cm 이상 탑승가능",
 
     duration: "약 2~3분",
     capacity: "현장 운영 기준",
@@ -869,13 +897,14 @@ export const AttractionsData = [
     precautions: [
       "회전 중에는 안전손잡이를 잡고 이용해주세요.",
       "기구가 완전히 정지하기 전에는 일어나지 말아주세요.",
+      "떨어질수 있는 소지품은 보관함에 보관 후 탑승해주세요"
     ],
   },
 
   {
     id: 26,
     AttractionName: "튜브썰매",
-    AttractionImg: null,
+    AttractionImg: tube,
 
     category: "놀이시설",
     target: "general",
@@ -909,7 +938,7 @@ export const AttractionsData = [
   {
     id: 27,
     AttractionName: "레고존",
-    AttractionImg: null,
+    AttractionImg: lego,
 
     category: "체험",
     target: "general",
@@ -943,7 +972,7 @@ export const AttractionsData = [
   {
     id: 28,
     AttractionName: "낚시터",
-    AttractionImg: null,
+    AttractionImg: fishing,
 
     category: "체험",
     target: "general",

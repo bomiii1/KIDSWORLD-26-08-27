@@ -1,20 +1,20 @@
 export default function Admission() {
   return (
-    <section className="bg-[white] px-5 py-[60px] sm:px-8 md:px-10 lg:py-[80px]">
+    <section className="bg-white px-5 py-[60px] sm:px-8 md:px-10 lg:py-[80px]">
       <div className="mx-auto max-w-[1250px]">
         {/* 타이틀 */}
-        <div className="text-center">
-          <h2 className="text-[30px] font-bold text-[#292929] sm:text-[34px] lg:text-[40px]">
+        <div className="border-l-[4px] border-[#5E9F45] pl-[18px]">
+          <p className="mt-[5px] text-[20px] font-bold leading-[1.6] text-[#292929] sm:text-[28px]">
             이용요금
-          </h2>
+          </p>
 
-          <p className="mt-[12px] text-[15px] font-medium leading-[1.7] text-[#292929]/60 sm:text-[16px] lg:text-[18px]">
+          <p className="text-[18px] font-bold text-[#5E9F45]">
             상상체험 키즈월드 이용요금을 확인해주세요.
           </p>
         </div>
 
         {/* 이용요금 */}
-        <div className="mt-[55px] grid grid-cols-1 gap-[40px] lg:grid-cols-2 lg:gap-[20px]">
+        <div className="mt-[45px] grid grid-cols-1 gap-[40px] lg:grid-cols-2 lg:gap-[20px]">
           {/* 종일권 */}
           <div>
             <h3 className="mb-[20px] text-center text-[24px] font-bold text-[#292929] lg:text-[28px]">

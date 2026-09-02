@@ -138,51 +138,67 @@ export default function Rules() {
         </div>
 
         {/* 준비물 목록 */}
-        <div className="mt-[30px] grid grid-cols-1 gap-[20px] sm:grid-cols-2 lg:grid-cols-4">
-          {/* 양말 */}
-          <div className="overflow-hidden rounded-[16px] bg-white shadow-[0_8px_25px_rgba(41,41,41,0.05)]">
-            <div className="flex h-[240px] items-center justify-center bg-[#D9D9D9] sm:h-[250px] lg:h-[260px]">
-              <img src={socks} alt="" />
-            </div>
+       <div className="mt-[30px] grid grid-cols-1 gap-[20px] sm:grid-cols-2 lg:grid-cols-4">
+  {/* 양말 */}
+  <div className="overflow-hidden rounded-[16px] bg-white shadow-[0_8px_25px_rgba(41,41,41,0.05)]">
+    <div className="h-[240px] overflow-hidden sm:h-[250px] lg:h-[260px]">
+      <img
+        src={socks}
+        alt="양말"
+        className="h-full w-full object-cover"
+      />
+    </div>
 
-            <div className="px-[18px] py-[18px] text-center">
-              <p className="text-[18px] font-bold text-[#292929]">양말</p>
-            </div>
-          </div>
+    <div className="px-[18px] py-[18px] text-center">
+      <p className="text-[18px] font-bold text-[#292929]">양말</p>
+    </div>
+  </div>
 
-          {/* 돗자리 */}
-          <div className="overflow-hidden rounded-[16px] bg-white shadow-[0_8px_25px_rgba(41,41,41,0.05)]">
-            <div className="flex h-[240px] items-center justify-center bg-[#D9D9D9] sm:h-[250px] lg:h-[260px]">
-              <img src={mat} alt="" />
-            </div>
+  {/* 돗자리 */}
+  <div className="overflow-hidden rounded-[16px] bg-white shadow-[0_8px_25px_rgba(41,41,41,0.05)]">
+    <div className="h-[240px] overflow-hidden sm:h-[250px] lg:h-[260px]">
+      <img
+        src={mat}
+        alt="돗자리"
+        className="h-full w-full object-cover"
+      />
+    </div>
 
-            <div className="px-[18px] py-[18px] text-center">
-              <p className="text-[18px] font-bold text-[#292929]">돗자리</p>
-            </div>
-          </div>
+    <div className="px-[18px] py-[18px] text-center">
+      <p className="text-[18px] font-bold text-[#292929]">돗자리</p>
+    </div>
+  </div>
 
-          {/* 물 */}
-          <div className="overflow-hidden rounded-[16px] bg-white shadow-[0_8px_25px_rgba(41,41,41,0.05)]">
-            <div className="flex h-[240px] items-center justify-center bg-[#D9D9D9] sm:h-[250px] lg:h-[260px]">
-              <img src={water} alt="" />
-            </div>
+  {/* 물 */}
+  <div className="overflow-hidden rounded-[16px] bg-white shadow-[0_8px_25px_rgba(41,41,41,0.05)]">
+    <div className="h-[240px] overflow-hidden sm:h-[250px] lg:h-[260px]">
+      <img
+        src={water}
+        alt="물"
+        className="h-full w-full object-cover"
+      />
+    </div>
 
-            <div className="px-[18px] py-[18px] text-center">
-              <p className="text-[18px] font-bold text-[#292929]">물</p>
-            </div>
-          </div>
+    <div className="px-[18px] py-[18px] text-center">
+      <p className="text-[18px] font-bold text-[#292929]">물</p>
+    </div>
+  </div>
 
-          {/* 기타 준비물 */}
-          <div className="overflow-hidden rounded-[16px] bg-white shadow-[0_8px_25px_rgba(41,41,41,0.05)]">
-            <div className="flex h-[240px] items-center justify-center bg-[#D9D9D9] sm:h-[250px] lg:h-[260px]">
-              <img src={clothes} alt="" />
-            </div>
+  {/* 편한 복장 */}
+  <div className="overflow-hidden rounded-[16px] bg-white shadow-[0_8px_25px_rgba(41,41,41,0.05)]">
+    <div className="h-[240px] overflow-hidden sm:h-[250px] lg:h-[260px]">
+      <img
+        src={clothes}
+        alt="편한 복장"
+        className="h-full w-full object-cover"
+      />
+    </div>
 
-            <div className="px-[18px] py-[18px] text-center">
-              <p className="text-[18px] font-bold text-[#292929]">편한 복장</p>
-            </div>
-          </div>
-        </div>
+    <div className="px-[18px] py-[18px] text-center">
+      <p className="text-[18px] font-bold text-[#292929]">편한 복장</p>
+    </div>
+  </div>
+</div>
       </div>
     </section>
   );

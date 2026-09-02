@@ -1,5 +1,5 @@
 import Review from "./about_components/Review";
-import aboutImg from "../../img/about.jpg";
+import aboutImg from "../../img/about.png";
 
 import { useState } from "react";
 
@@ -99,7 +99,8 @@ export default function About() {
 
           {/* 카드 2 */}
           <div>
-            <div className="relative min-h-[190px] overflow-hidden rounded-[14px] bg-[#D9D9D9] bg-cover bg-center bg-no-repeat sm:min-h-[220px] sm:rounded-[18px] lg:min-h-[250px]">
+            <div className="relative min-h-[190px] overflow-hidden rounded-[14px] bg-[#D9D9D9] bg-cover bg-center bg-no-repeat sm:min-h-[220px] sm:rounded-[18px] lg:min-h-[250px]"
+            style={{backgroundImage:"url(https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA4MTlfODkg%2FMDAxNzg3MTA2OTIwMjMw.4nJnBfTDA5oaBycI9LWzs6KwcU6V-WAU2Bo24ze467sg.Omt_LTQuJge0yKJTH7w8yVK7N46dyQoio1o4woKNeJIg.JPEG%2FIMG%25A3%25DF4593.jpg&type=a340)"}}>
               <div className="absolute inset-0 bg-black/30 backdrop-blur-[1px]" />
 
               <div className="absolute inset-x-0 bottom-0 z-10 p-[14px] sm:p-[18px] lg:p-[24px]">
@@ -118,7 +119,8 @@ export default function About() {
 
           {/* 카드 3 */}
           <div>
-            <div className="relative min-h-[190px] overflow-hidden rounded-[14px] bg-[#D9D9D9] bg-cover bg-center bg-no-repeat sm:min-h-[220px] sm:rounded-[18px] lg:min-h-[250px]">
+            <div className="relative min-h-[190px] overflow-hidden rounded-[14px] bg-[#D9D9D9] bg-cover bg-center bg-no-repeat sm:min-h-[220px] sm:rounded-[18px] lg:min-h-[250px]"
+            style={{backgroundImage:"url(https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA3MjVfMzQg%2FMDAxNzg0OTM4OTg0MTM0.g25_hsDEfvmAFJJxGVL9qXZI4WOuLM5IhqkMquB3d7Mg.ZZmcXTiGtvoKhEFfIRy5SC-jS9Ql4Lo2445p-14YVI4g.JPEG%2FIMG%25A3%25DF1246.JPG&type=a340)"}}>
               <div className="absolute inset-0 bg-black/30 backdrop-blur-[1px]" />
 
               <div className="absolute inset-x-0 bottom-0 z-10 p-[14px] sm:p-[18px] lg:p-[24px]">
@@ -137,7 +139,8 @@ export default function About() {
 
           {/* 카드 4 */}
           <div>
-            <div className="relative min-h-[190px] overflow-hidden rounded-[14px] bg-[#D9D9D9] bg-cover bg-center bg-no-repeat sm:min-h-[220px] sm:rounded-[18px] lg:min-h-[250px]">
+            <div className="relative min-h-[190px] overflow-hidden rounded-[14px] bg-[#D9D9D9] bg-cover bg-center bg-no-repeat sm:min-h-[220px] sm:rounded-[18px] lg:min-h-[250px]"
+            style={{backgroundImage:"url(https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA0MjlfOTgg%2FMDAxNzc3NDIxNDA0MzQ1.-F9dfUDaNlfheh4s3n1iOE6IlvKt9Nyj59KidXisNRYg.rOpfLAky3PlJYJcorMBK-vLswa3I7F1G2kKbja2jRpMg.JPEG%2F900_1777339397430.jpg&type=a340)"}}>
               <div className="absolute inset-0 bg-black/30 backdrop-blur-[1px]" />
 
               <div className="absolute inset-x-0 bottom-0 z-10 p-[14px] sm:p-[18px] lg:p-[24px]">

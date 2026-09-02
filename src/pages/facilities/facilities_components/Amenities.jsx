@@ -1,16 +1,22 @@
+import toyshop from "../../../img/toyshop.jpeg"
+
 export default function Amenities() {
   return (
-    <section className="bg-[white] px-5 py-[70px] sm:px-8 md:px-10 lg:px-[80px] lg:py-[90px] xl:px-[150px]">
-      {/* 타이틀 */}
+    <section className="bg-white px-5 py-[70px] sm:px-8 md:px-10 lg:px-[80px] lg:py-[90px] xl:px-[150px]">
       <div className="mx-auto max-w-[1250px]">
-        <div>
-          <h2 className="mt-[8px] text-[30px] font-bold text-[#292929] sm:text-[34px] lg:text-[40px]">
+        {/* 타이틀 */}
+        <div className="border-l-[4px] border-[#5E9F45] pl-[18px]">
+          <p className="mt-[5px] text-[20px] font-bold leading-[1.6] text-[#292929] sm:text-[28px]">
             부대시설
-          </h2>
+          </p>
+
+          <p className="text-[16px] font-bold leading-[1.6] text-[#5E9F45] sm:text-[18px]">
+            키즈월드에서 함께 이용할 수 있는 다양한 편의·체험시설을 안내합니다.
+          </p>
         </div>
 
         {/* 카드 */}
-        <div className="mt-[45px] grid grid-cols-1 gap-[22px] md:grid-cols-2">
+        <div className="mt-[45px] grid grid-cols-2 gap-[22px] md:grid-cols-2">
           {/* 매점 */}
           <div className="group overflow-hidden rounded-[22px] border border-[#292929]/10 bg-white shadow-[0_8px_30px_rgba(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-[5px] hover:shadow-[0_15px_40px_rgba(0,0,0,0.08)]">
             <div className="h-[230px] overflow-hidden bg-[#D9D9D9] sm:h-[270px]">
@@ -24,20 +30,23 @@ export default function Amenities() {
             <div className="p-[24px] sm:p-[28px]">
               <div className="flex items-start justify-between gap-[20px]">
                 <div>
-                  <p className="text-[13px] font-bold text-[#F5A623]">FOOD</p>
+                  <p className="text-[14px] font-bold text-[#F5A623]">
+                    FOOD
+                  </p>
 
                   <h3 className="mt-[4px] text-[24px] font-bold text-[#292929] lg:text-[27px]">
                     매점
                   </h3>
                 </div>
 
-                <span className="rounded-full bg-[#F5A623]/10 px-[12px] py-[6px] text-[12px] font-bold text-[#E59A16]">
+                <span className="rounded-full bg-[#F5A623]/10 px-[12px] py-[6px] text-[14px] font-bold text-[#E59A16]">
                   먹거리
                 </span>
               </div>
 
-              <div className="mt-[20px] flex gap-[10px]">
+              <div className="mt-[20px] flex gap-[10px] text-[16px]">
                 <span className="font-bold text-[#292929]/40">위치</span>
+
                 <span className="font-medium text-[#292929]/70">
                   5E 표시 바로 아래
                 </span>
@@ -48,13 +57,15 @@ export default function Amenities() {
               </p>
 
               <div className="mt-[22px] flex flex-wrap gap-[8px]">
-                <span className="rounded-full bg-[#292929]/5 px-[11px] py-[6px] text-[12px] font-bold text-[#292929]/55">
+                <span className="rounded-full bg-[#292929]/5 px-[12px] py-[7px] text-[14px] font-bold text-[#292929]/55">
                   떡볶이
                 </span>
-                <span className="rounded-full bg-[#292929]/5 px-[11px] py-[6px] text-[12px] font-bold text-[#292929]/55">
+
+                <span className="rounded-full bg-[#292929]/5 px-[12px] py-[7px] text-[14px] font-bold text-[#292929]/55">
                   핫바
                 </span>
-                <span className="rounded-full bg-[#292929]/5 px-[11px] py-[6px] text-[12px] font-bold text-[#292929]/55">
+
+                <span className="rounded-full bg-[#292929]/5 px-[12px] py-[7px] text-[14px] font-bold text-[#292929]/55">
                   볶음밥
                 </span>
               </div>
@@ -63,31 +74,30 @@ export default function Amenities() {
 
           {/* 카페 */}
           <div className="group overflow-hidden rounded-[22px] border border-[#292929]/10 bg-white shadow-[0_8px_30px_rgba(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-[5px] hover:shadow-[0_15px_40px_rgba(0,0,0,0.08)]">
-            <div className="h-[230px] overflow-hidden bg-[#D9D9D9] sm:h-[270px]">
-              <img
-                src={null}
-                alt="카페"
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
-              />
+            <div className="flex h-[230px] items-center justify-center overflow-hidden bg-[#D9D9D9] sm:h-[270px]">
+              <img className="w-full" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA3MThfMjI1%2FMDAxNzg0MzYyMjQ4MjE0.bfXMXMYshnE9adXxYzXiZbFGg4RUiNXdvk6QGwpiR6wg.gyx3A_SfWdBQXf2bTpZRo3NB2hCCD-nqRP9sSaw1Vjwg.JPEG%2F900_1784362247401.jpg&type=a340" alt="" />
             </div>
 
             <div className="p-[24px] sm:p-[28px]">
               <div className="flex items-start justify-between gap-[20px]">
                 <div>
-                  <p className="text-[13px] font-bold text-[#16864B]">CAFE</p>
+                  <p className="text-[14px] font-bold text-[#16864B]">
+                    CAFE
+                  </p>
 
                   <h3 className="mt-[4px] text-[24px] font-bold text-[#292929] lg:text-[27px]">
                     카페
                   </h3>
                 </div>
 
-                <span className="rounded-full bg-[#16864B]/10 px-[12px] py-[6px] text-[12px] font-bold text-[#16864B]">
+                <span className="rounded-full bg-[#16864B]/10 px-[12px] py-[6px] text-[14px] font-bold text-[#16864B]">
                   음료
                 </span>
               </div>
 
-              <div className="mt-[20px] flex gap-[10px]">
+              <div className="mt-[20px] flex gap-[10px] text-[16px]">
                 <span className="font-bold text-[#292929]/40">위치</span>
+
                 <span className="font-medium text-[#292929]/70">
                   5E 표시 바로 아래
                 </span>
@@ -98,10 +108,11 @@ export default function Amenities() {
               </p>
 
               <div className="mt-[22px] flex flex-wrap gap-[8px]">
-                <span className="rounded-full bg-[#292929]/5 px-[11px] py-[6px] text-[12px] font-bold text-[#292929]/55">
+                <span className="rounded-full bg-[#292929]/5 px-[12px] py-[7px] text-[14px] font-bold text-[#292929]/55">
                   아메리카노
                 </span>
-                <span className="rounded-full bg-[#292929]/5 px-[11px] py-[6px] text-[12px] font-bold text-[#292929]/55">
+
+                <span className="rounded-full bg-[#292929]/5 px-[12px] py-[7px] text-[14px] font-bold text-[#292929]/55">
                   음료
                 </span>
               </div>
@@ -110,31 +121,30 @@ export default function Amenities() {
 
           {/* 장난감가게 */}
           <div className="group overflow-hidden rounded-[22px] border border-[#292929]/10 bg-white shadow-[0_8px_30px_rgba(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-[5px] hover:shadow-[0_15px_40px_rgba(0,0,0,0.08)]">
-            <div className="h-[230px] overflow-hidden bg-[#D9D9D9] sm:h-[270px]">
-              <img
-                src=""
-                alt="장난감가게"
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
-              />
+            <div className="flex h-[230px] items-center justify-center overflow-hidden bg-[#D9D9D9] sm:h-[270px]">
+              <img className="w-full" src={toyshop} alt="" />
             </div>
 
             <div className="p-[24px] sm:p-[28px]">
               <div className="flex items-start justify-between gap-[20px]">
                 <div>
-                  <p className="text-[13px] font-bold text-[#E53935]">SHOP</p>
+                  <p className="text-[14px] font-bold text-[#E53935]">
+                    SHOP
+                  </p>
 
                   <h3 className="mt-[4px] text-[24px] font-bold text-[#292929] lg:text-[27px]">
                     장난감가게
                   </h3>
                 </div>
 
-                <span className="rounded-full bg-[#E53935]/10 px-[12px] py-[6px] text-[12px] font-bold text-[#E53935]">
+                <span className="rounded-full bg-[#E53935]/10 px-[12px] py-[6px] text-[14px] font-bold text-[#E53935]">
                   쇼핑
                 </span>
               </div>
 
-              <div className="mt-[20px] flex gap-[10px]">
+              <div className="mt-[20px] flex gap-[10px] text-[16px]">
                 <span className="font-bold text-[#292929]/40">위치</span>
+
                 <span className="font-medium text-[#292929]/70">
                   5E 표시 바로 아래
                 </span>
@@ -145,10 +155,14 @@ export default function Amenities() {
               </p>
 
               <div className="mt-[22px] flex flex-wrap gap-[8px]">
-                <span className="rounded-full bg-[#292929]/5 px-[11px] py-[6px] text-[12px] font-bold text-[#292929]/55">
-                  완구
+                <span className="rounded-full bg-[#292929]/5 px-[12px] py-[7px] text-[14px] font-bold text-[#292929]/55">
+                  돗자리
                 </span>
-                <span className="rounded-full bg-[#292929]/5 px-[11px] py-[6px] text-[12px] font-bold text-[#292929]/55">
+
+                <span className="rounded-full bg-[#292929]/5 px-[12px] py-[7px] text-[14px] font-bold text-[#292929]/55">
+                  양말
+                </span>
+                <span className="rounded-full bg-[#292929]/5 px-[12px] py-[7px] text-[14px] font-bold text-[#292929]/55">
                   장난감
                 </span>
               </div>
@@ -168,20 +182,23 @@ export default function Amenities() {
             <div className="p-[24px] sm:p-[28px]">
               <div className="flex items-start justify-between gap-[20px]">
                 <div>
-                  <p className="text-[13px] font-bold text-[#F5A623]">GAME</p>
+                  <p className="text-[14px] font-bold text-[#F5A623]">
+                    GAME
+                  </p>
 
                   <h3 className="mt-[4px] text-[24px] font-bold text-[#292929] lg:text-[27px]">
                     오락존
                   </h3>
                 </div>
 
-                <span className="rounded-full bg-[#F5A623]/10 px-[12px] py-[6px] text-[12px] font-bold text-[#E59A16]">
+                <span className="rounded-full bg-[#F5A623]/10 px-[12px] py-[6px] text-[14px] font-bold text-[#E59A16]">
                   오락
                 </span>
               </div>
 
-              <div className="mt-[20px] flex gap-[10px]">
+              <div className="mt-[20px] flex gap-[10px] text-[16px]">
                 <span className="font-bold text-[#292929]/40">위치</span>
+
                 <span className="font-medium text-[#292929]/70">
                   5E 표시 바로 아래
                 </span>
@@ -192,10 +209,11 @@ export default function Amenities() {
               </p>
 
               <div className="mt-[22px] flex flex-wrap gap-[8px]">
-                <span className="rounded-full bg-[#292929]/5 px-[11px] py-[6px] text-[12px] font-bold text-[#292929]/55">
+                <span className="rounded-full bg-[#292929]/5 px-[12px] py-[7px] text-[14px] font-bold text-[#292929]/55">
                   게임
                 </span>
-                <span className="rounded-full bg-[#292929]/5 px-[11px] py-[6px] text-[12px] font-bold text-[#292929]/55">
+
+                <span className="rounded-full bg-[#292929]/5 px-[12px] py-[7px] text-[14px] font-bold text-[#292929]/55">
                   오락시설
                 </span>
               </div>
@@ -215,7 +233,7 @@ export default function Amenities() {
             <div className="p-[24px] sm:p-[28px]">
               <div className="flex items-start justify-between gap-[20px]">
                 <div>
-                  <p className="text-[13px] font-bold text-[#16864B]">
+                  <p className="text-[14px] font-bold text-[#16864B]">
                     EXPERIENCE
                   </p>
 
@@ -224,13 +242,14 @@ export default function Amenities() {
                   </h3>
                 </div>
 
-                <span className="rounded-full bg-[#16864B]/10 px-[12px] py-[6px] text-[12px] font-bold text-[#16864B]">
+                <span className="rounded-full bg-[#16864B]/10 px-[12px] py-[6px] text-[14px] font-bold text-[#16864B]">
                   체험
                 </span>
               </div>
 
-              <div className="mt-[20px] flex gap-[10px]">
+              <div className="mt-[20px] flex gap-[10px] text-[16px]">
                 <span className="font-bold text-[#292929]/40">위치</span>
+
                 <span className="font-medium text-[#292929]/70">
                   5E 표시 바로 아래
                 </span>
@@ -241,10 +260,11 @@ export default function Amenities() {
               </p>
 
               <div className="mt-[22px] flex flex-wrap gap-[8px]">
-                <span className="rounded-full bg-[#292929]/5 px-[11px] py-[6px] text-[12px] font-bold text-[#292929]/55">
+                <span className="rounded-full bg-[#292929]/5 px-[12px] py-[7px] text-[14px] font-bold text-[#292929]/55">
                   만들기
                 </span>
-                <span className="rounded-full bg-[#292929]/5 px-[11px] py-[6px] text-[12px] font-bold text-[#292929]/55">
+
+                <span className="rounded-full bg-[#292929]/5 px-[12px] py-[7px] text-[14px] font-bold text-[#292929]/55">
                   체험
                 </span>
               </div>
@@ -264,7 +284,7 @@ export default function Amenities() {
             <div className="p-[24px] sm:p-[28px]">
               <div className="flex items-start justify-between gap-[20px]">
                 <div>
-                  <p className="text-[13px] font-bold text-[#E53935]">
+                  <p className="text-[14px] font-bold text-[#E53935]">
                     EXPERIENCE
                   </p>
 
@@ -273,13 +293,14 @@ export default function Amenities() {
                   </h3>
                 </div>
 
-                <span className="rounded-full bg-[#E53935]/10 px-[12px] py-[6px] text-[12px] font-bold text-[#E53935]">
+                <span className="rounded-full bg-[#E53935]/10 px-[12px] py-[6px] text-[14px] font-bold text-[#E53935]">
                   체험
                 </span>
               </div>
 
-              <div className="mt-[20px] flex gap-[10px]">
+              <div className="mt-[20px] flex gap-[10px] text-[16px]">
                 <span className="font-bold text-[#292929]/40">위치</span>
+
                 <span className="font-medium text-[#292929]/70">
                   5E 표시 바로 아래
                 </span>
@@ -290,10 +311,11 @@ export default function Amenities() {
               </p>
 
               <div className="mt-[22px] flex flex-wrap gap-[8px]">
-                <span className="rounded-full bg-[#292929]/5 px-[11px] py-[6px] text-[12px] font-bold text-[#292929]/55">
+                <span className="rounded-full bg-[#292929]/5 px-[12px] py-[7px] text-[14px] font-bold text-[#292929]/55">
                   낚시체험
                 </span>
-                <span className="rounded-full bg-[#292929]/5 px-[11px] py-[6px] text-[12px] font-bold text-[#292929]/55">
+
+                <span className="rounded-full bg-[#292929]/5 px-[12px] py-[7px] text-[14px] font-bold text-[#292929]/55">
                   가족체험
                 </span>
               </div>

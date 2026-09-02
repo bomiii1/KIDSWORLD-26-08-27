@@ -1,10 +1,20 @@
+import SupportBg from "../../img/support_bg.png";
+
 export default function Support() {
   return (
-    <main className="min-h-screen bg-[white] pt-[90px]">
-      {/* 타이틀 */}
-      <section className="px-5 py-[65px] sm:px-8 md:px-10 lg:px-[80px] xl:px-[150px]">
-        <div>
-          <h1 className="font-['Jua'] text-[46px] text-[#292929] sm:text-[52px] lg:text-[60px]">
+    <main className="min-h-screen bg-white pt-[90px]">
+      {/* 상단 타이틀 */}
+      <section
+        className="relative overflow-hidden bg-cover bg-[center_2%] bg-no-repeat px-5 py-[65px] sm:px-8 md:px-10 lg:px-[80px] lg:py-[75px] xl:px-[150px]"
+        style={{
+          backgroundImage: `url(${SupportBg})`,
+        }}
+      >
+        {/* 오버레이 */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/100 via-black/50 to-transparent" />
+
+        <div className="relative z-10">
+          <h1 className="font-['Jua'] text-[46px] text-white sm:text-[52px] lg:text-[60px]">
             문의
           </h1>
 
@@ -29,7 +39,7 @@ export default function Support() {
 
         <div className="mt-[35px] grid grid-cols-1 gap-[22px] lg:grid-cols-2">
           {/* 질문 1 */}
-          <div className="relative overflow-hidden rounded-[18px] bg-[white] px-[28px] py-[30px]">
+          <div className="relative overflow-hidden rounded-[18px] bg-white px-[28px] py-[30px]">
             <span className="absolute left-[20px] top-[12px] text-[82px] font-bold leading-none text-[#16864B]/20">
               Q
             </span>
@@ -50,7 +60,7 @@ export default function Support() {
           </div>
 
           {/* 질문 2 */}
-          <div className="relative overflow-hidden rounded-[18px] bg-[white] px-[28px] py-[30px]">
+          <div className="relative overflow-hidden rounded-[18px] bg-white px-[28px] py-[30px]">
             <span className="absolute left-[20px] top-[12px] text-[82px] font-bold leading-none text-[#16864B]/20">
               Q
             </span>
@@ -71,7 +81,7 @@ export default function Support() {
           </div>
 
           {/* 질문 3 */}
-          <div className="relative overflow-hidden rounded-[18px] bg-[white] px-[28px] py-[30px]">
+          <div className="relative overflow-hidden rounded-[18px] bg-white px-[28px] py-[30px]">
             <span className="absolute left-[20px] top-[12px] text-[82px] font-bold leading-none text-[#16864B]/20">
               Q
             </span>
@@ -86,13 +96,14 @@ export default function Support() {
               </h3>
 
               <p className="mt-[18px] text-[18px] font-medium leading-[1.8] text-[#292929]/70 lg:text-[19px]">
-                퇴장 후 재입장은 불가합니다. (성인만 입구에서 도장받고 외출가능)
+                퇴장 후 재입장은 불가합니다. (성인만 입구에서 도장받고 외출
+                가능)
               </p>
             </div>
           </div>
 
           {/* 질문 4 */}
-          <div className="relative overflow-hidden rounded-[18px] bg-[white] px-[28px] py-[30px]">
+          <div className="relative overflow-hidden rounded-[18px] bg-white px-[28px] py-[30px]">
             <span className="absolute left-[20px] top-[12px] text-[82px] font-bold leading-none text-[#16864B]/20">
               Q
             </span>
@@ -113,7 +124,7 @@ export default function Support() {
           </div>
 
           {/* 질문 5 */}
-          <div className="relative overflow-hidden rounded-[18px] bg-[white] px-[28px] py-[30px]">
+          <div className="relative overflow-hidden rounded-[18px] bg-white px-[28px] py-[30px]">
             <span className="absolute left-[20px] top-[12px] text-[82px] font-bold leading-none text-[#16864B]/20">
               Q
             </span>
@@ -134,7 +145,7 @@ export default function Support() {
           </div>
 
           {/* 질문 6 */}
-          <div className="relative overflow-hidden rounded-[18px] bg-[white] px-[28px] py-[30px]">
+          <div className="relative overflow-hidden rounded-[18px] bg-white px-[28px] py-[30px]">
             <span className="absolute left-[20px] top-[12px] text-[82px] font-bold leading-none text-[#16864B]/20">
               Q
             </span>
@@ -162,7 +173,7 @@ export default function Support() {
           {/* 기타문의 */}
           <div
             id="contact"
-            className="rounded-[18px] border border-[#292929]/10 bg-white/50 px-[28px] py-[30px]"
+            className="rounded-[18px] border border-[#292929]/10 bg-white px-[28px] py-[30px]"
           >
             <div className="inline-block">
               <h2 className="text-[24px] font-bold text-[#292929] lg:text-[28px]">
@@ -184,7 +195,7 @@ export default function Support() {
           {/* 단체문의 */}
           <div
             id="group"
-            className="rounded-[18px] border border-[#292929]/10 bg-white/50 px-[28px] py-[30px]"
+            className="rounded-[18px] border border-[#292929]/10 bg-white px-[28px] py-[30px]"
           >
             <div className="inline-block">
               <h2 className="text-[24px] font-bold text-[#292929] lg:text-[28px]">
