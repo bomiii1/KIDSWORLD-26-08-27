@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Section5() {
   return (
-    <section className="mt-[70px] bg-[white] px-5 py-[45px] sm:px-8 md:px-10 lg:px-[60px] xl:px-[150px]">
+    <section className="mt-[30px] bg-[white] px-5 py-[45px] sm:px-8 md:px-10 lg:px-[60px] xl:px-[150px]">
       {/* 타이틀 */}
       <div className="flex flex-col gap-[16px] sm:flex-row sm:items-end sm:justify-between">
         <div>
@@ -34,7 +34,7 @@ export default function Section5() {
               양말을 꼭 챙겨주세요
             </h3>
 
-            <p className="mt-[6px] text-[16px] font-medium leading-[1.7] text-white/60 sm:text-[17px]">
+            <p className="mt-[6px] text-[12px] font-medium leading-[1.7] text-white/60 sm:text-[17px]">
               에어바운스 등 일부 시설은 양말 착용이 필수입니다.
             </p>
           </div>
@@ -47,7 +47,7 @@ export default function Section5() {
               외부 음식물은 반입할 수 없어요
             </h3>
 
-            <p className="mt-[6px] text-[16px] font-medium leading-[1.7] text-white/60 sm:text-[17px]">
+            <p className="mt-[6px] text-[12px] font-medium leading-[1.7] text-white/60 sm:text-[17px]">
               물과 이유식을 제외한 모든 외부 음식물은 반입 금지입니다.
             </p>
           </div>
@@ -60,8 +60,8 @@ export default function Section5() {
               아이와 함께 줄을 서주세요
             </h3>
 
-            <p className="mt-[6px] text-[16px] font-medium leading-[1.7] text-white/60 sm:text-[17px]">
-              대리줄서기는 불가합니다. 기구를 이용하는 모든 인원이 줄을 서계신
+            <p className="mt-[6px] text-[12px] font-medium leading-[1.7] text-white/60 sm:text-[17px]">
+              대신줄서기는 불가합니다. 기구를 이용하는 모든 인원이 줄을 서계신
               후 이용 부탁드립니다.
             </p>
           </div>

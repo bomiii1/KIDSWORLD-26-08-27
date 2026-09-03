@@ -1,7 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import flagIcon from "../../../img/flag_icon.png";
 import { Link } from "react-router-dom";
-import kidsworldImg from "../../../img/about.jpg"
+import kidsworldImg from "../../../img/about.jpg";
 
 export default function Section1() {
   return (
@@ -9,7 +9,10 @@ export default function Section1() {
       <div className="flex flex-col gap-[45px] lg:flex-row lg:items-center lg:gap-[50px]">
         {/* 왼쪽 이미지 */}
         <div className="w-full lg:w-[45%]">
-          <img src={kidsworldImg} className="h-[320px] w-full rounded-[16px] bg-[#D9D9D9] sm:h-[400px] md:h-[460px] lg:h-[500px]" />
+          <img
+            src={kidsworldImg}
+            className="h-[320px] w-full rounded-[16px] bg-[#D9D9D9] sm:h-[400px] md:h-[460px] lg:h-[500px]"
+          />
         </div>
 
         {/* 오른쪽 내용 */}

@@ -369,8 +369,8 @@ export default function RestArea() {
         {/* 하단 안내 */}
         <div className="mt-[40px] border-t border-[#292929]/10 pt-[25px]">
           <p className="text-center text-[16px] font-medium leading-[1.8] text-[#292929]/60 sm:text-[18px]">
-            잔디존, 텐트존, 컬러펜스존 외에도 통행에 방해가 되지 않는
-            공간이라면 자유롭게 돗자리를 펴고 이용하실 수 있습니다.
+            잔디존, 텐트존, 컬러펜스존 외에도 통행에 방해가 되지 않는 공간이라면
+            자유롭게 돗자리를 펴고 이용하실 수 있습니다.
           </p>
         </div>
       </div>

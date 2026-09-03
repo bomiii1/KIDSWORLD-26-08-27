@@ -1,4 +1,4 @@
-import toyshop from "../../../img/toyshop.jpeg"
+import toyshop from "../../../img/toyshop.jpeg";
 
 export default function Amenities() {
   return (
@@ -16,7 +16,7 @@ export default function Amenities() {
         </div>
 
         {/* 카드 */}
-        <div className="mt-[45px] grid grid-cols-2 gap-[22px] md:grid-cols-2">
+        <div className="mt-[45px] grid grid-cols-1 gap-[22px] md:grid-cols-2">
           {/* 매점 */}
           <div className="group overflow-hidden rounded-[22px] border border-[#292929]/10 bg-white shadow-[0_8px_30px_rgba(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-[5px] hover:shadow-[0_15px_40px_rgba(0,0,0,0.08)]">
             <div className="h-[230px] overflow-hidden bg-[#D9D9D9] sm:h-[270px]">
@@ -30,9 +30,7 @@ export default function Amenities() {
             <div className="p-[24px] sm:p-[28px]">
               <div className="flex items-start justify-between gap-[20px]">
                 <div>
-                  <p className="text-[14px] font-bold text-[#F5A623]">
-                    FOOD
-                  </p>
+                  <p className="text-[14px] font-bold text-[#F5A623]">FOOD</p>
 
                   <h3 className="mt-[4px] text-[24px] font-bold text-[#292929] lg:text-[27px]">
                     매점
@@ -75,15 +73,17 @@ export default function Amenities() {
           {/* 카페 */}
           <div className="group overflow-hidden rounded-[22px] border border-[#292929]/10 bg-white shadow-[0_8px_30px_rgba(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-[5px] hover:shadow-[0_15px_40px_rgba(0,0,0,0.08)]">
             <div className="flex h-[230px] items-center justify-center overflow-hidden bg-[#D9D9D9] sm:h-[270px]">
-              <img className="w-full" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA3MThfMjI1%2FMDAxNzg0MzYyMjQ4MjE0.bfXMXMYshnE9adXxYzXiZbFGg4RUiNXdvk6QGwpiR6wg.gyx3A_SfWdBQXf2bTpZRo3NB2hCCD-nqRP9sSaw1Vjwg.JPEG%2F900_1784362247401.jpg&type=a340" alt="" />
+              <img
+                className="w-full"
+                src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA3MThfMjI1%2FMDAxNzg0MzYyMjQ4MjE0.bfXMXMYshnE9adXxYzXiZbFGg4RUiNXdvk6QGwpiR6wg.gyx3A_SfWdBQXf2bTpZRo3NB2hCCD-nqRP9sSaw1Vjwg.JPEG%2F900_1784362247401.jpg&type=a340"
+                alt=""
+              />
             </div>
 
             <div className="p-[24px] sm:p-[28px]">
               <div className="flex items-start justify-between gap-[20px]">
                 <div>
-                  <p className="text-[14px] font-bold text-[#16864B]">
-                    CAFE
-                  </p>
+                  <p className="text-[14px] font-bold text-[#16864B]">CAFE</p>
 
                   <h3 className="mt-[4px] text-[24px] font-bold text-[#292929] lg:text-[27px]">
                     카페
@@ -128,9 +128,7 @@ export default function Amenities() {
             <div className="p-[24px] sm:p-[28px]">
               <div className="flex items-start justify-between gap-[20px]">
                 <div>
-                  <p className="text-[14px] font-bold text-[#E53935]">
-                    SHOP
-                  </p>
+                  <p className="text-[14px] font-bold text-[#E53935]">SHOP</p>
 
                   <h3 className="mt-[4px] text-[24px] font-bold text-[#292929] lg:text-[27px]">
                     장난감가게
@@ -182,9 +180,7 @@ export default function Amenities() {
             <div className="p-[24px] sm:p-[28px]">
               <div className="flex items-start justify-between gap-[20px]">
                 <div>
-                  <p className="text-[14px] font-bold text-[#F5A623]">
-                    GAME
-                  </p>
+                  <p className="text-[14px] font-bold text-[#F5A623]">GAME</p>
 
                   <h3 className="mt-[4px] text-[24px] font-bold text-[#292929] lg:text-[27px]">
                     오락존

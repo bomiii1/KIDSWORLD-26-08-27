@@ -317,15 +317,7 @@ export default function Header() {
                 onClick={closeMobileMenu}
                 className="text-[16px] font-medium text-white/55 transition-colors hover:text-[#F5A623]"
               >
-                키즈월드
-              </Link>
-
-              <Link
-                to="/directions"
-                onClick={closeMobileMenu}
-                className="text-[16px] font-medium text-white/55 transition-colors hover:text-[#F5A623]"
-              >
-                오시는길
+                소개
               </Link>
             </div>
           </div>

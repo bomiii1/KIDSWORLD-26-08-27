@@ -11,7 +11,7 @@ export default function Attractions() {
   );
 
   return (
-    <main className="min-h-screen bg-white pb-[150px] pt-[140px]">
+    <main className="min-h-screen bg-white pb-[150px] pt-[80px]">
       <div className="px-5 sm:px-8 md:px-10 lg:px-[60px] xl:px-[150px]">
         <div className="mx-auto max-w-[1250px]">
           {/* 타이틀 */}
@@ -61,7 +61,7 @@ export default function Attractions() {
           </div>
 
           {/* 시설 카드 */}
-          <div className="mt-[35px] grid grid-cols-1 gap-x-[24px] gap-y-[35px] sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <div className="mt-[35px] grid grid-cols-2 gap-x-[24px] gap-y-[35px] sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {filteredAttractions.map((attraction) => (
               <Link
                 key={attraction.id}
@@ -77,7 +77,7 @@ export default function Attractions() {
                 "
               >
                 {/* 이미지 */}
-                <div className="aspect-[4/3] w-full overflow-hidden bg-[#EEEEEE]">
+                <div className="h-[130px] w-full overflow-hidden bg-[#EEEEEE]">
                   {attraction.AttractionImg ? (
                     <img
                       src={attraction.AttractionImg}

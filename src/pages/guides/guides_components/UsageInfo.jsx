@@ -7,14 +7,14 @@ export default function UsageInfo() {
     <section className="bg-white px-5 py-[60px] sm:px-8 md:px-10 lg:px-[80px] lg:py-[80px] xl:px-[150px]">
       {/* 타이틀 */}
       <div className="border-l-[4px] border-[#5E9F45] pl-[18px]">
-  <p className="mt-[5px] text-[20px] font-bold leading-[1.6] text-[#292929] sm:text-[28px]">
-    이용정보
-  </p>
+        <p className="mt-[5px] text-[20px] font-bold leading-[1.6] text-[#292929] sm:text-[28px]">
+          이용정보
+        </p>
 
-  <p className="text-[18px] font-bold text-[#5E9F45]">
-    상상체험 키즈월드 이용에 필요한 기본 정보를 안내드립니다.
-  </p>
-</div>
+        <p className="text-[18px] font-bold text-[#5E9F45]">
+          상상체험 키즈월드 이용에 필요한 기본 정보를 안내드립니다.
+        </p>
+      </div>
 
       <div className="mt-[35px] grid grid-cols-1 items-stretch gap-[45px] lg:grid-cols-[0.95fr_1.05fr] lg:gap-[55px]">
         {/* 왼쪽 이미지 */}
@@ -82,7 +82,7 @@ export default function UsageInfo() {
             </h3>
 
             <p className="text-[17px] font-bold text-[#292929] lg:text-[18px]">
-              051-000-0000
+              070-4801-6034
             </p>
           </div>
 

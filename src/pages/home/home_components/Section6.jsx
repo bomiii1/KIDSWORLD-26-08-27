@@ -5,7 +5,7 @@ import MapImg from "../../../img/map.png";
 
 export default function Section6() {
   return (
-    <section className="mt-[70px] bg-[white] pb-[80px] sm:pb-[100px] lg:pb-[140px] xl:pb-[150px]">
+    <section className="mt-[30px] bg-[white] pb-[80px] sm:pb-[100px] lg:pb-[140px] xl:pb-[150px]">
       {/* 타이틀 */}
       <div className="px-5 pb-[28px] sm:px-8 md:px-10 lg:px-[60px] xl:px-[150px]">
         <h2 className="font-['Jua'] text-[40px] leading-none text-[#292929] sm:text-[46px] lg:text-[52px]">

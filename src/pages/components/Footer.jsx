@@ -27,9 +27,7 @@ export default function Footer() {
 
             <p>운영시간 10:30 - 18:00</p>
 
-            <p>
-              입장마감 <span className="font-bold">17:00</span>
-            </p>
+            <p>* 입장마감 17:00</p>
           </div>
         </div>
 
@@ -87,11 +85,6 @@ export default function Footer() {
         <div className="flex flex-col gap-[10px] lg:flex-row lg:items-center lg:justify-between">
           <p className="text-[16px] font-medium text-[white]/40">
             © KIDS WORLD. All rights reserved.
-          </p>
-
-          <p className="max-w-[650px] text-[16px] font-medium leading-[1.7] text-[white]/40 lg:text-right">
-            본 사이트는 포트폴리오 목적으로 제작된 리뉴얼 사이트이며, 실제 운영
-            정보와 차이가 있을 수 있습니다.
           </p>
         </div>
       </div>

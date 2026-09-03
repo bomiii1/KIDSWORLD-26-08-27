@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Section4() {
   return (
-    <section className="mt-[70px] bg-[white] px-5 py-[45px] sm:px-8 md:px-10 lg:px-[60px] xl:px-[150px]">
+    <section className="mt-[30px] bg-[white] px-5 py-[45px] sm:px-8 md:px-10 lg:px-[60px] xl:px-[150px]">
       {/* 타이틀 */}
       <div className="flex flex-col gap-[16px] sm:flex-row sm:items-end sm:justify-between">
         <div>
@@ -44,11 +44,7 @@ export default function Section4() {
               sm:px-[30px]
             "
           >
-            {/* 왼쪽 포인트 라인 */}
             <div className="absolute left-0 top-0 h-full w-[5px] bg-[#F5A623]/70" />
-
-            {/* 은은한 빛 */}
-            <div className="pointer-events-none absolute -right-[60px] -top-[100px] h-[220px] w-[220px] rounded-full bg-white/70 blur-[55px]" />
 
             {/* 오픈 / 마감 */}
             <div className="relative z-10 grid grid-cols-2 gap-[20px]">
@@ -88,15 +84,13 @@ export default function Section4() {
             <h3 className="text-[24px] font-bold text-[#292929]">입장료</h3>
 
             <Link
-              to="/guides"
+              to="/guides/admission"
               className="group flex w-fit items-center gap-[6px] rounded-[8px] border border-[#292929]/15 bg-white/20 px-[12px] py-[8px] text-[16px] font-medium text-[#292929] transition-all duration-300 hover:border-[#E53935] hover:text-[#E53935]"
             >
               무료/할인 대상 자세히보기
               <ArrowUpRight className="h-[16px] w-[16px] transition-transform duration-300 group-hover:translate-x-[2px] group-hover:-translate-y-[2px]" />
             </Link>
           </div>
-
-          {/* 입장료 유리 카드 */}
           <div
             className="
               relative mt-[14px] flex-1 overflow-hidden
@@ -111,9 +105,6 @@ export default function Section4() {
           >
             {/* 왼쪽 포인트 라인 */}
             <div className="absolute left-0 top-0 h-full w-[5px] bg-[#F5A623]/70" />
-
-            {/* 은은한 빛 */}
-            <div className="pointer-events-none absolute -right-[60px] -top-[100px] h-[220px] w-[220px] rounded-full bg-white/70 blur-[55px]" />
 
             {/* 종일권 */}
             <div className="relative z-10 grid grid-cols-1 gap-[20px] md:grid-cols-[110px_1fr] md:items-center">

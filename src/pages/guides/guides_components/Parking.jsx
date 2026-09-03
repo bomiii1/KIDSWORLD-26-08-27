@@ -105,11 +105,11 @@ export default function Parking() {
       {/* 주차등록 */}
       <div className="mt-[75px]">
         <div>
-          <h3 className="text-[26px] font-bold text-[#292929] lg:text-[30px]">
-            주차등록
-          </h3>
-
-          <div className="mt-[6px] h-[3px] w-[75px] bg-[#E53935]" />
+          <div className="border-l-[4px] border-[#5E9F45] pl-[18px]">
+            <p className="mt-[5px] text-[20px] font-bold leading-[1.6] text-[#292929] sm:text-[28px]">
+              주차지원
+            </p>
+          </div>
         </div>
 
         <div className="mt-[30px] grid grid-cols-1 gap-[35px] lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-[65px]">

@@ -16,7 +16,7 @@ export default function Section2() {
   );
 
   return (
-    <section className="mt-[70px] px-5 sm:mt-[80px] sm:px-10 md:px-12 lg:mt-[100px] lg:px-[80px] xl:px-[150px]">
+    <section className="mt-[100px] px-5 sm:mt-[80px] sm:px-10 md:px-12 lg:mt-[100px] lg:px-[80px] xl:px-[150px]">
       <div className="mx-auto max-w-[1600px]">
         {/* 타이틀 */}
         <div className="flex items-end justify-between gap-[20px]">
@@ -43,7 +43,6 @@ export default function Section2() {
             className="group flex shrink-0 items-center gap-[8px] text-[16px] font-medium text-[#292929]/70 transition-colors duration-300 hover:text-[#E53935] sm:text-[18px]"
           >
             전체보기
-
             <ArrowUpRight className="h-[19px] w-[19px] transition-transform duration-300 group-hover:translate-x-[3px] group-hover:-translate-y-[3px]" />
           </Link>
         </div>
@@ -69,7 +68,7 @@ export default function Section2() {
               el: ".section2-pagination",
               clickable: true,
             }}
-            slidesPerView={1.2}
+            slidesPerView={1.7}
             slidesPerGroup={1}
             spaceBetween={14}
             breakpoints={{
@@ -99,7 +98,7 @@ export default function Section2() {
                   className="group block h-full overflow-hidden rounded-[16px] border border-[#292929]/10 bg-white transition-all duration-300 hover:border-[#292929]/20 hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)]"
                 >
                   {/* 이미지 */}
-                  <div className="h-[200px] overflow-hidden bg-[#EEEEEE] sm:h-[230px] md:h-[240px] lg:h-[260px]">
+                  <div className="h-[150px] overflow-hidden bg-[#EEEEEE] sm:h-[230px] md:h-[240px] lg:h-[260px]">
                     {item.AttractionImg ? (
                       <img
                         src={item.AttractionImg}
