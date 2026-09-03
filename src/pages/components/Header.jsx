@@ -30,7 +30,7 @@ export default function Header() {
   return (
     <>
       <header
-        className={`left-0 top-0 z-[10000] h-[90px] w-full px-[20px] text-white transition-[background-color,box-shadow,backdrop-filter] duration-300 sm:px-[30px] md:px-[50px] lg:px-[80px] xl:px-[150px] ${
+        className={`left-0 top-0 z-[10000] h-[70px] w-full px-[20px] text-white transition-[background-color,box-shadow,backdrop-filter] duration-300 sm:px-[30px] md:px-[50px] lg:h-[90px] lg:px-[80px] xl:px-[150px] ${
           isScrolled
             ? "fixed border-b border-white/10 bg-[#292929]/40 shadow-[0_8px_25px_rgba(0,0,0,0.12)] backdrop-blur-xl"
             : "absolute border-b border-white/10 bg-[#292929]"
@@ -42,7 +42,7 @@ export default function Header() {
           <Link
             to="/"
             onClick={closeMobileMenu}
-            className="w-[65px] shrink-0 sm:w-[75px] lg:w-[70px]"
+            className="w-[55px] shrink-0 sm:w-[60px] lg:w-[70px]"
           >
             <img src={logoImg} alt="키즈월드 로고" className="w-full" />
           </Link>
@@ -155,12 +155,12 @@ export default function Header() {
             type="button"
             onClick={() => setMobileMenuOpen((prev) => !prev)}
             aria-label="메뉴"
-            className="flex h-[44px] w-[44px] items-center justify-center lg:hidden"
+            className="flex h-[40px] w-[40px] items-center justify-center lg:hidden"
           >
             {mobileMenuOpen ? (
-              <X className="h-[30px] w-[30px]" />
+              <X className="h-[26px] w-[26px]" />
             ) : (
-              <Menu className="h-[32px] w-[32px]" />
+              <Menu className="h-[28px] w-[28px]" />
             )}
           </button>
         </div>
@@ -284,7 +284,6 @@ export default function Header() {
                   )}
                 </div>
 
-                {/* 예매 버튼 자리 */}
                 <div />
               </div>
             </div>
@@ -294,9 +293,9 @@ export default function Header() {
 
       {/* 모바일 메뉴 */}
       <div
-        className={`fixed left-0 top-[90px] z-[9999] w-full overflow-y-auto bg-[#292929]/95 text-white backdrop-blur-xl transition-all duration-300 lg:hidden ${
+        className={`fixed left-0 top-[70px] z-[9999] w-full overflow-y-auto bg-[#292929]/95 text-white backdrop-blur-xl transition-all duration-300 lg:hidden ${
           mobileMenuOpen
-            ? "visible h-[calc(100vh-90px)] opacity-100"
+            ? "visible h-[calc(100vh-70px)] opacity-100"
             : "invisible h-0 opacity-0"
         }`}
       >
