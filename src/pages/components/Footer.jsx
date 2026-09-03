@@ -27,56 +27,8 @@ export default function Footer() {
 
             <p>운영시간 10:30 - 18:00</p>
 
-            <p>* 입장마감 17:00</p>
+            <p>입장마감 17:00</p>
           </div>
-        </div>
-
-        {/* 오른쪽 메뉴 */}
-        <div className="grid grid-cols-2 gap-x-[45px] gap-y-[14px] sm:grid-cols-3 lg:gap-x-[55px]">
-          <Link
-            to="/guides"
-            className="text-[16px] font-medium text-[white]/70 transition-colors duration-300 hover:text-[#F5A623]"
-          >
-            이용안내
-          </Link>
-
-          <Link
-            to="/facilities"
-            className="text-[16px] font-medium text-[white]/70 transition-colors duration-300 hover:text-[#F5A623]"
-          >
-            시설안내
-          </Link>
-
-          <Link
-            to="/directions"
-            className="text-[16px] font-medium text-[white]/70 transition-colors duration-300 hover:text-[#F5A623]"
-          >
-            오시는길
-          </Link>
-
-          <Link
-            to="/faq"
-            className="text-[16px] font-medium text-[white]/70 transition-colors duration-300 hover:text-[#F5A623]"
-          >
-            FAQ
-          </Link>
-
-          <Link
-            to="/guides"
-            className="text-[16px] font-medium text-[white]/70 transition-colors duration-300 hover:text-[#F5A623]"
-          >
-            단체문의
-          </Link>
-
-          <a
-            href="#"
-            target="_blank"
-            rel="noreferrer"
-            className="group flex items-center gap-[6px] text-[16px] font-bold text-[#F5A623]"
-          >
-            예매 바로가기
-            <ArrowUpRight className="h-[17px] w-[17px] transition-transform duration-300 group-hover:translate-x-[2px] group-hover:-translate-y-[2px]" />
-          </a>
         </div>
       </div>
 

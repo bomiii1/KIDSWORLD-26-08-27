@@ -17,7 +17,7 @@ export default function Section3() {
         />
 
         {/* 텍스트 */}
-        <div className="pointer-events-none relative z-20 mx-auto h-full max-w-[1228px] px-5 pl-[125px] pt-7 sm:px-10 sm:pl-[150px] sm:pt-8 md:pl-[180px] lg:flex lg:items-center lg:pl-[250px] lg:pt-0 xl:pl-[330px]">
+        <div className="pointer-events-none relative z-20 mx-auto h-full max-w-[1228px] px-5 pl-[125px] pt-7 sm:px-10 sm:pl-[150px] sm:pt-8 md:pl-[180px] lg:flex lg:items-center lg:pl-[250px] lg:pt-0 xl:pl-[80px]">
           <div>
             <h2 className="text-[28px] font-[Jua] tracking-[-1px] text-white sm:text-[38px] lg:text-[52px]">
               맞춤 놀이 찾기

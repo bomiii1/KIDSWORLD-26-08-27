@@ -1,5 +1,5 @@
 import { ArrowUpRight, TrainFront, SquareParking } from "lucide-react";
-
+import { Link } from "react-router-dom";
 import BexcoBg from "../../../img/bexco_bg.jpg";
 import MapImg from "../../../img/map.png";
 
@@ -99,15 +99,13 @@ export default function Section6() {
                   벡스코 제1·2전시장 주차 가능
                 </p>
 
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noreferrer"
+                <Link
+                  to={"/guides/parking"}
                   className="group mt-[14px] flex w-fit items-center gap-[6px] rounded-[8px] border border-white/30 px-[14px] py-[9px] text-[16px] font-medium transition-all duration-300 hover:bg-white/10"
                 >
                   주차안내
                   <ArrowUpRight className="h-[16px] w-[16px] transition-transform duration-300 group-hover:translate-x-[2px] group-hover:-translate-y-[2px]" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>

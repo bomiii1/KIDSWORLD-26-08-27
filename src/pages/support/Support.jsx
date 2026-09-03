@@ -30,19 +30,20 @@ export default function Support() {
         {/* 자주 묻는 질문 */}
         <section
           id="faq"
-          className="bg-[#EEE8DE] px-5 py-[60px] sm:px-8 md:px-10 lg:px-[80px] lg:py-[80px] xl:px-[250px]"
+          className=" px-5 py-[60px] sm:px-8 md:px-10 lg:px-[80px] lg:py-[80px] xl:px-[250px]"
         >
-          <div className="inline-block">
-            <h2 className="text-[30px] font-bold text-[#292929] lg:text-[34px]">
-              자주 묻는 질문
-            </h2>
-
-            <div className="mt-[7px] h-[3px] w-full bg-[#E53935]" />
+          <div className="border-l-[4px] border-[#5E9F45] pl-[18px]">
+            <p className="mt-[5px] text-[20px] font-bold leading-[1.6] text-[#292929] sm:text-[28px]">
+              Q&A
+            </p>
+            <p className="text-[18px] font-bold text-[#5E9F45]">
+              고객님들이 많이 궁금해하는 내용을 모았어요
+            </p>
           </div>
 
           <div className="mt-[35px] grid grid-cols-1 gap-[22px] lg:grid-cols-2">
             {/* 질문 1 */}
-            <div className="relative overflow-hidden rounded-[18px] bg-white px-[28px] py-[30px]">
+            <div className="relative overflow-hidden rounded-[18px] bg-white border-[#292929]/10 border-1 shadow-xs px-[28px] py-[30px]">
               <span className="absolute left-[20px] top-[12px] text-[82px] font-bold leading-none text-[#16864B]/20">
                 Q
               </span>
@@ -63,7 +64,7 @@ export default function Support() {
             </div>
 
             {/* 질문 2 */}
-            <div className="relative overflow-hidden rounded-[18px] bg-white px-[28px] py-[30px]">
+            <div className="relative overflow-hidden rounded-[18px] bg-white border-[#292929]/10 border-1 shadow-xs px-[28px] py-[30px]">
               <span className="absolute left-[20px] top-[12px] text-[82px] font-bold leading-none text-[#16864B]/20">
                 Q
               </span>
@@ -84,7 +85,7 @@ export default function Support() {
             </div>
 
             {/* 질문 3 */}
-            <div className="relative overflow-hidden rounded-[18px] bg-white px-[28px] py-[30px]">
+            <div className="relative overflow-hidden rounded-[18px] bg-white border-[#292929]/10 border-1 shadow-xs px-[28px] py-[30px]">
               <span className="absolute left-[20px] top-[12px] text-[82px] font-bold leading-none text-[#16864B]/20">
                 Q
               </span>
@@ -106,7 +107,7 @@ export default function Support() {
             </div>
 
             {/* 질문 4 */}
-            <div className="relative overflow-hidden rounded-[18px] bg-white px-[28px] py-[30px]">
+            <div className="relative overflow-hidden rounded-[18px] bg-white border-[#292929]/10 border-1 shadow-xs px-[28px] py-[30px]">
               <span className="absolute left-[20px] top-[12px] text-[82px] font-bold leading-none text-[#16864B]/20">
                 Q
               </span>
@@ -127,7 +128,7 @@ export default function Support() {
             </div>
 
             {/* 질문 5 */}
-            <div className="relative overflow-hidden rounded-[18px] bg-white px-[28px] py-[30px]">
+            <div className="relative overflow-hidden rounded-[18px] bg-white border-[#292929]/10 border-1 shadow-xs px-[28px] py-[30px]">
               <span className="absolute left-[20px] top-[12px] text-[82px] font-bold leading-none text-[#16864B]/20">
                 Q
               </span>
@@ -148,7 +149,7 @@ export default function Support() {
             </div>
 
             {/* 질문 6 */}
-            <div className="relative overflow-hidden rounded-[18px] bg-white px-[28px] py-[30px]">
+            <div className="relative overflow-hidden rounded-[18px] bg-white border-[#292929]/10 border-1 shadow-xs px-[28px] py-[30px]">
               <span className="absolute left-[20px] top-[12px] text-[82px] font-bold leading-none text-[#16864B]/20">
                 Q
               </span>
@@ -171,50 +172,40 @@ export default function Support() {
         </section>
 
         {/* 기타문의 / 단체문의 */}
-        <section className="px-5 py-[65px] sm:px-8 md:px-10 lg:px-[80px] lg:py-[80px] xl:px-[150px]">
-          <div className="grid grid-cols-1 gap-[22px] md:grid-cols-2">
-            {/* 기타문의 */}
-            <div
-              id="contact"
-              className="rounded-[18px] border border-[#292929]/10 bg-white px-[28px] py-[30px]"
-            >
-              <div className="inline-block">
-                <h2 className="text-[24px] font-bold text-[#292929] lg:text-[28px]">
-                  기타문의
-                </h2>
+        <section className="px-5 pb-[90px] pt-[30px] sm:px-8 md:px-10 lg:px-[80px] lg:pb-[110px] xl:px-[250px]">
+          <div className="border-y border-[#292929]/10 py-[35px] sm:py-[45px]">
+            <div className="grid grid-cols-1 md:grid-cols-2">
+              {/* 기타문의 */}
+              <div
+                id="contact"
+                className="pb-[30px] md:border-r md:border-[#292929]/10 md:pb-0 md:pr-[45px]"
+              >
+                <p className="text-[16px] font-bold text-[#5E9F45]">기타문의</p>
 
-                <div className="mt-[7px] h-[3px] w-full bg-[#E53935]" />
+                <p className="mt-[10px] text-[24px] font-bold text-[#292929] sm:text-[28px]">
+                  051-000-0000
+                </p>
+
+                <p className="mt-[8px] text-[15px] font-medium leading-[1.7] text-[#292929]/55 sm:text-[16px]">
+                  키즈월드 이용 및 운영 관련 문의를 도와드려요.
+                </p>
               </div>
 
-              <p className="mt-[22px] text-[20px] font-bold text-[#292929] lg:text-[22px]">
-                051-000-0000
-              </p>
+              {/* 단체문의 */}
+              <div
+                id="group"
+                className="border-t border-[#292929]/10 pt-[30px] md:border-t-0 md:pl-[45px] md:pt-0"
+              >
+                <p className="text-[16px] font-bold text-[#5E9F45]">단체문의</p>
 
-              <p className="mt-[10px] text-[18px] font-medium leading-[1.8] text-[#292929]/60 lg:text-[19px]">
-                운영 관련 문의사항은 전화로 문의해주세요.
-              </p>
-            </div>
+                <p className="mt-[10px] text-[24px] font-bold text-[#292929] sm:text-[28px]">
+                  070-4801-6034
+                </p>
 
-            {/* 단체문의 */}
-            <div
-              id="group"
-              className="rounded-[18px] border border-[#292929]/10 bg-white px-[28px] py-[30px]"
-            >
-              <div className="inline-block">
-                <h2 className="text-[24px] font-bold text-[#292929] lg:text-[28px]">
-                  단체문의
-                </h2>
-
-                <div className="mt-[7px] h-[3px] w-full bg-[#E53935]" />
+                <p className="mt-[8px] text-[15px] font-medium leading-[1.7] text-[#292929]/55 sm:text-[16px]">
+                  단체 방문 및 이용 관련 문의를 도와드려요.
+                </p>
               </div>
-
-              <p className="mt-[22px] text-[20px] font-bold text-[#292929] lg:text-[22px]">
-                070-4801-6034
-              </p>
-
-              <p className="mt-[10px] text-[18px] font-medium leading-[1.8] text-[#292929]/60 lg:text-[19px]">
-                단체 방문 및 이용 관련 문의는 전화로 문의해주세요.
-              </p>
             </div>
           </div>
         </section>

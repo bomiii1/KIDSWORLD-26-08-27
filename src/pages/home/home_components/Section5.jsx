@@ -17,7 +17,7 @@ export default function Section5() {
         </div>
 
         <Link
-          to="/guides"
+          to="/guides/rules"
           className="group flex w-fit items-center gap-[8px] text-[16px] font-medium text-[#292929] transition-colors duration-300 hover:text-[#E53935]"
         >
           전체 이용수칙 보기
