@@ -13,7 +13,7 @@ export default function Guides() {
   return (
     <>
       <PageTitle title="이용안내" />
-      <div className="mt-[90px] min-h-screen bg-white">
+      <div className="lg:mt-[90px]  mt-[70px] min-h-screen bg-white">
         <section
           className="relative bg-cover bg-[center_90%] bg-no-repeat px-5 py-[65px] sm:px-8 md:px-10 lg:px-[80px] lg:py-[75px] xl:px-[150px]"
           style={{

@@ -13,7 +13,7 @@ export default function Facilities() {
   return (
     <>
       <PageTitle title="시설안내" />
-      <main className="min-h-screen bg-white pt-[90px]">
+      <main className="min-h-screen bg-white pt-[70px] lg:pt-[90px]">
         {/* 타이틀 */}
         <section
           className="relative overflow-hidden bg-cover bg-[center_62%] bg-no-repeat px-5 py-[65px] sm:px-8 md:px-10 lg:px-[80px] lg:py-[75px] xl:px-[150px]"
