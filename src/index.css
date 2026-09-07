@@ -2,9 +2,11 @@
 @import "tailwindcss";
 
 body {
-  background-color: white;
+  background-color: #ffffff;
+  color: #292929;
 }
 
+/* 히어로 배경 확대 */
 @keyframes heroZoom {
   0% {
     transform: scale(1);
@@ -15,54 +17,30 @@ body {
   }
 }
 
+/* 페이지네이션 */
 .section2-pagination {
   position: static !important;
   width: 100% !important;
 }
 
 .section2-pagination .swiper-pagination-bullet {
-  width: 8px;
-  height: 8px;
-  margin: 0 4px !important;
-  background: #d9d9d9;
-  opacity: 1;
+  width: 9px;
+  height: 9px;
+  margin: 0 5px !important;
+  background-color: #292929;
+  opacity: 0.2;
+  transition: all 0.3s ease;
 }
 
 .section2-pagination .swiper-pagination-bullet-active {
-  background: #39a96b;
+  background-color: #ff6b81;
+  opacity: 1;
 }
 
+/* 비활성화된 화살표 */
 .section2-prev.swiper-button-disabled,
 .section2-next.swiper-button-disabled {
   opacity: 0.25;
   pointer-events: none;
 }
 
-@keyframes circleUp {
-  0% {
-    opacity: 0;
-    transform: translateY(70px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.circle-up {
-  opacity: 0;
-  animation: circleUp 0.8s ease-out forwards;
-}
-
-.circle-delay-1 {
-  animation-delay: 0.15s;
-}
-
-.circle-delay-2 {
-  animation-delay: 0.35s;
-}
-
-.circle-delay-3 {
-  animation-delay: 0.55s;
-}

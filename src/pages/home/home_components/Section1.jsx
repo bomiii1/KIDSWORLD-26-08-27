@@ -1,103 +1,99 @@
-import { ArrowUpRight } from "lucide-react";
-import flagIcon from "../../../img/flag_icon.png";
-import { Link } from "react-router-dom";
 import kidsworldImg from "../../../img/about.jpg";
+import yellowStarImg from "../../../img/yellowstar.png";
+import pinkStarImg from "../../../img/pinkstar.png";
+
+const playPoints = [
+  {
+    id: 1,
+    title: "#대규모 실내놀이터",
+    description: "약 2,500평 규모로 펼쳐지는 넓고 쾌적한 실내 놀이공간",
+    image: kidsworldImg,
+    imagePosition: "object-left",
+  },
+  {
+    id: 2,
+    title: "#다양한 놀이시설",
+    description: "아이들의 상상력과 호기심을 키워주는 다채로운 놀이시설",
+    image: kidsworldImg,
+    imagePosition: "object-center",
+  },
+  {
+    id: 3,
+    title: "#온가족이 함께",
+    description: "아이와 보호자가 함께 웃으며 즐길 수 있는 특별한 체험",
+    image: kidsworldImg,
+    imagePosition: "object-right",
+  },
+];
 
 export default function Section1() {
   return (
-    <section className="mt-[70px] px-5 sm:mt-[80px] sm:px-10 md:px-12 lg:mt-[100px] lg:px-[80px] xl:px-[150px]">
-      <div className="flex flex-col gap-[45px] lg:flex-row lg:items-center lg:gap-[50px]">
-        {/* 왼쪽 이미지 */}
-        <div className="w-full lg:w-[45%]">
-          <img
-            src={kidsworldImg}
-            className="h-[320px] w-full rounded-[16px] bg-[#D9D9D9] sm:h-[400px] md:h-[460px] lg:h-[500px]"
-          />
+    <section className="relative w-full overflow-hidden bg-white px-5 pb-[50px] pt-[70px] sm:px-[30px] sm:pb-[60px] sm:pt-[80px] md:px-[50px] lg:px-[80px] lg:pb-[65px] lg:pt-[100px] xl:px-[150px]">
+      {/* 왼쪽 노란 장식 */}
+      <img
+        src={yellowStarImg}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute left-0 top-0 z-0 w-[180px] select-none object-contain sm:w-[260px] lg:w-[380px] xl:w-[430px]"
+      />
+
+      {/* 오른쪽 핑크 장식 */}
+      <img
+        src={pinkStarImg}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute right-[-20px] top-[260px] z-0 w-[155px] select-none object-contain sm:right-0 sm:top-[170px] sm:w-[240px] lg:top-[110px] lg:w-[360px] xl:w-[410px]"
+      />
+
+      <div className="relative z-10 mx-auto max-w-[1300px]">
+        {/* 제목 영역 */}
+        <div className="text-center">
+          <p className="text-[14px] font-bold tracking-[1.5px] text-[#292929] sm:text-[16px] lg:text-[18px]">
+            WELCOME TO
+          </p>
+
+          <h2 className="mt-2 font-['Jua'] text-[44px] leading-none tracking-[-1px] text-[#292929] sm:text-[56px] lg:text-[68px]">
+            KIDSWORLD!
+          </h2>
+
+          <p className="mt-7 text-[16px] font-medium leading-[1.8] text-[#292929]/80 sm:text-[18px] lg:mt-9 lg:text-[20px]">
+            다양한 놀이시설과 즐거운 체험이 가득!
+            <br />
+            온 가족이 함께 즐기는 대규모 실내 놀이터!
+          </p>
         </div>
 
-        {/* 오른쪽 내용 */}
-        <div className="w-full lg:w-[55%]">
-          <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <div className="flex items-center gap-2">
-                <h1 className="font-['Jua'] text-[42px] leading-none text-[#292929] sm:text-[50px] md:text-[56px] lg:text-[60px]">
-                  KIDS WORLD
-                </h1>
-
-                <img
-                  src={flagIcon}
-                  alt="깃발아이콘"
-                  className="w-[32px] shrink-0 sm:w-[38px] lg:w-auto"
-                />
-              </div>
-
-              <p className="mt-2 text-[18px] font-bold text-[#E53935] sm:text-[21px] lg:text-[24px]">
-                상상체험 키즈월드를 소개합니다 !
-              </p>
-            </div>
-
-            <Link
-              to="/guides"
-              className="group flex w-fit items-center gap-[8px] text-[14px] transition-colors hover:text-[#E53935] sm:text-[15px] lg:text-[16px]"
+        {/* 원형 이미지 */}
+        <div className="mt-[55px] grid grid-cols-1 justify-items-center gap-[30px] sm:mt-[70px] sm:grid-cols-3 sm:gap-[20px] lg:mt-[85px] lg:gap-[40px] xl:gap-[55px]">
+          {playPoints.map((point) => (
+            <article
+              key={point.id}
+              tabIndex={0}
+              className="group relative aspect-square w-full max-w-[300px] cursor-pointer overflow-hidden rounded-full shadow-[0_15px_35px_rgba(41,41,41,0.18)] outline-none ring-[#FFD050] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_22px_45px_rgba(41,41,41,0.25)] focus-visible:ring-4 sm:max-w-[260px] md:max-w-[300px] lg:max-w-[340px] xl:max-w-[370px]"
             >
-              <span className="font-medium">더보기</span>
+              {/* 이미지 */}
+              <img
+                src={point.image}
+                alt={point.title}
+                className={`h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 group-focus:scale-110 ${point.imagePosition}`}
+              />
 
-              <ArrowUpRight className="h-[18px] w-[18px] transition-transform duration-300 group-hover:translate-x-[3px] group-hover:-translate-y-[3px]" />
-            </Link>
-          </div>
+              {/* 모바일 기본 오버레이 / PC 호버 오버레이 */}
+              <div className="absolute inset-0 bg-[#292929]/70 transition-colors duration-300 sm:bg-[#292929]/0 sm:group-hover:bg-[#292929]/65 sm:group-focus:bg-[#292929]/65" />
 
-          {/* 설명 */}
-          <div className="mt-[30px] sm:mt-[35px] lg:mt-[45px]">
-            <p className="text-[14px] font-medium leading-[1.8] text-[#292929] sm:text-[15px] md:text-[16px]">
-              벡스코 상상체험 키즈월드는 아이들의 상상력과 호기심을 키워주는
-              국내 최대 실내 놀이공간입니다.
-              <br className="hidden md:block" />
-              안전하고 쾌적한 환경에서 다양한 놀이와 체험을 마음껏 즐길 수
-              있습니다.
-            </p>
-          </div>
+              {/* 놀이 포인트 설명 */}
+              <div className="absolute inset-0 flex flex-col items-center justify-center px-8 text-center text-white opacity-100 transition-all duration-300 sm:translate-y-3 sm:opacity-0 sm:group-hover:translate-y-0 sm:group-hover:opacity-100 sm:group-focus:translate-y-0 sm:group-focus:opacity-100">
+                {/* 타이틀 길이에 맞는 노란 선 */}
+                <h3 className="inline-block border-b-[3px] border-[#FFD050] pb-3 text-[18px] font-bold sm:text-[16px] md:text-[18px] lg:text-[22px]">
+                  {point.title}
+                </h3>
 
-          {/* 동그라미 3개 */}
-          <div className="mt-[35px] flex w-full items-center justify-between gap-2 sm:gap-4 lg:mt-[40px] lg:gap-3 xl:gap-[20px]">
-            {/* 1 */}
-            <div className="flex aspect-square min-w-0 flex-1 flex-col items-center justify-center rounded-full bg-[#16864B]/50 px-2 text-center shadow-xl transition-all duration-200 hover:scale-105 sm:px-3 lg:px-2 xl:px-[20px]">
-              <p className="whitespace-nowrap text-[11px] font-bold sm:text-[14px] md:text-[16px] lg:text-[14px] xl:text-[18px]">
-                #대규모 실내놀이터
-              </p>
-
-              <p className="mt-2 text-[10px] font-medium leading-[1.5] text-[#292929]/60 sm:mt-3 sm:text-[12px] md:text-[14px] lg:text-[12px] xl:mt-[14px] xl:text-[16px]">
-                2500평 규모의
-                <br />
-                대형 실내놀이터
-              </p>
-            </div>
-
-            {/* 2 */}
-            <div className="flex aspect-square min-w-0 flex-1 flex-col items-center justify-center rounded-full bg-[#F5A623]/50 px-2 text-center shadow-xl transition-all duration-200 hover:scale-105 sm:px-3 lg:px-2 xl:px-[20px]">
-              <p className="whitespace-nowrap text-[11px] font-bold sm:text-[14px] md:text-[16px] lg:text-[14px] xl:text-[18px]">
-                #다양한 체험시설
-              </p>
-
-              <p className="mt-2 text-[10px] font-medium leading-[1.5] text-[#292929]/60 sm:mt-3 sm:text-[12px] md:text-[14px] lg:text-[12px] xl:mt-[12px] xl:text-[16px]">
-                다양한 체험시설이 있어
-                <br />
-                즐거움이 가득
-              </p>
-            </div>
-
-            {/* 3 */}
-            <div className="flex aspect-square min-w-0 flex-1 flex-col items-center justify-center rounded-full bg-[#16864B]/50 px-2 text-center shadow-xl transition-all duration-200 hover:scale-105 sm:px-3 lg:px-2 xl:px-[20px]">
-              <p className="whitespace-nowrap text-[11px] font-bold sm:text-[14px] md:text-[16px] lg:text-[14px] xl:text-[18px]">
-                #시간제한 없이
-              </p>
-
-              <p className="mt-2 text-[10px] font-medium leading-[1.5] text-[#292929]/60 sm:mt-3 sm:text-[12px] md:text-[14px] lg:text-[12px] xl:mt-[12px] xl:text-[16px]">
-                시간 제한 없이 편하게
-                <br />
-                즐기는 실내놀이터
-              </p>
-            </div>
-          </div>
+                <p className="mt-4 text-[14px] font-medium leading-[1.7] lg:text-[16px]">
+                  {point.description}
+                </p>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>

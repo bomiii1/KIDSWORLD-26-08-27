@@ -1,11 +1,29 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Menu, X } from "lucide-react";
 
 import logoImg from "../../img/logo.png";
 
+const menuItems = [
+  {
+    label: "소개",
+    to: "/about",
+  },
+  {
+    label: "이용안내",
+    to: "/guides",
+  },
+  {
+    label: "시설안내",
+    to: "/facilities",
+  },
+  {
+    label: "문의",
+    to: "/support",
+  },
+];
+
 export default function Header() {
-  const [activeMenu, setActiveMenu] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -15,13 +33,21 @@ export default function Header() {
     };
 
     handleScroll();
-
     window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  // 모바일 메뉴가 열렸을 때 배경 스크롤 방지
+  useEffect(() => {
+    document.body.style.overflow = mobileMenuOpen ? "hidden" : "";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
 
   const closeMobileMenu = () => {
     setMobileMenuOpen(false);
@@ -30,12 +56,11 @@ export default function Header() {
   return (
     <>
       <header
-        className={`left-0 top-0 z-[10000] h-[70px] w-full px-[20px] text-white transition-[background-color,box-shadow,backdrop-filter] duration-300 sm:px-[30px] md:px-[50px] lg:h-[90px] lg:px-[80px] xl:px-[150px] ${
+        className={`left-0 top-0 z-[10000] h-[70px] w-full border-b border-[#292929]/10 px-5 text-[#292929] transition-[background-color,box-shadow,backdrop-filter] duration-300 sm:px-[30px] md:px-[50px] lg:h-[90px] lg:px-[80px] xl:px-[150px] ${
           isScrolled
-            ? "fixed border-b border-white/10 bg-[#292929]/40 shadow-[0_8px_25px_rgba(0,0,0,0.12)] backdrop-blur-xl"
-            : "absolute border-b border-white/10 bg-[#292929]"
+            ? "fixed bg-white/95 shadow-[0_8px_25px_rgba(41,41,41,0.1)] backdrop-blur-xl"
+            : "absolute bg-white"
         }`}
-        onMouseLeave={() => setActiveMenu(null)}
       >
         <div className="flex h-full w-full items-center justify-between">
           {/* 로고 */}
@@ -44,405 +69,97 @@ export default function Header() {
             onClick={closeMobileMenu}
             className="w-[55px] shrink-0 sm:w-[60px] lg:w-[70px]"
           >
-            <img src={logoImg} alt="키즈월드 로고" className="w-full" />
+            <img
+              src={logoImg}
+              alt="키즈월드 로고"
+              className="block w-full"
+            />
           </Link>
 
           {/* PC 메뉴 */}
-          <div className="hidden h-full lg:block">
+          <nav className="hidden h-full lg:block" aria-label="주요 메뉴">
             <div className="grid h-full grid-cols-[80px_110px_110px_80px_150px] items-center gap-[28px] xl:gap-[38px]">
-              {/* 소개 */}
-              <div
-                className="flex h-full items-center justify-center"
-                onMouseEnter={() => setActiveMenu("about")}
-              >
-                <Link
-                  to="/about"
-                  className={`relative flex h-full items-center justify-center text-[16px] font-bold transition-colors duration-300 ${
-                    activeMenu === "about"
-                      ? "text-[#F5A623]"
-                      : "hover:text-[#F5A623]"
-                  }`}
+              {menuItems.map((menu) => (
+                <div
+                  key={menu.to}
+                  className="flex h-full items-center justify-center"
                 >
-                  소개
-                  <span
-                    className={`absolute bottom-[22px] left-0 h-[2px] bg-[#F5A623] ${
-                      activeMenu === "about" ? "w-full" : "w-0"
-                    }`}
-                  />
-                </Link>
-              </div>
+                  <Link
+                    to={menu.to}
+                    className="group relative flex h-full items-center justify-center text-[16px] font-bold text-[#292929] transition-colors duration-300 hover:text-[#FF6B81]"
+                  >
+                    {menu.label}
 
-              {/* 이용안내 */}
-              <div
-                className="flex h-full items-center justify-center"
-                onMouseEnter={() => setActiveMenu("guides")}
-              >
-                <Link
-                  to="/guides"
-                  className={`relative flex h-full items-center justify-center text-[16px] font-bold transition-colors duration-300 ${
-                    activeMenu === "guides"
-                      ? "text-[#F5A623]"
-                      : "hover:text-[#F5A623]"
-                  }`}
-                >
-                  이용안내
-                  <span
-                    className={`absolute bottom-[22px] left-0 h-[2px] bg-[#F5A623] ${
-                      activeMenu === "guides" ? "w-full" : "w-0"
-                    }`}
-                  />
-                </Link>
-              </div>
-
-              {/* 시설안내 */}
-              <div
-                className="flex h-full items-center justify-center"
-                onMouseEnter={() => setActiveMenu("facilities")}
-              >
-                <Link
-                  to="/facilities"
-                  className={`relative flex h-full items-center justify-center text-[16px] font-bold transition-colors duration-300 ${
-                    activeMenu === "facilities"
-                      ? "text-[#F5A623]"
-                      : "hover:text-[#F5A623]"
-                  }`}
-                >
-                  시설안내
-                  <span
-                    className={`absolute bottom-[22px] left-0 h-[2px] bg-[#F5A623] ${
-                      activeMenu === "facilities" ? "w-full" : "w-0"
-                    }`}
-                  />
-                </Link>
-              </div>
-
-              {/* 문의 */}
-              <div
-                className="flex h-full items-center justify-center"
-                onMouseEnter={() => setActiveMenu("support")}
-              >
-                <Link
-                  to="/support"
-                  className={`relative flex h-full items-center justify-center text-[16px] font-bold transition-colors duration-300 ${
-                    activeMenu === "support"
-                      ? "text-[#F5A623]"
-                      : "hover:text-[#F5A623]"
-                  }`}
-                >
-                  문의
-                  <span
-                    className={`absolute bottom-[22px] left-0 h-[2px] bg-[#F5A623] ${
-                      activeMenu === "support" ? "w-full" : "w-0"
-                    }`}
-                  />
-                </Link>
-              </div>
+                    {/* 메뉴 hover 밑줄 */}
+                    <span className="absolute bottom-[20px] left-1/2 h-[3px] w-0 -translate-x-1/2 rounded-full bg-[#FFD050] transition-all duration-300 group-hover:w-full" />
+                  </Link>
+                </div>
+              ))}
 
               {/* 온라인 예매 */}
               <a
                 href="https://map.naver.com/p/search/%EB%B2%A1%EC%8A%A4%EC%BD%94%20%ED%82%A4%EC%A6%88%EC%9B%94%EB%93%9C/place/1801736280"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center justify-center whitespace-nowrap rounded-[10px] bg-[#E53935] px-[18px] py-[12px] text-[16px] font-bold text-white transition-all duration-300 hover:bg-[#C92F2C]"
+                className="flex items-center justify-center whitespace-nowrap rounded-[10px] border border-[#FF6B81] bg-white px-[18px] py-[11px] text-[15px] font-bold text-[#FF6B81] transition-all duration-300 hover:bg-[#FF6B81] hover:text-white"
               >
-                온라인 예매
+                예매하기
               </a>
             </div>
-          </div>
+          </nav>
 
-          {/* 모바일 햄버거 */}
+          {/* 모바일 메뉴 버튼 */}
           <button
             type="button"
+            aria-label={mobileMenuOpen ? "메뉴 닫기" : "메뉴 열기"}
+            aria-expanded={mobileMenuOpen}
             onClick={() => setMobileMenuOpen((prev) => !prev)}
-            aria-label="메뉴"
-            className="flex h-[40px] w-[40px] items-center justify-center lg:hidden"
+            className="flex h-[42px] w-[42px] cursor-pointer items-center justify-center text-[#292929] lg:hidden"
           >
             {mobileMenuOpen ? (
-              <X className="h-[26px] w-[26px]" />
+              <X className="h-[25px] w-[25px]" />
             ) : (
-              <Menu className="h-[28px] w-[28px]" />
+              <Menu className="h-[27px] w-[27px]" />
             )}
           </button>
-        </div>
-
-        {/* PC 세부메뉴 */}
-        <div
-          className={`fixed left-0 top-[90px] hidden w-full border-t border-white/10 bg-[#292929]/95 shadow-[0_15px_30px_rgba(0,0,0,0.2)] backdrop-blur-xl transition-all duration-300 lg:block ${
-            activeMenu
-              ? "visible translate-y-0 opacity-100"
-              : "invisible -translate-y-[8px] opacity-0"
-          }`}
-        >
-          <div className="px-[80px] xl:px-[150px]">
-            <div className="flex min-h-[240px] w-full justify-end py-[35px]">
-              <div className="grid grid-cols-[80px_110px_110px_80px_150px] gap-[28px] xl:gap-[38px]">
-                {/* 소개 세부메뉴 */}
-                <div>
-                  {activeMenu === "about" && (
-                    <div className="flex flex-col items-center gap-[20px]">
-                      <Link
-                        to="/about"
-                        onClick={() => setActiveMenu(null)}
-                        className="text-[18px] font-medium text-white/65 transition-colors hover:text-[#F5A623]"
-                      >
-                        키즈월드
-                      </Link>
-                    </div>
-                  )}
-                </div>
-
-                {/* 이용안내 세부메뉴 */}
-                <div>
-                  {activeMenu === "guides" && (
-                    <div className="flex flex-col items-center gap-[20px]">
-                      <Link
-                        to="/guides"
-                        onClick={() => setActiveMenu(null)}
-                        className="text-[18px] font-medium text-white/65 transition-colors hover:text-[#F5A623]"
-                      >
-                        이용정보
-                      </Link>
-
-                      <Link
-                        to="/guides/admission"
-                        onClick={() => setActiveMenu(null)}
-                        className="text-[18px] font-medium text-white/65 transition-colors hover:text-[#F5A623]"
-                      >
-                        이용요금
-                      </Link>
-
-                      <Link
-                        to="/guides/parking"
-                        onClick={() => setActiveMenu(null)}
-                        className="text-[18px] font-medium text-white/65 transition-colors hover:text-[#F5A623]"
-                      >
-                        주차안내
-                      </Link>
-
-                      <Link
-                        to="/guides/rules"
-                        onClick={() => setActiveMenu(null)}
-                        className="text-[18px] font-medium text-white/65 transition-colors hover:text-[#F5A623]"
-                      >
-                        이용수칙
-                      </Link>
-                    </div>
-                  )}
-                </div>
-
-                {/* 시설안내 세부메뉴 */}
-                <div>
-                  {activeMenu === "facilities" && (
-                    <div className="flex flex-col items-center gap-[20px]">
-                      <Link
-                        to="/facilities"
-                        onClick={() => setActiveMenu(null)}
-                        className="text-[18px] font-medium text-white/65 transition-colors hover:text-[#F5A623]"
-                      >
-                        놀이시설
-                      </Link>
-
-                      <Link
-                        to="/facilities/rest"
-                        onClick={() => setActiveMenu(null)}
-                        className="text-[18px] font-medium text-white/65 transition-colors hover:text-[#F5A623]"
-                      >
-                        휴게공간
-                      </Link>
-
-                      <Link
-                        to="/facilities/amenities"
-                        onClick={() => setActiveMenu(null)}
-                        className="text-[18px] font-medium text-white/65 transition-colors hover:text-[#F5A623]"
-                      >
-                        부대시설
-                      </Link>
-
-                      <Link
-                        to="/facilities/custom"
-                        onClick={() => setActiveMenu(null)}
-                        className="whitespace-nowrap text-[18px] font-medium text-white/65 transition-colors hover:text-[#F5A623]"
-                      >
-                        아이맞춤 시설안내
-                      </Link>
-                    </div>
-                  )}
-                </div>
-
-                {/* 문의 세부메뉴 */}
-                <div>
-                  {activeMenu === "support" && (
-                    <div className="flex flex-col items-center gap-[20px]">
-                      <Link
-                        to="/support"
-                        onClick={() => setActiveMenu(null)}
-                        className="text-[18px] font-medium text-white/65 transition-colors hover:text-[#F5A623]"
-                      >
-                        문의
-                      </Link>
-                    </div>
-                  )}
-                </div>
-
-                <div />
-              </div>
-            </div>
-          </div>
         </div>
       </header>
 
       {/* 모바일 메뉴 */}
       <div
-        className={`fixed left-0 top-[70px] z-[9999] w-full overflow-y-auto bg-[#292929]/95 text-white backdrop-blur-xl transition-all duration-300 lg:hidden ${
+        className={`fixed left-0 top-[70px] z-[9999] w-full overflow-y-auto bg-white text-[#292929] shadow-[0_15px_30px_rgba(41,41,41,0.12)] transition-all duration-300 lg:hidden ${
           mobileMenuOpen
-            ? "visible h-[calc(100vh-70px)] opacity-100"
+            ? "visible h-[calc(100svh-70px)] opacity-100"
             : "invisible h-0 opacity-0"
         }`}
       >
-        <div className="px-[24px] py-[35px] sm:px-[40px]">
-          {/* 소개 */}
-          <div className="border-b border-white/10 pb-[26px]">
-            <Link
-              to="/about"
-              onClick={closeMobileMenu}
-              className="text-[22px] font-bold"
-            >
-              소개
-            </Link>
-
-            <div className="mt-[18px] grid grid-cols-2 gap-[14px]">
+        <nav className="px-6 py-8 sm:px-10" aria-label="모바일 메뉴">
+          {/* 모바일 메뉴 목록 */}
+          <div>
+            {menuItems.map((menu) => (
               <Link
-                to="/about"
+                key={menu.to}
+                to={menu.to}
                 onClick={closeMobileMenu}
-                className="text-[16px] font-medium text-white/55 transition-colors hover:text-[#F5A623]"
+                className="block border-b border-[#292929]/10 py-6 text-[22px] font-bold text-[#292929] transition-colors duration-300 first:pt-0 hover:text-[#FF6B81]"
               >
-                소개
+                {menu.label}
               </Link>
-            </div>
+            ))}
           </div>
 
-          {/* 이용안내 */}
-          <div className="border-b border-white/10 py-[26px]">
-            <Link
-              to="/guides"
-              onClick={closeMobileMenu}
-              className="text-[22px] font-bold"
-            >
-              이용안내
-            </Link>
-
-            <div className="mt-[18px] grid grid-cols-2 gap-x-[30px] gap-y-[14px]">
-              <Link
-                to="/guides"
-                onClick={closeMobileMenu}
-                className="text-[16px] font-medium text-white/55 transition-colors hover:text-[#F5A623]"
-              >
-                이용정보
-              </Link>
-
-              <Link
-                to="/guides/admission"
-                onClick={closeMobileMenu}
-                className="text-[16px] font-medium text-white/55 transition-colors hover:text-[#F5A623]"
-              >
-                이용요금
-              </Link>
-
-              <Link
-                to="/guides/parking"
-                onClick={closeMobileMenu}
-                className="text-[16px] font-medium text-white/55 transition-colors hover:text-[#F5A623]"
-              >
-                주차안내
-              </Link>
-
-              <Link
-                to="/guides/rules"
-                onClick={closeMobileMenu}
-                className="text-[16px] font-medium text-white/55 transition-colors hover:text-[#F5A623]"
-              >
-                이용수칙
-              </Link>
-            </div>
-          </div>
-
-          {/* 시설안내 */}
-          <div className="border-b border-white/10 py-[26px]">
-            <Link
-              to="/facilities"
-              onClick={closeMobileMenu}
-              className="text-[22px] font-bold"
-            >
-              시설안내
-            </Link>
-
-            <div className="mt-[18px] grid grid-cols-2 gap-x-[30px] gap-y-[14px]">
-              <Link
-                to="/facilities"
-                onClick={closeMobileMenu}
-                className="text-[16px] font-medium text-white/55 transition-colors hover:text-[#F5A623]"
-              >
-                놀이시설
-              </Link>
-
-              <Link
-                to="/facilities/rest"
-                onClick={closeMobileMenu}
-                className="text-[16px] font-medium text-white/55 transition-colors hover:text-[#F5A623]"
-              >
-                휴게공간
-              </Link>
-
-              <Link
-                to="/facilities/amenities"
-                onClick={closeMobileMenu}
-                className="text-[16px] font-medium text-white/55 transition-colors hover:text-[#F5A623]"
-              >
-                부대시설
-              </Link>
-
-              <Link
-                to="/facilities/custom"
-                onClick={closeMobileMenu}
-                className="text-[16px] font-medium text-white/55 transition-colors hover:text-[#F5A623]"
-              >
-                아이맞춤 시설안내
-              </Link>
-            </div>
-          </div>
-
-          {/* 문의 */}
-          <div className="py-[26px]">
-            <Link
-              to="/support"
-              onClick={closeMobileMenu}
-              className="text-[22px] font-bold"
-            >
-              문의
-            </Link>
-
-            <div className="mt-[18px]">
-              <Link
-                to="/support"
-                onClick={closeMobileMenu}
-                className="text-[16px] font-medium text-white/55 transition-colors hover:text-[#F5A623]"
-              >
-                문의
-              </Link>
-            </div>
-          </div>
-
-          {/* 모바일 온라인 예매 */}
+          {/* 모바일 예매 버튼 */}
           <a
             href="https://map.naver.com/p/search/%EB%B2%A1%EC%8A%A4%EC%BD%94%20%ED%82%A4%EC%A6%88%EC%9B%94%EB%93%9C/place/1801736280"
             target="_blank"
             rel="noreferrer"
-            className="group mt-[10px] flex w-full items-center justify-between rounded-[12px] bg-[#E53935] px-[20px] py-[16px] text-[16px] font-bold"
+            className="group mt-7 flex w-full items-center justify-between rounded-[12px] bg-[#FF6B81] px-5 py-4 text-[16px] font-bold text-white shadow-md transition-transform duration-300 hover:scale-[1.02] active:scale-[0.98]"
           >
-            온라인 예매
-            <ArrowUpRight className="h-[18px] w-[18px] transition-transform duration-300 group-hover:translate-x-[2px] group-hover:-translate-y-[2px]" />
+            예매하기
+
+            <ArrowUpRight className="h-[19px] w-[19px] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
-        </div>
+        </nav>
       </div>
     </>
   );

@@ -1,72 +1,38 @@
-import giraffeImg from "../../../img/giraffe.png";
-import cloud1Img from "../../../img/cloud1.png";
-import cloud2Img from "../../../img/cloud2.png";
-import cloud3Img from "../../../img/cloud3.png";
+import { ArrowRight, Ruler } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Section3() {
   return (
-    <section className="relative mx-auto h-[330px] w-full overflow-hidden bg-white sm:h-[310px] lg:h-[300px]">
-      {/* 초록색 영역 */}
-      <div className="absolute left-0 top-[55px] h-[200px] w-full bg-[#138D4B] sm:top-[60px] sm:h-[215px] lg:top-[68px] lg:h-[175px]">
-        {/* 왼쪽 구름 */}
-        <img
-          src={cloud1Img}
-          alt=""
-          className="pointer-events-none absolute left-0 top-[58px] z-10 w-[55px] sm:top-[52px] sm:w-[72px] lg:top-[48px] lg:w-[90px]"
-        />
+    <section className="bg-white px-5 pb-[90px] sm:px-[30px] sm:pb-[110px] md:px-[50px] lg:px-[80px] lg:pb-[130px] xl:px-[150px]">
+      {/* 박스 전체가 링크 */}
+      <Link
+        to="/facilities/custom"
+        aria-label="우리 아이 맞춤놀이 찾기"
+        className="group flex w-full cursor-pointer items-center justify-between gap-4 rounded-[20px] bg-[#FFD050]/45 px-5 py-7 transition-all duration-300 hover:bg-[#FFD050]/65 hover:shadow-[0_10px_30px_rgba(41,41,41,0.1)] active:scale-[0.99] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#FF6B81]/35 sm:px-8 sm:py-8 lg:px-14 lg:py-10"
+      >
+        {/* 안내 내용 */}
+        <div className="flex min-w-0 items-start gap-4 sm:items-center sm:gap-6">
+          {/* 아이콘 */}
+          <div className="flex h-[50px] w-[50px] shrink-0 items-center justify-center rounded-full bg-white/65 text-[#FF6B81] sm:h-[60px] sm:w-[60px]">
+            <Ruler className="h-7 w-7 rotate-[-45deg] sm:h-8 sm:w-8" />
+          </div>
 
-        {/* 텍스트 */}
-        <div className="pointer-events-none relative z-20 mx-auto h-full max-w-[1228px] px-5 pl-[125px] pt-7 sm:px-10 sm:pl-[150px] sm:pt-8 md:pl-[180px] lg:flex lg:items-center lg:pl-[250px] lg:pt-0 xl:pl-[80px]">
-          <div>
-            <h2 className="text-[28px] font-[Jua] tracking-[-1px] text-white sm:text-[38px] lg:text-[52px]">
-              맞춤 놀이 찾기
+          {/* 글자 */}
+          <div className="min-w-0">
+            <h2 className="break-keep font-['Jua'] text-[22px] leading-[1.3] text-[#292929] sm:text-[28px] lg:text-[32px]">
+              우리 아이 맞춤놀이 찾기
             </h2>
 
-            <p className="mt-1 text-[14px] font-bold leading-[1.35] text-[#FFAD21] sm:text-[16px] sm:leading-[1.5] lg:text-[16px]">
-              <span className="block lg:inline">
-                키, 나이, 보호자동반 탑승 여부에 맞춰
-              </span>
-
-              <span className="block lg:ml-2 lg:inline">
-                이용 가능한 놀이를 추천해드립니다.
-              </span>
+            <p className="mt-2 break-keep text-[14px] font-medium leading-[1.6] text-[#292929]/70 sm:text-[16px] lg:text-[18px]">
+              키, 나이, 보호자동반 탑승 여부에 맞춰 이용 가능한 놀이를
+              추천해드립니다.
             </p>
           </div>
         </div>
-        {/* 오른쪽 흰 구름 버튼 */}
-        <Link
-          to="/facilities/custom"
-          className="group absolute bottom-0 right-0 z-10 h-[90px] w-[215px] origin-bottom-right cursor-pointer border-0 bg-transparent p-0 transition-transform duration-300 ease-out hover:scale-[1.04] focus-visible:scale-[1.04] focus-visible:outline-none sm:h-[110px] sm:w-[280px] lg:h-[138px] lg:w-[370px]"
-        >
-          <img
-            src={cloud2Img}
-            alt=""
-            className="pointer-events-none absolute inset-0 h-full w-full object-contain object-bottom"
-          />
 
-          <span className="absolute bottom-[23px] left-1/2 z-10 flex -translate-x-1/2 items-center whitespace-nowrap text-[13px] font-bold text-[#292929] sm:bottom-[30px] sm:text-[15px] lg:bottom-[38px] lg:text-[18px]">
-            맞춤 놀이 찾기
-            <span className="ml-2 inline-block transition-transform duration-300 group-hover:translate-x-1 group-focus-visible:translate-x-1">
-              →
-            </span>
-          </span>
-        </Link>
-
-        {/* 오른쪽 하늘색 구름 */}
-        <img
-          src={cloud3Img}
-          alt=""
-          className="pointer-events-none absolute bottom-0 right-0 z-20 w-[70px] sm:w-[95px] lg:w-[120px]"
-        />
-
-        {/* 기린 */}
-        <img
-          src={giraffeImg}
-          alt=""
-          className="pointer-events-none absolute bottom-0 left-[14px] z-30 h-[135px] w-auto object-contain sm:left-[35px] sm:h-[175px] md:left-[60px] md:h-[195px] lg:left-[115px] lg:h-[245px]"
-        />
-      </div>
+        {/* 화살표 */}
+        <ArrowRight className="h-7 w-7 shrink-0 text-[#FF6B81] transition-transform duration-300 group-hover:translate-x-2 sm:h-8 sm:w-8 lg:h-9 lg:w-9" />
+      </Link>
     </section>
   );
 }

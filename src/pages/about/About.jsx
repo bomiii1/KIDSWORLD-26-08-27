@@ -1,411 +1,252 @@
-import Review from "./about_components/Review";
-import aboutImg from "../../img/about.png";
+import PageTitle from "../components/PageTitle";
+
+import aboutImg from "../../img/about.jpeg";
 import keyword2500 from "../../img/keyword2500.jpg";
 import keywordAllday from "../../img/keyword_allday.jpg";
 import keyword30 from "../../img/keyword30.jpg";
 
-import { useState } from "react";
-import PageTitle from "../components/PageTitle";
+const experienceCards = [
+  {
+    id: 1,
+    image:
+      "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA4MjhfNTYg%2FMDAxNzg3OTE2ODQ5NzQx.eVRWnZ9XeLHGB9RJz9EhJXDDNrcOXvHj8oYFj2mssSYg.DJqKxyBIYGG6fgGjrC7kPfuB8ms-wpqNLg3rRp-vjDog.JPEG%2F900_20260822_154002.jpg&type=sc960_832",
+    text: "보기만 하는 것이 아닌 직접 몸으로 즐기는 놀이",
+  },
+  {
+    id: 2,
+    image:
+      "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA4MTlfODkg%2FMDAxNzg3MTA2OTIwMjMw.4nJnBfTDA5oaBycI9LWzs6KwcU6V-WAU2Bo24ze467sg.Omt_LTQuJge0yKJTH7w8yVK7N46dyQoio1o4woKNeJIg.JPEG%2FIMG%25A3%25DF4593.jpg&type=a340",
+    text: "소중한 순간을 사진과 기억으로 남기는 공간",
+  },
+  {
+    id: 3,
+    image:
+      "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA3MjVfMzQg%2FMDAxNzg0OTM4OTg0MTM0.g25_hsDEfvmAFJJxGVL9qXZI4WOuLM5IhqkMquB3d7Mg.ZZmcXTiGtvoKhEFfIRy5SC-jS9Ql4Lo2445p-14YVI4g.JPEG%2FIMG%25A3%25DF1246.JPG&type=a340",
+    text: "놀이와 체험 과정에서 자연스럽게 얻는 경험",
+  },
+  {
+    id: 4,
+    image:
+      "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA0MjlfOTgg%2FMDAxNzc3NDIxNDA0MzQ1.-F9dfUDaNlfheh4s3n1iOE6IlvKt9Nyj59KidXisNRYg.rOpfLAky3PlJYJcorMBK-vLswa3I7F1G2kKbja2jRpMg.JPEG%2F900_1777339397430.jpg&type=a340",
+    text: "부모와 아이가 함께 즐길 수 있는 다양한 놀이",
+  },
+];
+
+const historyItems = [
+  {
+    year: "2010",
+    title: "어린이를 위한 체험형 행사 시작",
+  },
+  {
+    year: "2014",
+    title: "상상체험 키즈월드 운영 확대",
+  },
+  {
+    year: "2020",
+    title: "다양한 놀이와 체험을 한 공간에서",
+  },
+  {
+    year: "TODAY",
+    title: "상상체험 키즈월드 2026",
+    current: true,
+  },
+];
+
+const keyPoints = [
+  {
+    id: 1,
+    value: "2,500평",
+    title: "넓은 실내 공간",
+    description: "아이들이 자유롭게 뛰어놀 수 있는 대규모 공간",
+    image: keyword2500,
+  },
+  {
+    id: 2,
+    value: "ALL DAY",
+    title: "시간 제한 없이",
+    description: "입장부터 운영 마감까지 여유롭게 이용",
+    image: keywordAllday,
+  },
+  {
+    id: 3,
+    value: "30종+",
+    title: "다양한 놀이시설",
+    description: "놀이와 체험을 한 공간에서 즐길 수 있는 구성",
+    image: keyword30,
+  },
+];
 
 export default function About() {
-  const [activeKeyword, setActiveKeyword] = useState("2500");
-  const keywordImages = {
-    2500: keyword2500,
-    allday: keywordAllday,
-    30: keyword30,
-  };
-
   return (
     <>
       <PageTitle title="소개" />
-      <main className="min-h-screen bg-[white] pt-[90px]">
-        {/* 상단 타이틀 */}
+
+      <main className="min-h-screen bg-white pt-[90px]">
+        {/* 상단 비주얼 */}
         <section
-          className="relative bg-cover bg-[center_50%] bg-no-repeat px-5 py-[65px] sm:px-8 md:px-10 lg:px-[80px] lg:py-[75px] xl:px-[150px]"
+          className="relative bg-cover bg-[center_50%] bg-no-repeat px-5 py-[65px] sm:px-[30px] md:px-[50px] lg:px-[80px] lg:py-[75px] xl:px-[150px]"
           style={{
             backgroundImage:
               "url(https://mblogthumb-phinf.pstatic.net/MjAyNDA3MzBfMjg1/MDAxNzIyMzUwNjM2MzU2.KZUm8ffnIlX9N6ijR1VvemejEO9x8TpFlMbgUIiUXj8g.y73cpa-W_7S5OWdQqei6Q4qKJGem0R9Qw5fpDOcVsgMg.JPEG/SE-ad50c06f-8d66-49cc-859b-1d06dd4b7798.jpg?type=w800)",
           }}
         >
-          {/* 검정 오버레이 */}
-          <div className="absolute inset-0 bg-black/70" />
+          <div className="absolute inset-0 bg-[#292929]/70" />
 
-          {/* 타이틀 */}
           <div className="relative z-10">
-            <h1 className="font-['Jua'] text-[46px] text-[white] sm:text-[52px] lg:text-[60px]">
+            <h1 className="font-['Jua'] text-[46px] text-white sm:text-[52px] lg:text-[60px]">
               상상체험 키즈월드
             </h1>
 
-            <p className="mt-[10px] text-[18px] font-bold text-[#E53935] lg:text-[20px]">
+            <p className="mt-3 text-[16px] font-bold text-[#FF6B81] lg:text-[20px]">
               상상체험 키즈월드를 소개합니다!
             </p>
-          </div>
-
-          {/* 동그라미 */}
-          <div className="absolute bottom-[-85px] right-[30px] z-20 hidden gap-[22px] md:flex lg:right-[80px] xl:right-[150px]">
-            <div className="circle-up circle-delay-1 flex h-[160px] w-[160px] items-center justify-center rounded-full bg-[#F5A623] text-[15px] font-bold text-[white] shadow-2xl lg:h-[180px] lg:w-[180px] lg:text-[17px]">
-              EXPERIENCE
-            </div>
-
-            <div className="circle-up circle-delay-2 flex h-[160px] w-[160px] items-center justify-center rounded-full bg-[#16864B] text-[15px] font-bold text-[white] shadow-2xl lg:h-[180px] lg:w-[180px] lg:text-[17px]">
-              PLAY
-            </div>
-
-            <div className="circle-up circle-delay-3 flex h-[160px] w-[160px] items-center justify-center rounded-full bg-[#F5A623] text-[15px] font-bold text-[white] shadow-2xl lg:h-[180px] lg:w-[180px] lg:text-[17px]">
-              EMOTION
-            </div>
           </div>
         </section>
 
         {/* 키즈월드 소개 */}
-        <section className="px-5 pb-[70px] pt-[80px] sm:px-8 sm:pt-[100px] md:px-10 lg:px-[80px] lg:pb-[80px] lg:pt-[110px] xl:px-[150px]">
-          {/* 소개글 */}
-          <div className="flex flex-col items-center text-center my-10">
-            <h2 className="text-[28px] font-bold text-[#292929] sm:text-[32px] lg:text-[38px]">
-              아이들의 상상이 현실이 되는 즐거운 놀이공간
-            </h2>
+        <section className="px-5 pb-[80px] pt-[80px] sm:px-[30px] sm:pt-[100px] md:px-[50px] lg:px-[80px] lg:pt-[110px] xl:px-[150px]">
+          <div className="mx-auto max-w-[1600px]">
+            {/* 소개글 */}
+            <div className="my-10 flex flex-col items-center text-center">
+              <h2 className="break-keep text-[28px] font-bold text-[#292929] sm:text-[32px] lg:text-[38px]">
+                아이들의 상상이 현실이 되는 즐거운 놀이공간
+              </h2>
 
-            <p className="mt-[18px] max-w-[720px] text-[15px] font-medium leading-[1.8] text-[#292929]/70 lg:text-[17px]">
-              상상체험 키즈월드는 아이들이 직접 몸으로 느끼고 경험하며,
-              <br className="hidden sm:block" />
-              부모와 아이가 함께 즐거운 순간을 만들어가는 실내 놀이공간입니다.
-            </p>
-          </div>
-
-          {/* 메인 이미지 */}
-          <div className="mt-[35px] overflow-hidden rounded-[30px]">
-            <img
-              src={aboutImg}
-              alt="상상체험 키즈월드"
-              className="h-[300px] w-full object-cover object-center sm:h-[500px] lg:h-[550px]"
-            />
-          </div>
-
-          {/* 카드 */}
-          <div className="mt-[28px] grid grid-cols-2 gap-x-[10px] gap-y-[24px] sm:gap-[14px] lg:grid-cols-4">
-            {/* 카드 1 */}
-            <div>
-              <div
-                className="relative min-h-[190px] overflow-hidden rounded-[14px] bg-cover bg-center bg-no-repeat sm:min-h-[220px] sm:rounded-[18px] lg:min-h-[250px]"
-                style={{
-                  backgroundImage:
-                    "url(https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA4MjhfNTYg%2FMDAxNzg3OTE2ODQ5NzQx.eVRWnZ9XeLHGB9RJz9EhJXDDNrcOXvHj8oYFj2mssSYg.DJqKxyBIYGG6fgGjrC7kPfuB8ms-wpqNLg3rRp-vjDog.JPEG%2F900_20260822_154002.jpg&type=sc960_832)",
-                }}
-              >
-                <div className="absolute inset-0 bg-black/30 backdrop-blur-[1px]" />
-
-                <div className="absolute inset-x-0 bottom-0 z-10 p-[14px] sm:p-[18px] lg:p-[24px]">
-                  <p className="text-[12px] font-bold leading-[1.6] text-white sm:text-[14px] lg:text-[17px] lg:leading-[1.7]">
-                    보기만 하는 것이 아닌
-                    <br />
-                    직접 몸으로 즐기는 놀이
-                  </p>
-                </div>
-              </div>
-
-              <p className="mt-[10px] text-center text-[12px] font-bold text-[#292929] sm:text-[13px] lg:mt-[14px] lg:text-[14px]">
-                직접 참여하는 체험
+              <p className="mt-[18px] max-w-[720px] break-keep text-[14px] font-medium leading-[1.8] text-[#292929]/70 sm:text-[16px] lg:text-[18px]">
+                상상체험 키즈월드는 아이들이 직접 몸으로 느끼고 경험하며,
+                <br className="hidden sm:block" />
+                부모와 아이가 함께 즐거운 순간을 만들어가는 실내
+                놀이공간입니다.
               </p>
             </div>
 
-            {/* 카드 2 */}
-            <div>
-              <div
-                className="relative min-h-[190px] overflow-hidden rounded-[14px] bg-[#D9D9D9] bg-cover bg-center bg-no-repeat sm:min-h-[220px] sm:rounded-[18px] lg:min-h-[250px]"
-                style={{
-                  backgroundImage:
-                    "url(https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA4MTlfODkg%2FMDAxNzg3MTA2OTIwMjMw.4nJnBfTDA5oaBycI9LWzs6KwcU6V-WAU2Bo24ze467sg.Omt_LTQuJge0yKJTH7w8yVK7N46dyQoio1o4woKNeJIg.JPEG%2FIMG%25A3%25DF4593.jpg&type=a340)",
-                }}
-              >
-                <div className="absolute inset-0 bg-black/30 backdrop-blur-[1px]" />
-
-                <div className="absolute inset-x-0 bottom-0 z-10 p-[14px] sm:p-[18px] lg:p-[24px]">
-                  <p className="text-[12px] font-bold leading-[1.6] text-white sm:text-[14px] lg:text-[17px] lg:leading-[1.7]">
-                    가족과 함께한 순간을
-                    <br />
-                    사진과 기억으로 남기는 공간
-                  </p>
-                </div>
-              </div>
-
-              <p className="mt-[10px] text-center text-[12px] font-bold text-[#292929] sm:text-[13px] lg:mt-[14px] lg:text-[14px]">
-                추억이 되는 체험
-              </p>
+            {/* 메인 이미지 */}
+            <div className="mt-[35px] overflow-hidden rounded-[24px]">
+              <img
+                src={aboutImg}
+                alt="상상체험 키즈월드"
+                className="h-[300px] w-full object-cover object-center sm:h-[500px] lg:h-[550px]"
+              />
             </div>
 
-            {/* 카드 3 */}
-            <div>
-              <div
-                className="relative min-h-[190px] overflow-hidden rounded-[14px] bg-[#D9D9D9] bg-cover bg-center bg-no-repeat sm:min-h-[220px] sm:rounded-[18px] lg:min-h-[250px]"
-                style={{
-                  backgroundImage:
-                    "url(https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA3MjVfMzQg%2FMDAxNzg0OTM4OTg0MTM0.g25_hsDEfvmAFJJxGVL9qXZI4WOuLM5IhqkMquB3d7Mg.ZZmcXTiGtvoKhEFfIRy5SC-jS9Ql4Lo2445p-14YVI4g.JPEG%2FIMG%25A3%25DF1246.JPG&type=a340)",
-                }}
-              >
-                <div className="absolute inset-0 bg-black/30 backdrop-blur-[1px]" />
+            {/* 체험 카드 */}
+            <div className="mt-5 grid grid-cols-2 gap-3 sm:mt-6 sm:gap-4 lg:grid-cols-4">
+              {experienceCards.map((card) => (
+                <article
+                  key={card.id}
+                  className="group relative min-h-[190px] overflow-hidden rounded-[14px] bg-[#292929] sm:min-h-[230px] sm:rounded-[18px] lg:min-h-[270px]"
+                >
+                  <img
+                    src={card.image}
+                    alt=""
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
 
-                <div className="absolute inset-x-0 bottom-0 z-10 p-[14px] sm:p-[18px] lg:p-[24px]">
-                  <p className="text-[12px] font-bold leading-[1.6] text-white sm:text-[14px] lg:text-[17px] lg:leading-[1.7]">
-                    놀이와 체험 과정에서
-                    <br />
-                    자연스럽게 얻는 경험
+                  {/* 검정 배경 */}
+                  <div className="absolute inset-0 bg-[#292929]/45 transition-colors duration-300 group-hover:bg-[#292929]/55" />
+
+                  {/* 사진 아래쪽 글자 */}
+                  <p className="absolute inset-x-0 bottom-0 z-10 break-keep p-4 text-left text-[14px] font-bold leading-[1.7] text-white sm:p-5 sm:text-[16px] lg:p-6 lg:text-[18px]">
+                    {card.text}
                   </p>
-                </div>
-              </div>
-
-              <p className="mt-[10px] text-center text-[12px] font-bold text-[#292929] sm:text-[13px] lg:mt-[14px] lg:text-[14px]">
-                놀면서 배우는 체험
-              </p>
-            </div>
-
-            {/* 카드 4 */}
-            <div>
-              <div
-                className="relative min-h-[190px] overflow-hidden rounded-[14px] bg-[#D9D9D9] bg-cover bg-center bg-no-repeat sm:min-h-[220px] sm:rounded-[18px] lg:min-h-[250px]"
-                style={{
-                  backgroundImage:
-                    "url(https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA0MjlfOTgg%2FMDAxNzc3NDIxNDA0MzQ1.-F9dfUDaNlfheh4s3n1iOE6IlvKt9Nyj59KidXisNRYg.rOpfLAky3PlJYJcorMBK-vLswa3I7F1G2kKbja2jRpMg.JPEG%2F900_1777339397430.jpg&type=a340)",
-                }}
-              >
-                <div className="absolute inset-0 bg-black/30 backdrop-blur-[1px]" />
-
-                <div className="absolute inset-x-0 bottom-0 z-10 p-[14px] sm:p-[18px] lg:p-[24px]">
-                  <p className="text-[12px] font-bold leading-[1.6] text-white sm:text-[14px] lg:text-[17px] lg:leading-[1.7]">
-                    부모와 아이가 함께 즐길 수 있는
-                    <br />
-                    다양한 놀이
-                  </p>
-                </div>
-              </div>
-
-              <p className="mt-[10px] text-center text-[12px] font-bold text-[#292929] sm:text-[13px] lg:mt-[14px] lg:text-[14px]">
-                온 가족이 함께
-              </p>
+                </article>
+              ))}
             </div>
           </div>
         </section>
 
         {/* 연혁 */}
-        <section className="px-5 pb-[40px] sm:px-8 md:px-10 lg:px-[80px] lg:pb-[50px] xl:px-[150px]">
-          {/* PC / 태블릿 */}
-          <div className="mt-[50px] hidden md:block">
-            <div className="relative">
-              <div className="absolute left-0 top-[8px] h-[2px] w-full bg-[#292929]/15" />
+        <section className="bg-[#FFD050]/10 px-5 py-[75px] sm:px-[30px] sm:py-[85px] md:px-[50px] lg:px-[80px] lg:py-[95px] xl:px-[150px]">
+          <div className="mx-auto max-w-[1600px]">
 
-              <div className="relative grid grid-cols-4 gap-[30px]">
-                {/* 2010 */}
-                <div>
-                  <div className="h-[16px] w-[16px] rounded-full bg-[#D9D9D9]" />
+            <div className="relative mt-12 md:mt-16">
+              {/* 모바일 세로선 / PC 가로선 */}
+              <div className="absolute bottom-0 left-[7px] top-0 w-[2px] bg-[#292929]/12 md:bottom-auto md:left-0 md:right-0 md:top-[7px] md:h-[2px] md:w-full" />
 
-                  <p className="mt-[24px] text-[14px] font-bold text-[#292929]/45">
-                    2010
-                  </p>
+              <div className="relative grid grid-cols-1 gap-10 md:grid-cols-4 md:gap-8">
+                {historyItems.map((item) => (
+                  <article
+                    key={item.year}
+                    className="relative pl-10 md:pl-0 md:pt-10"
+                  >
+                    <span
+                      className={`absolute left-0 top-0 h-4 w-4 rounded-full md:left-0 md:top-0 ${
+                        item.current
+                          ? "bg-[#FF6B81] ring-[6px] ring-[#FF6B81]/15"
+                          : "border-[4px] border-[#FFD050] bg-white"
+                      }`}
+                    />
 
-                  <h3 className="mt-[10px] text-[17px] font-bold leading-[1.6] text-[#292929] lg:text-[19px]">
-                    어린이를 위한
-                    <br />
-                    체험형 행사 시작
-                  </h3>
-                </div>
+                    <p
+                      className={`text-[14px] font-bold sm:text-[16px] ${
+                        item.current
+                          ? "text-[#FF6B81]"
+                          : "text-[#292929]/45"
+                      }`}
+                    >
+                      {item.year}
+                    </p>
 
-                {/* 2014 */}
-                <div>
-                  <div className="h-[16px] w-[16px] rounded-full bg-[#D9D9D9]" />
-
-                  <p className="mt-[24px] text-[14px] font-bold text-[#292929]/45">
-                    2014
-                  </p>
-
-                  <h3 className="mt-[10px] text-[17px] font-bold leading-[1.6] text-[#292929] lg:text-[19px]">
-                    상상체험 키즈월드
-                    <br />
-                    운영 확대
-                  </h3>
-                </div>
-
-                {/* 2020 */}
-                <div>
-                  <div className="h-[16px] w-[16px] rounded-full bg-[#D9D9D9]" />
-
-                  <p className="mt-[24px] text-[14px] font-bold text-[#292929]/45">
-                    2020
-                  </p>
-
-                  <h3 className="mt-[10px] text-[17px] font-bold leading-[1.6] text-[#292929] lg:text-[19px]">
-                    다양한 놀이와 체험을
-                    <br />한 공간에서
-                  </h3>
-                </div>
-
-                {/* TODAY */}
-                <div>
-                  <div className="h-[18px] w-[18px] rounded-full bg-[#16864B] ring-[6px] ring-[#16864B]/10" />
-
-                  <p className="mt-[22px] text-[14px] font-bold text-[#16864B]">
-                    TODAY
-                  </p>
-
-                  <h3 className="mt-[10px] text-[22px] font-bold leading-[1.5] text-[#292929] lg:text-[26px]">
-                    상상체험
-                    <br />
-                    키즈월드 2026
-                  </h3>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* 모바일 */}
-          <div className="relative mt-[40px] md:hidden">
-            <div className="absolute bottom-0 left-[7px] top-0 w-[2px] bg-[#292929]/15" />
-
-            <div className="space-y-[35px]">
-              {/* 2010 */}
-              <div className="relative pl-[38px]">
-                <div className="absolute left-0 top-[4px] h-[16px] w-[16px] rounded-full bg-[#D9D9D9]" />
-
-                <p className="text-[13px] font-bold text-[#292929]/45">2010</p>
-
-                <h3 className="mt-[7px] text-[17px] font-bold leading-[1.6] text-[#292929]">
-                  어린이를 위한 체험형 행사 시작
-                </h3>
-              </div>
-
-              {/* 2014 */}
-              <div className="relative pl-[38px]">
-                <div className="absolute left-0 top-[4px] h-[16px] w-[16px] rounded-full bg-[#D9D9D9]" />
-
-                <p className="text-[13px] font-bold text-[#292929]/45">2014</p>
-
-                <h3 className="mt-[7px] text-[17px] font-bold leading-[1.6] text-[#292929]">
-                  상상체험 키즈월드 운영 확대
-                </h3>
-              </div>
-
-              {/* 2020 */}
-              <div className="relative pl-[38px]">
-                <div className="absolute left-0 top-[4px] h-[16px] w-[16px] rounded-full bg-[#D9D9D9]" />
-
-                <p className="text-[13px] font-bold text-[#292929]/45">2020</p>
-
-                <h3 className="mt-[7px] text-[17px] font-bold leading-[1.6] text-[#292929]">
-                  다양한 놀이와 체험을 한 공간에서
-                </h3>
-              </div>
-
-              {/* TODAY */}
-              <div className="relative pl-[38px]">
-                <div className="absolute left-[-1px] top-[3px] h-[18px] w-[18px] rounded-full bg-[#16864B] ring-[6px] ring-[#16864B]/10" />
-
-                <p className="text-[13px] font-bold text-[#16864B]">TODAY</p>
-
-                <h3 className="mt-[7px] text-[21px] font-bold text-[#292929]">
-                  상상체험 키즈월드 2026
-                </h3>
+                    <h3
+                      className={`mt-2 break-keep font-bold leading-[1.6] text-[#292929] ${
+                        item.current
+                          ? "text-[20px] lg:text-[24px]"
+                          : "text-[18px] lg:text-[20px]"
+                      }`}
+                    >
+                      {item.title}
+                    </h3>
+                  </article>
+                ))}
               </div>
             </div>
           </div>
         </section>
 
-        {/* 키워드 */}
-        <section className="px-5 pb-[80px] pt-[20px] sm:px-8 sm:pt-[30px] md:px-10 lg:px-[80px] lg:pb-[100px] lg:pt-[40px] xl:px-[150px]">
-          <div className="grid grid-cols-1 gap-[35px] lg:grid-cols-2 lg:items-center lg:gap-[80px]">
-            {/* 왼쪽 이미지 */}
-            <div className="h-[300px] overflow-hidden rounded-[20px] sm:h-[400px] lg:h-[520px]">
-              <img
-                src={keywordImages[activeKeyword]}
-                alt={`${activeKeyword}`}
-                className="h-full w-full object-cover transition-all duration-500"
-              />
-            </div>
+        {/* 주요 특징 이미지 배너 */}
+       <section className="bg-white px-5 py-[80px] sm:px-[30px] sm:py-[90px] md:px-[50px] lg:px-[80px] lg:py-[110px] xl:px-[150px]">
+  <div className="mx-auto max-w-[1600px]">
+    <h2 className="sr-only">키즈월드 주요 특징</h2>
 
-            {/* 오른쪽 키워드 */}
-            <div>
-              {/* 2500 */}
-              <div
-                onMouseEnter={() => setActiveKeyword("2500")}
-                onClick={() => setActiveKeyword("2500")}
-                className="cursor-pointer py-[12px] lg:py-[15px]"
-              >
-                <h3
-                  className={`text-[52px] font-black leading-none transition-all duration-300 sm:text-[70px] lg:text-[90px] ${
-                    activeKeyword === "2500"
-                      ? "text-[#F5A623]"
-                      : "text-[#F5A623]/20"
-                  }`}
-                >
-                  2500
-                </h3>
+    <div className="grid grid-cols-1 overflow-hidden rounded-[20px] sm:grid-cols-3">
+      {keyPoints.map((point, index) => (
+        <article
+          key={point.id}
+          className={`group relative min-h-[300px] overflow-hidden sm:min-h-[400px] lg:min-h-[500px] ${
+            index !== keyPoints.length - 1
+              ? "border-b border-white/40 sm:border-b-0 sm:border-r"
+              : ""
+          }`}
+        >
+          {/* 배경 이미지 */}
+          <img
+            src={point.image}
+            alt=""
+            className="absolute inset-0 h-full w-full object-cover"
+          />
 
-                <p
-                  className={`mt-[8px] text-[14px] font-bold transition-all duration-300 sm:text-[16px] ${
-                    activeKeyword === "2500"
-                      ? "text-[#292929]/70"
-                      : "text-[#292929]/25"
-                  }`}
-                >
-                  약 2,500평의 넓은 실내 공간
-                </p>
-              </div>
+          {/* 글자가 있는 아래쪽에만 그라데이션 */}
+          <div className="absolute inset-x-0 bottom-0 h-[72%] bg-gradient-to-t from-[#292929]/95 via-[#292929]/60 to-transparent" />
 
-              {/* ALL DAY */}
-              <div
-                onMouseEnter={() => setActiveKeyword("allday")}
-                onClick={() => setActiveKeyword("allday")}
-                className="cursor-pointer py-[12px] lg:py-[15px]"
-              >
-                <h3
-                  className={`text-[52px] font-black leading-none transition-all duration-300 sm:text-[70px] lg:text-[90px] ${
-                    activeKeyword === "allday"
-                      ? "text-[#16864B]"
-                      : "text-[#16864B]/20"
-                  }`}
-                >
-                  ALL DAY
-                </h3>
+          {/* 내용 */}
+          <div className="absolute inset-x-0 bottom-0 z-10 p-6 text-white sm:p-5 lg:p-8">
+            <strong className="inline-block origin-left font-['Jua'] text-[42px] leading-none text-[#FF6B81] drop-shadow-[0_2px_5px_rgba(0,0,0,0.5)] transition-all duration-300 sm:text-[36px] sm:text-white sm:group-hover:scale-105 sm:group-hover:text-[#FF6B81] lg:text-[52px]">
+              {point.value}
+            </strong>
 
-                <p
-                  className={`mt-[8px] text-[14px] font-bold transition-all duration-300 sm:text-[16px] ${
-                    activeKeyword === "allday"
-                      ? "text-[#292929]/70"
-                      : "text-[#292929]/25"
-                  }`}
-                >
-                  입장부터 마감까지 시간 제한 없이
-                </p>
-              </div>
+            <h3 className="mt-3 text-[18px] font-bold drop-shadow-[0_2px_5px_rgba(0,0,0,0.6)] lg:text-[22px]">
+              {point.title}
+            </h3>
 
-              {/* 30종 이상 */}
-              <div
-                onMouseEnter={() => setActiveKeyword("30")}
-                onClick={() => setActiveKeyword("30")}
-                className="cursor-pointer py-[12px] lg:py-[15px]"
-              >
-                <h3
-                  className={`text-[52px] font-black leading-none transition-all duration-300 sm:text-[70px] lg:text-[90px] ${
-                    activeKeyword === "30"
-                      ? "text-[#E53935]"
-                      : "text-[#E53935]/20"
-                  }`}
-                >
-                  30종 이상
-                </h3>
-
-                <p
-                  className={`mt-[8px] text-[14px] font-bold transition-all duration-300 sm:text-[16px] ${
-                    activeKeyword === "30"
-                      ? "text-[#292929]/70"
-                      : "text-[#292929]/25"
-                  }`}
-                >
-                  다양한 놀이시설을 한 공간에서
-                </p>
-              </div>
-            </div>
+            <p className="mt-2 break-keep text-[14px] font-medium leading-[1.7] text-white/90 drop-shadow-[0_2px_5px_rgba(0,0,0,0.6)] sm:text-[16px]">
+              {point.description}
+            </p>
           </div>
-        </section>
-
-        {/* <Review /> */}
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
       </main>
     </>
   );
