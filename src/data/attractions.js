@@ -21,7 +21,7 @@ import dino from "../img/dino.jpeg";
 import rc_boat from "../img/rc_boat.jpeg";
 import castle from "../img/castle.jpeg";
 import zip from "../img/zip.jpeg";
-import climbing from "../img/climbing.png";
+import climbing from "../img/climbing.jpeg";
 import interstella from "../img/interstella.jpeg";
 import racing_bounce from "../img/racing_bounce.jpeg";
 import train from "../img/train.jpeg";
@@ -37,7 +37,7 @@ export const AttractionsData = [
     target: "general",
     location: "오른쪽 에어바운스존",
 
-    popular: true,
+    popular: false,
 
     description:
       "다양한 모양의 에어바운스를 자유롭게 오가며 신나게 뛰어놀 수 있는 공간입니다.",
@@ -109,7 +109,7 @@ export const AttractionsData = [
     target: "general",
     location: "왼쪽 에어바운스",
 
-    popular: false,
+    popular: true,
 
     description:
       "커다란 궁전 모양의 에어바운스를 오르고 슬라이드를 내려오며 즐기는 대형 놀이시설입니다.",
@@ -146,7 +146,7 @@ export const AttractionsData = [
     target: "general",
     location: "",
 
-    popular: true,
+    popular: false,
 
     description:
       "직접 리모컨을 조작하며 다양한 RC 기기를 즐길 수 있는 체험 공간입니다.",
@@ -291,7 +291,7 @@ export const AttractionsData = [
     target: "general",
     location: "",
 
-    popular: true,
+    popular: false,
 
     description:
       "투명한 볼 안에 들어가 물 위를 움직이며 균형을 잡아보는 이색 체험시설입니다.",
@@ -363,7 +363,7 @@ export const AttractionsData = [
     target: "general",
     location: "",
 
-    popular: false,
+    popular: true,
 
     description:
       "움직이는 기구를 타고 신나는 재미를 느낄 수 있는 어린이 놀이시설입니다.",
@@ -399,7 +399,7 @@ export const AttractionsData = [
     target: "general",
     location: "",
 
-    popular: false,
+    popular: true,
 
     description:
       "레이싱을 테마로 한 다양한 장애물을 통과하며 뛰어놀 수 있는 대형 에어바운스입니다.",
@@ -543,7 +543,7 @@ export const AttractionsData = [
     target: "general",
     location: "",
 
-    popular: true,
+    popular: false,
 
     description:
       "레이싱을 테마로 한 탈것을 직접 즐기며 주행의 재미를 느낄 수 있는 공간입니다.",
@@ -580,7 +580,7 @@ export const AttractionsData = [
     target: "general",
     location: "",
 
-    popular: true,
+    popular: false,
 
     description:
       "아이들이 즐겁게 움직이며 색다른 놀이를 경험할 수 있는 체험형 놀이시설입니다.",
@@ -692,7 +692,7 @@ export const AttractionsData = [
     target: "general",
     location: "",
 
-    popular: true,
+    popular: false,
 
     description:
       "UFO 모양의 바이킹을 타고 좌우로 움직이며 짜릿한 재미를 즐길 수 있는 인기 놀이기구입니다.",
@@ -728,7 +728,7 @@ export const AttractionsData = [
     target: "general",
     location: "",
 
-    popular: false,
+    popular: true,
 
     description:
       "직접 페달을 움직이며 물 위를 천천히 이동해볼 수 있는 어린이 체험시설입니다.",
@@ -875,7 +875,7 @@ export const AttractionsData = [
     target: "general",
     location: "",
 
-    popular: false,
+    popular: true,
 
     description:
       "귀여운 공룡 모양의 기구를 타고 빙글빙글 회전하며 즐기는 어린이 놀이기구입니다.",
@@ -911,7 +911,7 @@ export const AttractionsData = [
     target: "general",
     location: "",
 
-    popular: true,
+    popular: false,
 
     description:
       "다람쥐통 모양의 기구를 타고 빙글빙글 회전하는 재미를 즐길 수 있는 놀이기구입니다.",
@@ -948,7 +948,7 @@ export const AttractionsData = [
     target: "general",
     location: "",
 
-    popular: true,
+    popular: false,
 
     description:
       "튜브를 타고 슬로프를 내려오며 속도감과 짜릿함을 즐길 수 있는 인기 놀이시설입니다.",

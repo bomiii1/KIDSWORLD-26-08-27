@@ -2,15 +2,15 @@ export default function Loading() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-[white]">
       <div className="flex items-end gap-[10px]">
-        <span className="h-[18px] w-[18px] animate-bounce rounded-full bg-[#F5A623]" />
+        <span className="h-[18px] w-[18px] animate-bounce rounded-full bg-[#5F8F73]" />
 
         <span
-          className="h-[18px] w-[18px] animate-bounce rounded-full bg-[#16864B]"
+          className="h-[18px] w-[18px] animate-bounce rounded-full bg-[#FFD050]"
           style={{ animationDelay: "0.15s" }}
         />
 
         <span
-          className="h-[18px] w-[18px] animate-bounce rounded-full bg-[#E53935]"
+          className="h-[18px] w-[18px] animate-bounce rounded-full bg-[#FF6B81]"
           style={{ animationDelay: "0.3s" }}
         />
       </div>

@@ -1,9 +1,4 @@
-import {
-  ArrowUpRight,
-  MapPin,
-  SquareParking,
-  TrainFront,
-} from "lucide-react";
+import { ArrowUpRight, MapPin, SquareParking, TrainFront } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Section6() {
@@ -26,7 +21,7 @@ export default function Section6() {
           {/* 실제 지도 */}
           <div className="h-[320px] w-full overflow-hidden rounded-[14px] border border-[#292929]/15 bg-[#F4F4F4] sm:h-[400px] lg:h-full lg:min-h-[500px]">
             <iframe
-              src="https://www.google.com/maps?q=%EC%83%81%EC%83%81%EC%B2%B4%ED%97%98%20%ED%82%A4%EC%A6%88%EC%9B%94%EB%93%9C%20%EB%B2%A1%EC%8A%A4%EC%BD%94%20%EC%A0%9C2%EC%A0%84%EC%8B%9C%EC%9E%A5&z=16&output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m5!3m3!1m2!1s0x356893442154d7d1%3A0xb7d5de66b8e7df8e!2z7IOB7IOB7LK07ZeY7YKk7KaI7JuU65Oc!5e0!3m2!1sko!2skr!4v1788838980569!5m2!1sko!2skr"
               title="상상체험 키즈월드 위치 지도"
               loading="lazy"
               allowFullScreen
@@ -39,10 +34,7 @@ export default function Section6() {
           <div className="flex h-full flex-col">
             {/* 주소 */}
             <div className="flex items-start gap-3">
-      
-
               <div>
-
                 <h3 className="mt-2 break-keep text-[25px] font-bold leading-[1.3] text-[#292929] sm:text-[30px] lg:text-[34px]">
                   부산 해운대구 APEC로 30
                   <br />
@@ -68,26 +60,26 @@ export default function Section6() {
 
                 {/* 지도 바로가기 */}
                 <div className="mb-8 mt-4 flex flex-wrap gap-2 lg:mb-10">
-  <a
-    href="https://map.naver.com/p/search/%EB%B2%A1%EC%8A%A4%EC%BD%94%20%EC%A0%9C2%EC%A0%84%EC%8B%9C%EC%9E%A5"
-    target="_blank"
-    rel="noreferrer"
-    className="group flex items-center gap-2 rounded-[7px] border border-[#292929]/25 px-4 py-3 text-[14px] font-medium text-[#292929] transition-colors duration-300 hover:border-[#FF6B81] hover:text-[#FF6B81] sm:text-[16px]"
-  >
-    네이버 지도
-    <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-  </a>
+                  <a
+                    href="https://map.naver.com/p/search/%EB%B2%A1%EC%8A%A4%EC%BD%94%20%EC%A0%9C2%EC%A0%84%EC%8B%9C%EC%9E%A5"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group flex items-center gap-2 rounded-[7px] border border-[#292929]/25 px-4 py-3 text-[14px] font-medium text-[#292929] transition-colors duration-300 hover:border-[#FF6B81] hover:text-[#FF6B81] sm:text-[16px]"
+                  >
+                    네이버 지도
+                    <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </a>
 
-  <a
-    href="https://map.kakao.com/link/search/%EB%B2%A1%EC%8A%A4%EC%BD%94%20%EC%A0%9C2%EC%A0%84%EC%8B%9C%EC%9E%A5"
-    target="_blank"
-    rel="noreferrer"
-    className="group flex items-center gap-2 rounded-[7px] border border-[#292929]/25 px-4 py-3 text-[14px] font-medium text-[#292929] transition-colors duration-300 hover:border-[#FF6B81] hover:text-[#FF6B81] sm:text-[16px]"
-  >
-    카카오맵
-    <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-  </a>
-</div>
+                  <a
+                    href="https://map.kakao.com/link/search/%EB%B2%A1%EC%8A%A4%EC%BD%94%20%EC%A0%9C2%EC%A0%84%EC%8B%9C%EC%9E%A5"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group flex items-center gap-2 rounded-[7px] border border-[#292929]/25 px-4 py-3 text-[14px] font-medium text-[#292929] transition-colors duration-300 hover:border-[#FF6B81] hover:text-[#FF6B81] sm:text-[16px]"
+                  >
+                    카카오맵
+                    <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -109,7 +101,6 @@ export default function Section6() {
                   className="group mt-4 flex w-fit items-center gap-2 rounded-[7px] border border-[#292929]/25 px-4 py-3 text-[14px] font-medium text-[#292929] transition-colors duration-300 hover:border-[#FF6B81] hover:text-[#FF6B81] sm:text-[16px]"
                 >
                   주차안내
-
                   <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </Link>
               </div>

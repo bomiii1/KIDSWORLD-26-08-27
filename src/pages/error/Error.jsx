@@ -5,13 +5,14 @@ export default function Error() {
   return (
     <div>
       <PageTitle title="404" />
-      <main className="flex min-h-screen items-center justify-center bg-[white] px-[20px]">
+
+      <main className="flex min-h-screen items-center justify-center bg-white px-[20px]">
         <div className="text-center">
-          <p className="mb-[10px] text-[16px] font-bold tracking-[2px] text-[#F5A623]">
+          <p className="mb-[10px] text-[16px] font-bold tracking-[2px] text-[#FFD050]">
             KIDS WORLD
           </p>
 
-          <h1 className="text-[120px] font-black leading-none text-[#E53935] sm:text-[160px]">
+          <h1 className="text-[120px] font-black leading-none text-[#FF6B81] sm:text-[160px]">
             404
           </h1>
 
@@ -27,7 +28,7 @@ export default function Error() {
 
           <Link
             to="/"
-            className="mt-[35px] inline-flex h-[52px] items-center justify-center rounded-[10px] bg-[#E53935] px-[28px] text-[16px] font-bold text-white transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#C92F2C] active:scale-95"
+            className="mt-[35px] inline-flex h-[52px] items-center justify-center rounded-[10px] bg-[#FF6B81] px-[28px] text-[16px] font-bold text-white transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#e85c72] active:scale-95"
           >
             메인으로 돌아가기
           </Link>

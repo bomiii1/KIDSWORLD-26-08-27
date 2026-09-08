@@ -47,11 +47,7 @@ const discountInformation = [
     id: 2,
     title: "할인 대상",
     highlight: "50% 할인",
-    contents: [
-      "장애인 · 국가유공자 (동반 1인까지)",
-      "임산부",
-      "65세 이상",
-    ],
+    contents: ["장애인 · 국가유공자 (동반 1인까지)", "임산부", "65세 이상"],
     notice: "관련 증빙서류를 지참해주세요.",
   },
 ];
@@ -125,12 +121,12 @@ export default function Admission() {
               } ${index === 0 ? "sm:pl-0" : "sm:pr-0"}`}
             >
               {/* 제목 */}
-              <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+              <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 items-center">
                 <h3 className="text-[21px] font-bold text-[#292929] sm:text-[24px]">
                   {information.title}
                 </h3>
 
-                <strong className="text-[16px] font-bold text-[#FF6B81] sm:text-[18px]">
+                <strong className="text-[16px] text-[#ebbd3f] bg-[#FFD050]/5 rounded-[10px] px-3 py-2 border-[#FFD050] border-1 sm:text-[18px]">
                   {information.highlight}
                 </strong>
               </div>
@@ -166,16 +162,12 @@ export default function Admission() {
         </div>
 
         {/* 이용안내 */}
-        <div className="mt-[28px] rounded-[14px] border border-[#FF6B81]/70 bg-[#FFD050]/10 px-5 py-5 text-center sm:px-8 sm:py-6">
+        <div className="mt-[28px] rounded-[14px] border border-[#FF6B81]/70 px-5 py-5 text-center sm:px-8 sm:py-6">
           <p className="break-keep text-[14px] font-bold leading-[1.8] text-[#292929] sm:text-[17px]">
             영업시간 내{" "}
-            <strong className="text-[#FF6B81]">
-              시간제한 없이 이용 가능
-            </strong>
+            <strong className="text-[#FF6B81]">시간제한 없이 이용 가능</strong>
             합니다. 단, 퇴장 시{" "}
-            <strong className="text-[#FF6B81]">
-              재입장은 불가
-            </strong>
+            <strong className="text-[#FF6B81]">재입장은 불가</strong>
             합니다.
           </p>
         </div>

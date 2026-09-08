@@ -33,7 +33,7 @@ export default function Guides() {
               이용안내
             </h1>
 
-            <p className="mt-3 text-[16px] font-bold text-[#FF6B81] sm:text-[18px] lg:text-[20px]">
+            <p className="text-[16px] font-['Jua'] text-[#FFD050] sm:text-[18px] lg:text-[20px]">
               이용에 필요한 정보를 찾아보세요!
             </p>
           </div>
@@ -46,17 +46,11 @@ export default function Guides() {
               이용정보
             </NavLink>
 
-            <NavLink
-              to="/guides/admission"
-              className={menuStyle}
-            >
+            <NavLink to="/guides/admission" className={menuStyle}>
               이용요금
             </NavLink>
 
-            <NavLink
-              to="/guides/parking"
-              className={menuStyle}
-            >
+            <NavLink to="/guides/parking" className={menuStyle}>
               주차안내
             </NavLink>
 

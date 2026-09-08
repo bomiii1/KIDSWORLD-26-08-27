@@ -69,11 +69,7 @@ export default function Header() {
             onClick={closeMobileMenu}
             className="w-[55px] shrink-0 sm:w-[60px] lg:w-[70px]"
           >
-            <img
-              src={logoImg}
-              alt="키즈월드 로고"
-              className="block w-full"
-            />
+            <img src={logoImg} alt="키즈월드 로고" className="block w-full" />
           </Link>
 
           {/* PC 메뉴 */}
@@ -103,7 +99,7 @@ export default function Header() {
                 rel="noreferrer"
                 className="flex items-center justify-center whitespace-nowrap rounded-[10px] border border-[#FF6B81] bg-white px-[18px] py-[11px] text-[15px] font-bold text-[#FF6B81] transition-all duration-300 hover:bg-[#FF6B81] hover:text-white"
               >
-                예매하기
+                온라인 예매
               </a>
             </div>
           </nav>
@@ -156,7 +152,6 @@ export default function Header() {
             className="group mt-7 flex w-full items-center justify-between rounded-[12px] bg-[#FF6B81] px-5 py-4 text-[16px] font-bold text-white shadow-md transition-transform duration-300 hover:scale-[1.02] active:scale-[0.98]"
           >
             예매하기
-
             <ArrowUpRight className="h-[19px] w-[19px] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
         </nav>

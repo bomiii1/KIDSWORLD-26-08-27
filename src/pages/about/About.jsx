@@ -1,9 +1,10 @@
 import PageTitle from "../components/PageTitle";
 
-import aboutImg from "../../img/about.jpeg";
-import keyword2500 from "../../img/keyword2500.jpg";
-import keywordAllday from "../../img/keyword_allday.jpg";
-import keyword30 from "../../img/keyword30.jpg";
+import aboutImg1 from "../../img/aboutImg1.png";
+import aboutImg2 from "../../img/aboutImg.png";
+import keyword2500 from "../../img/keyword2500.png";
+import keywordAllday from "../../img/keyword_allday.png";
+import keyword30 from "../../img/keyword30.png";
 
 const experienceCards = [
   {
@@ -81,13 +82,12 @@ export default function About() {
     <>
       <PageTitle title="소개" />
 
-      <main className="min-h-screen bg-white pt-[90px]">
+      <main className="min-h-screen bg-white pt-[70px] lg:pt-[90px]">
         {/* 상단 비주얼 */}
         <section
           className="relative bg-cover bg-[center_50%] bg-no-repeat px-5 py-[65px] sm:px-[30px] md:px-[50px] lg:px-[80px] lg:py-[75px] xl:px-[150px]"
           style={{
-            backgroundImage:
-              "url(https://mblogthumb-phinf.pstatic.net/MjAyNDA3MzBfMjg1/MDAxNzIyMzUwNjM2MzU2.KZUm8ffnIlX9N6ijR1VvemejEO9x8TpFlMbgUIiUXj8g.y73cpa-W_7S5OWdQqei6Q4qKJGem0R9Qw5fpDOcVsgMg.JPEG/SE-ad50c06f-8d66-49cc-859b-1d06dd4b7798.jpg?type=w800)",
+            backgroundImage: `url(${aboutImg1})`,
           }}
         >
           <div className="absolute inset-0 bg-[#292929]/70" />
@@ -97,7 +97,7 @@ export default function About() {
               상상체험 키즈월드
             </h1>
 
-            <p className="mt-3 text-[16px] font-bold text-[#FF6B81] lg:text-[20px]">
+            <p className="text-[16px] font-bold text-[#FFD050] lg:text-[20px]">
               상상체험 키즈월드를 소개합니다!
             </p>
           </div>
@@ -115,17 +115,16 @@ export default function About() {
               <p className="mt-[18px] max-w-[720px] break-keep text-[14px] font-medium leading-[1.8] text-[#292929]/70 sm:text-[16px] lg:text-[18px]">
                 상상체험 키즈월드는 아이들이 직접 몸으로 느끼고 경험하며,
                 <br className="hidden sm:block" />
-                부모와 아이가 함께 즐거운 순간을 만들어가는 실내
-                놀이공간입니다.
+                부모와 아이가 함께 즐거운 순간을 만들어가는 실내 놀이공간입니다.
               </p>
             </div>
 
             {/* 메인 이미지 */}
             <div className="mt-[35px] overflow-hidden rounded-[24px]">
               <img
-                src={aboutImg}
+                src={aboutImg2}
                 alt="상상체험 키즈월드"
-                className="h-[300px] w-full object-cover object-center sm:h-[500px] lg:h-[550px]"
+                className="h-[300px] w-full object-cover object-center sm:h-[500px] lg:h-[550px] opacity-80"
               />
             </div>
 
@@ -158,7 +157,6 @@ export default function About() {
         {/* 연혁 */}
         <section className="bg-[#FFD050]/10 px-5 py-[75px] sm:px-[30px] sm:py-[85px] md:px-[50px] lg:px-[80px] lg:py-[95px] xl:px-[150px]">
           <div className="mx-auto max-w-[1600px]">
-
             <div className="relative mt-12 md:mt-16">
               {/* 모바일 세로선 / PC 가로선 */}
               <div className="absolute bottom-0 left-[7px] top-0 w-[2px] bg-[#292929]/12 md:bottom-auto md:left-0 md:right-0 md:top-[7px] md:h-[2px] md:w-full" />
@@ -179,9 +177,7 @@ export default function About() {
 
                     <p
                       className={`text-[14px] font-bold sm:text-[16px] ${
-                        item.current
-                          ? "text-[#FF6B81]"
-                          : "text-[#292929]/45"
+                        item.current ? "text-[#FF6B81]" : "text-[#292929]/45"
                       }`}
                     >
                       {item.year}
@@ -204,49 +200,49 @@ export default function About() {
         </section>
 
         {/* 주요 특징 이미지 배너 */}
-       <section className="bg-white px-5 py-[80px] sm:px-[30px] sm:py-[90px] md:px-[50px] lg:px-[80px] lg:py-[110px] xl:px-[150px]">
-  <div className="mx-auto max-w-[1600px]">
-    <h2 className="sr-only">키즈월드 주요 특징</h2>
+        <section className="bg-white px-5 py-[80px] sm:px-[30px] sm:py-[90px] md:px-[50px] lg:px-[80px] lg:py-[110px] xl:px-[150px]">
+          <div className="mx-auto max-w-[1600px]">
+            <h2 className="sr-only">키즈월드 주요 특징</h2>
 
-    <div className="grid grid-cols-1 overflow-hidden rounded-[20px] sm:grid-cols-3">
-      {keyPoints.map((point, index) => (
-        <article
-          key={point.id}
-          className={`group relative min-h-[300px] overflow-hidden sm:min-h-[400px] lg:min-h-[500px] ${
-            index !== keyPoints.length - 1
-              ? "border-b border-white/40 sm:border-b-0 sm:border-r"
-              : ""
-          }`}
-        >
-          {/* 배경 이미지 */}
-          <img
-            src={point.image}
-            alt=""
-            className="absolute inset-0 h-full w-full object-cover"
-          />
+            <div className="grid grid-cols-1 overflow-hidden rounded-[20px] sm:grid-cols-3">
+              {keyPoints.map((point, index) => (
+                <article
+                  key={point.id}
+                  className={`group relative min-h-[300px] overflow-hidden sm:min-h-[400px] lg:min-h-[500px] ${
+                    index !== keyPoints.length - 1
+                      ? "border-b border-white/40 sm:border-b-0 sm:border-r"
+                      : ""
+                  }`}
+                >
+                  {/* 배경 이미지 */}
+                  <img
+                    src={point.image}
+                    alt=""
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
 
-          {/* 글자가 있는 아래쪽에만 그라데이션 */}
-          <div className="absolute inset-x-0 bottom-0 h-[72%] bg-gradient-to-t from-[#292929]/95 via-[#292929]/60 to-transparent" />
+                  {/* 글자가 있는 아래쪽에만 그라데이션 */}
+                  <div className="absolute inset-x-0 bottom-0 h-[72%] bg-gradient-to-t from-[#292929]/95 via-[#292929]/60 to-transparent" />
 
-          {/* 내용 */}
-          <div className="absolute inset-x-0 bottom-0 z-10 p-6 text-white sm:p-5 lg:p-8">
-            <strong className="inline-block origin-left font-['Jua'] text-[42px] leading-none text-[#FF6B81] drop-shadow-[0_2px_5px_rgba(0,0,0,0.5)] transition-all duration-300 sm:text-[36px] sm:text-white sm:group-hover:scale-105 sm:group-hover:text-[#FF6B81] lg:text-[52px]">
-              {point.value}
-            </strong>
+                  {/* 내용 */}
+                  <div className="absolute inset-x-0 bottom-0 z-10 p-6 text-white sm:p-5 lg:p-8">
+                    <strong className="inline-block origin-left font-['Jua'] text-[42px] leading-none text-[#FF6B81] drop-shadow-[0_2px_5px_rgba(0,0,0,0.5)] transition-all duration-300 sm:text-[36px] sm:text-white sm:group-hover:scale-105 sm:group-hover:text-[#FF6B81] lg:text-[52px]">
+                      {point.value}
+                    </strong>
 
-            <h3 className="mt-3 text-[18px] font-bold drop-shadow-[0_2px_5px_rgba(0,0,0,0.6)] lg:text-[22px]">
-              {point.title}
-            </h3>
+                    <h3 className="mt-3 text-[18px] font-bold drop-shadow-[0_2px_5px_rgba(0,0,0,0.6)] lg:text-[22px]">
+                      {point.title}
+                    </h3>
 
-            <p className="mt-2 break-keep text-[14px] font-medium leading-[1.7] text-white/90 drop-shadow-[0_2px_5px_rgba(0,0,0,0.6)] sm:text-[16px]">
-              {point.description}
-            </p>
+                    <p className="mt-2 break-keep text-[14px] font-medium leading-[1.7] text-white/90 drop-shadow-[0_2px_5px_rgba(0,0,0,0.6)] sm:text-[16px]">
+                      {point.description}
+                    </p>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
-        </article>
-      ))}
-    </div>
-  </div>
-</section>
+        </section>
       </main>
     </>
   );

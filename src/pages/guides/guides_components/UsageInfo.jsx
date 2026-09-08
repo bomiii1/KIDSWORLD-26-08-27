@@ -61,7 +61,6 @@ export default function UsageInfo() {
                     className="group flex items-center gap-[6px] rounded-[8px] border border-[#292929]/20 px-[14px] py-[9px] text-[16px] font-medium text-[#292929] transition-colors duration-300 hover:border-[#FF6B81] hover:text-[#FF6B81]"
                   >
                     네이버 지도
-
                     <ArrowUpRight className="h-[16px] w-[16px] transition-transform duration-300 group-hover:translate-x-[2px] group-hover:-translate-y-[2px]" />
                   </a>
 
@@ -72,7 +71,6 @@ export default function UsageInfo() {
                     className="group flex items-center gap-[6px] rounded-[8px] border border-[#292929]/20 px-[14px] py-[9px] text-[16px] font-medium text-[#292929] transition-colors duration-300 hover:border-[#FF6B81] hover:text-[#FF6B81]"
                   >
                     카카오맵
-
                     <ArrowUpRight className="h-[16px] w-[16px] transition-transform duration-300 group-hover:translate-x-[2px] group-hover:-translate-y-[2px]" />
                   </a>
                 </div>
@@ -85,12 +83,16 @@ export default function UsageInfo() {
                 연락처
               </h3>
 
-              <a
-                href="tel:070-4801-6034"
-                className="w-fit text-[16px] font-bold text-[#292929] transition-colors hover:text-[#FF6B81] sm:text-[18px]"
-              >
-                070-4801-6034
-              </a>
+              <p className=" group text-[16px] font-medium text-[#292929] sm:text-[18px]">
+                <a
+                  href="tel:07048016034"
+                  aria-label="문의 전화하기"
+                  className="flex items-center gap-[5px] transition-colors duration-200 hover:text-[#FF6B81]"
+                >
+                  070-4801-6034
+                  <ArrowUpRight className="h-5 w-5 text-[#292929]/60 group-hover:text-[#FF6B81] transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                </a>
+              </p>
             </div>
 
             {/* 영업시간 */}
@@ -174,9 +176,7 @@ export default function UsageInfo() {
 
                 <p>
                   보조배터리 대여
-                  <span className="ml-2 text-[#292929]/55">
-                    유료
-                  </span>
+                  <span className="ml-2 text-[#292929]/55">유료</span>
                 </p>
               </div>
             </div>

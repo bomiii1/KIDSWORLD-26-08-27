@@ -141,7 +141,7 @@ export default function RestArea() {
                   {activeArea.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-[6px] bg-[#FFD050]/10 px-[12px] py-[7px] text-[16px] font-bold text-[#FFD050]"
+                      className="rounded-[6px] bg-[#FFD050]/10 px-[12px] py-[7px] text-[16px] font-bold text-[#c9a33a]"
                     >
                       {tag}
                     </span>
@@ -203,10 +203,10 @@ export default function RestArea() {
         </div>
 
         {/* 하단 안내 */}
-        <div className="mt-[40px] border-t border-[#292929]/10 pt-[25px]">
+        <div className="mt-[40px] border-1 rounded-[20px] items-center flex justify-center border-[#5F8F73] bg-[#5F8F73]/10 py-[20px]">
           <p className="text-center text-[16px] font-medium leading-[1.8] text-[#5F8F73] sm:text-[18px]">
-            잔디존, 텐트존, 컬러펜스존 외에도 통행에 방해가 되지 않는
-            공간이라면 자유롭게 돗자리를 펴고 이용하실 수 있습니다.
+            잔디존, 텐트존, 컬러펜스존 외에도 통행에 방해가 되지 않는 공간이라면
+            자유롭게 돗자리를 펴고 이용하실 수 있습니다.
           </p>
         </div>
       </div>

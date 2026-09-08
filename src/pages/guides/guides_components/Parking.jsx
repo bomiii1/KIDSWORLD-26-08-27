@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "lucide-react";
 import parkingImg from "../../../img/parking.png";
 
 export default function Parking() {
@@ -16,13 +17,11 @@ export default function Parking() {
         </div>
 
         {/* 주차 가능 장소 */}
-        <div className="mt-[38px] rounded-[14px] border border-[#FF6B81]/60 bg-[#FFD050]/10 px-5 py-5 text-center sm:px-8 sm:py-6">
+        <div className="mt-[38px] rounded-[14px] border border-[#FF6B81]/60 px-5 py-5 text-center sm:px-8 sm:py-6">
           <p className="break-keep text-[16px] font-bold leading-[1.8] text-[#292929] sm:text-[18px]">
             벡스코 주차장{" "}
-            <strong className="text-[#FF6B81]">
-              제1전시장 · 제2전시장
-            </strong>
-            에 주차할 수 있습니다.
+            <strong className="text-[#FF6B81]">제1전시장 · 제2전시장</strong>에
+            주차할 수 있습니다.
           </p>
         </div>
 
@@ -36,33 +35,33 @@ export default function Parking() {
 
             <dl className="mt-5 border-t border-[#292929]/15">
               <div className="grid grid-cols-[110px_1fr] gap-5 border-b border-[#292929]/15 py-5 sm:grid-cols-[130px_1fr]">
-                <dt className="text-[16px] font-bold text-[#292929]/55 sm:text-[18px]">
+                <p className="text-[16px] font-bold text-[#292929]/55 sm:text-[18px]">
                   구분
-                </dt>
+                </p>
 
-                <dd className="text-[16px] font-bold text-[#292929] sm:text-[18px]">
+                <p className="text-[16px] font-bold text-[#292929] sm:text-[18px]">
                   유료
-                </dd>
+                </p>
               </div>
 
               <div className="grid grid-cols-[110px_1fr] gap-5 border-b border-[#292929]/15 py-5 sm:grid-cols-[130px_1fr]">
-                <dt className="text-[16px] font-bold text-[#292929]/55 sm:text-[18px]">
+                <p className="text-[16px] font-bold text-[#292929]/55 sm:text-[18px]">
                   기본요금
-                </dt>
+                </p>
 
-                <dd className="text-[16px] font-medium leading-[1.7] text-[#292929] sm:text-[18px]">
+                <p className="text-[16px] font-medium leading-[1.7] text-[#292929] sm:text-[18px]">
                   1시간 2,700원
-                </dd>
+                </p>
               </div>
 
               <div className="grid grid-cols-[110px_1fr] gap-5 border-b border-[#292929]/15 py-5 sm:grid-cols-[130px_1fr]">
-                <dt className="text-[16px] font-bold text-[#292929]/55 sm:text-[18px]">
+                <p className="text-[16px] font-bold text-[#292929]/55 sm:text-[18px]">
                   일일 최대
-                </dt>
+                </p>
 
-                <dd className="text-[16px] font-medium leading-[1.7] text-[#292929] sm:text-[18px]">
+                <p className="text-[16px] font-medium leading-[1.7] text-[#292929] sm:text-[18px]">
                   15,000원
-                </dd>
+                </p>
               </div>
             </dl>
           </div>
@@ -75,39 +74,40 @@ export default function Parking() {
 
             <dl className="mt-5 border-t border-[#292929]/15">
               <div className="grid grid-cols-[110px_1fr] gap-5 border-b border-[#292929]/15 py-5 sm:grid-cols-[130px_1fr]">
-                <dt className="text-[16px] font-bold text-[#292929]/55 sm:text-[18px]">
+                <p className="text-[16px] font-bold text-[#292929]/55 sm:text-[18px]">
                   정산 방법
-                </dt>
+                </p>
 
-                <dd className="text-[16px] font-medium text-[#292929] sm:text-[18px]">
+                <p className="text-[16px] font-medium text-[#292929] sm:text-[18px]">
                   출차 전 사전정산
-                </dd>
+                </p>
               </div>
 
               <div className="grid grid-cols-[110px_1fr] gap-5 border-b border-[#292929]/15 py-5 sm:grid-cols-[130px_1fr]">
-                <dt className="text-[16px] font-bold text-[#292929]/55 sm:text-[18px]">
+                <p className="text-[16px] font-bold text-[#292929]/55 sm:text-[18px]">
                   주차장 문의
-                </dt>
+                </p>
 
-                <dd className="text-[16px] font-medium text-[#292929] sm:text-[18px]">
-  <a
-    href="tel:0510000000"
-    aria-label="주차장 문의 전화하기"
-    className="transition-colors duration-200 hover:text-[#FF6B81]"
-  >
-    051-000-0000
-  </a>
-</dd>
+                <p className=" group text-[16px] font-medium text-[#292929] sm:text-[18px]">
+                  <a
+                    href="tel:0517407336"
+                    aria-label="주차장 문의 전화하기"
+                    className="flex items-center gap-[5px] transition-colors duration-200 hover:text-[#FF6B81]"
+                  >
+                    051-740-7336
+                    <ArrowUpRight className="h-5 w-5 text-[#292929]/60 group-hover:text-[#FF6B81] transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  </a>
+                </p>
               </div>
 
               <div className="grid grid-cols-[110px_1fr] gap-5 border-b border-[#292929]/15 py-5 sm:grid-cols-[130px_1fr]">
-                <dt className="text-[16px] font-bold text-[#292929]/55 sm:text-[18px]">
+                <p className="text-[16px] font-bold text-[#292929]/55 sm:text-[18px]">
                   주차 가능
-                </dt>
+                </p>
 
-                <dd className="break-keep text-[16px] font-medium text-[#292929] sm:text-[18px]">
+                <p className="break-keep text-[16px] font-medium text-[#292929] sm:text-[18px]">
                   제1전시장 · 제2전시장
-                </dd>
+                </p>
               </div>
             </dl>
           </div>
@@ -115,7 +115,7 @@ export default function Parking() {
 
         {/* 주차장 이미지 */}
         <div className="mt-[55px] grid grid-cols-1 gap-4 md:grid-cols-2">
-          <div className="h-[280px] overflow-hidden rounded-[16px] bg-[#F2F2F2] sm:h-[340px]">
+          <div className="h-[280px] overflow-hipen rounded-[16px] bg-[#F2F2F2] sm:h-[340px]">
             <img
               src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjAzMTZfODkg%2FMDAxNzczNjEwMzY5MDc1.z7hfivF0C7DVOqzBIiZeVnFYGj1Xhxs91lqU1lCbvK0g.QOSga0EyO1HKuj28ArcshKS0eeVhZf5RooSE_DCdWYsg.JPEG%2F9026f169.jpg&type=sc960_832"
               alt="벡스코 주차장 입구"
@@ -123,7 +123,7 @@ export default function Parking() {
             />
           </div>
 
-          <div className="h-[280px] overflow-hidden rounded-[16px] bg-[#F2F2F2] sm:h-[340px]">
+          <div className="h-[280px] overflow-hipen rounded-[16px] bg-[#F2F2F2] sm:h-[340px]">
             <img
               src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTAxMDNfMjcy%2FMDAxNTQ2NDg5NjE2NjMx.sG1Yvs_BufkRN75H369eueoj0WQiYjXx_r-NgtVg8MAg.s3DnQQKM7_RauhANTpH0ygFI6uCAeqswORazSyxBucMg.JPEG.choisujo%2FCYMERA_20190103_132529.jpg&type=sc960_832"
               alt="벡스코 주차장 안내"
@@ -146,7 +146,7 @@ export default function Parking() {
 
           <div className="mt-[35px] grid grid-cols-1 gap-[40px] lg:grid-cols-[0.9fr_1.1fr] lg:items-stretch lg:gap-[60px]">
             {/* 안내 이미지 */}
-            <div className="flex min-h-[360px] items-center justify-center overflow-hidden rounded-[16px] bg-[#F7F7F7] lg:h-full">
+            <div className="flex min-h-[360px] items-center justify-center overflow-hipen rounded-[16px] bg-[#F7F7F7] lg:h-full">
               <img
                 src={parkingImg}
                 alt="키즈월드 주차등록 안내"
@@ -180,13 +180,12 @@ export default function Parking() {
 
               <div className="mt-[30px] space-y-4">
                 <p className="break-keep text-[16px] font-medium leading-[1.8] text-[#292929]/70 sm:text-[18px]">
-                  입장 시 매표소 또는 입구 직원에게 주차등록을
-                  요청해주세요.
+                  입장 시 매표소 또는 입구 직원에게 주차등록을 요청해주세요.
                 </p>
 
                 <p className="break-keep text-[16px] font-medium leading-[1.8] text-[#292929]/70 sm:text-[18px]">
-                  차량 1대당 1회 적용되며, 입장권 매수와 관계없이
-                  동일하게 적용됩니다.
+                  차량 1대당 1회 적용되며, 입장권 매수와 관계없이 동일하게
+                  적용됩니다.
                 </p>
 
                 <p className="break-keep text-[16px] font-medium leading-[1.8] text-[#292929]/70 sm:text-[18px]">

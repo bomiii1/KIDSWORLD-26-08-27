@@ -81,8 +81,7 @@ export default function Custom() {
     setResultAgeRange("");
   };
 
-  const hasResult =
-    resultHeightRange !== "" && resultAgeRange !== "";
+  const hasResult = resultHeightRange !== "" && resultAgeRange !== "";
 
   const hasSelectedCondition =
     resultHeightRange !== "" || resultAgeRange !== "";
@@ -108,10 +107,7 @@ export default function Custom() {
     };
 
     // 최소 키 제한
-    if (
-      attraction.minHeight !== null &&
-      attraction.minHeight !== undefined
-    ) {
+    if (attraction.minHeight !== null && attraction.minHeight !== undefined) {
       if (selectedHeight.max < attraction.minHeight) {
         reasons.push(`${attraction.minHeight}cm 이상 이용 가능`);
       } else {
@@ -120,10 +116,7 @@ export default function Custom() {
     }
 
     // 최대 키 제한
-    if (
-      attraction.maxHeight !== null &&
-      attraction.maxHeight !== undefined
-    ) {
+    if (attraction.maxHeight !== null && attraction.maxHeight !== undefined) {
       if (selectedHeight.min > attraction.maxHeight) {
         reasons.push(`${attraction.maxHeight}cm 이하 이용 가능`);
       } else {
@@ -132,10 +125,7 @@ export default function Custom() {
     }
 
     // 유아 전용
-    if (
-      attraction.target === "toddler" &&
-      resultAgeRange === "over6"
-    ) {
+    if (attraction.target === "toddler" && resultAgeRange === "over6") {
       reasons.push("5세 이하 이용 가능");
     }
 
@@ -225,14 +215,10 @@ export default function Custom() {
     return (
       <Link
         to={`/facilities/attractions/${attraction.id}`}
-        className={`group block min-w-0 overflow-hidden rounded-[14px] border bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_26px_rgba(41,41,41,0.08)] sm:rounded-[16px] ${
-          difficult
-            ? "border-[#292929]/10 opacity-70"
-            : "border-[#292929]/10 hover:border-[#FF6B81]/35"
-        }`}
+        className={`group block min-w-0 ${difficult ? "opacity-60" : ""}`}
       >
         {/* 이미지 */}
-        <div className="aspect-[4/3] w-full overflow-hidden bg-[#F2F2F2]">
+        <div className="aspect-[4/3] w-full overflow-hidden rounded-[14px] bg-[#D9D9D9] sm:rounded-[16px]">
           {attraction.AttractionImg ? (
             <img
               src={attraction.AttractionImg}
@@ -248,67 +234,56 @@ export default function Custom() {
           )}
         </div>
 
-        {/* 정보 */}
-        <div className="px-[12px] py-[15px] sm:px-[20px] sm:py-[22px]">
-          <p className="text-[14px] font-bold text-[#FF6B81] sm:text-[16px]">
-            {attraction.category}
-          </p>
+        {/* 시설명 */}
+        <h3 className="mt-[10px] break-keep px-[4px] text-[16px] font-bold leading-[1.45] text-[#292929] transition-colors duration-300 group-hover:text-[#FF6B81] sm:mt-[12px] sm:text-[20px]">
+          {attraction.AttractionName}
+        </h3>
 
-          <h3 className="mt-1 break-keep text-[16px] font-bold leading-[1.45] text-[#292929] sm:text-[22px]">
-            {attraction.AttractionName}
-          </h3>
+        {/* 이용 가능 조건 */}
+        {!difficult && (
+          <div className="mt-[8px] flex flex-wrap gap-[6px] px-[4px]">
+            {attraction.result.conditions.map((condition, index) => (
+              <span
+                key={`condition-${index}`}
+                className="break-keep rounded-[6px] bg-[#292929]/10 px-[10px] py-[6px] text-[12px] font-bold leading-[1.3] text-[#292929]/75 backdrop-blur-sm sm:text-[14px]"
+              >
+                {condition}
+              </span>
+            ))}
 
-          {/* 이용 가능 조건 */}
-          {!difficult && (
-            <div className="mt-3 flex flex-wrap gap-[6px] sm:mt-4 sm:gap-2">
-              {attraction.result.conditions.map(
-                (condition, index) => (
-                  <span
-                    key={`condition-${index}`}
-                    className="break-keep rounded-[6px] bg-[#FFD050]/25 px-2 py-[5px] text-[14px] font-medium leading-[1.4] text-[#292929]/70 sm:px-[10px] sm:py-[6px]"
-                  >
-                    {condition}
-                  </span>
-                ),
-              )}
+            {attraction.result.warnings.map((warning, index) => (
+              <span
+                key={`warning-${index}`}
+                className="break-keep rounded-[6px] bg-[#FF6B81]/15 px-[10px] py-[6px] text-[12px] font-bold leading-[1.3] text-[#FF6B81] backdrop-blur-sm sm:text-[14px]"
+              >
+                {warning}
+              </span>
+            ))}
 
-              {attraction.result.warnings.map((warning, index) => (
-                <span
-                  key={`warning-${index}`}
-                  className="break-keep rounded-[6px] bg-[#FF6B81]/10 px-2 py-[5px] text-[14px] font-bold leading-[1.4] text-[#FF6B81] sm:px-[10px] sm:py-[6px]"
-                >
-                  {warning}
-                </span>
-              ))}
+            {attraction.result.infos.map((info, index) => (
+              <span
+                key={`info-${index}`}
+                className="break-keep rounded-[6px] bg-[#5F8F73]/15 px-[10px] py-[6px] text-[12px] font-bold leading-[1.3] text-[#5F8F73] backdrop-blur-sm sm:text-[14px]"
+              >
+                {info}
+              </span>
+            ))}
+          </div>
+        )}
 
-              {attraction.result.infos.map((info, index) => (
-                <span
-                  key={`info-${index}`}
-                  className="break-keep rounded-[6px] bg-[#5F8F73]/10 px-2 py-[5px] text-[14px] font-bold leading-[1.4] text-[#5F8F73] sm:px-[10px] sm:py-[6px]"
-                >
-                  {info}
-                </span>
-              ))}
-            </div>
-          )}
-
-          {/* 이용이 어려운 이유 */}
-          {difficult &&
-            attraction.result.reasons.length > 0 && (
-              <div className="mt-3 space-y-[5px] sm:mt-4">
-                {attraction.result.reasons.map(
-                  (reason, index) => (
-                    <p
-                      key={index}
-                      className="break-keep text-[14px] font-medium leading-[1.5] text-[#292929]/55 sm:text-[16px]"
-                    >
-                      {reason}
-                    </p>
-                  ),
-                )}
-              </div>
-            )}
-        </div>
+        {/* 이용이 어려운 이유 */}
+        {difficult && attraction.result.reasons.length > 0 && (
+          <div className="mt-[8px] flex flex-wrap gap-[6px] px-[4px]">
+            {attraction.result.reasons.map((reason, index) => (
+              <span
+                key={index}
+                className="break-keep rounded-[6px] bg-[#292929]/10 px-[10px] py-[6px] text-[12px] font-bold leading-[1.3] text-[#292929]/60 backdrop-blur-sm sm:text-[14px]"
+              >
+                {reason}
+              </span>
+            ))}
+          </div>
+        )}
       </Link>
     );
   };
@@ -347,18 +322,13 @@ export default function Custom() {
 
                 <select
                   value={heightRange}
-                  onChange={(event) =>
-                    setHeightRange(event.target.value)
-                  }
+                  onChange={(event) => setHeightRange(event.target.value)}
                   className="h-[56px] w-full cursor-pointer appearance-none rounded-[10px] border border-[#292929]/15 bg-white pl-[46px] pr-[42px] text-[14px] font-medium text-[#292929] outline-none transition-all duration-300 hover:border-[#292929]/30 focus:border-[#FF6B81] focus:shadow-[0_0_0_3px_rgba(255,107,129,0.1)] sm:h-[62px] sm:pl-[52px] sm:text-[18px]"
                 >
                   <option value="">키를 선택해주세요</option>
 
                   {heightOptions.map((option) => (
-                    <option
-                      key={option.value}
-                      value={option.value}
-                    >
+                    <option key={option.value} value={option.value}>
                       {option.label}
                     </option>
                   ))}
@@ -373,18 +343,13 @@ export default function Custom() {
 
                 <select
                   value={ageRange}
-                  onChange={(event) =>
-                    setAgeRange(event.target.value)
-                  }
+                  onChange={(event) => setAgeRange(event.target.value)}
                   className="h-[56px] w-full cursor-pointer appearance-none rounded-[10px] border border-[#292929]/15 bg-white pl-[46px] pr-[42px] text-[14px] font-medium text-[#292929] outline-none transition-all duration-300 hover:border-[#292929]/30 focus:border-[#FF6B81] focus:shadow-[0_0_0_3px_rgba(255,107,129,0.1)] sm:h-[62px] sm:pl-[52px] sm:text-[18px]"
                 >
                   <option value="">연령을 선택해주세요</option>
 
                   {ageOptions.map((option) => (
-                    <option
-                      key={option.value}
-                      value={option.value}
-                    >
+                    <option key={option.value} value={option.value}>
                       {option.label}
                     </option>
                   ))}
@@ -431,7 +396,7 @@ export default function Custom() {
                     type="button"
                     onClick={removeAgeCondition}
                     aria-label={`${selectedAge.label} 조건 삭제`}
-                    className="flex cursor-pointer items-center gap-2 rounded-full bg-[#FF6B81]/10 px-4 py-[9px] text-[14px] font-bold text-[#FF6B81] transition-colors hover:bg-[#FF6B81]/20 sm:text-[16px]"
+                    className="flex cursor-pointer items-center gap-2 rounded-full bg-[#FFD050]/35 px-4 py-[9px] text-[14px] font-bold text-[#292929] transition-colors hover:bg-[#FFD050]/60 sm:text-[16px]"
                   >
                     {selectedAge.label}
                     <X className="h-4 w-4" />
@@ -454,7 +419,7 @@ export default function Custom() {
             <div className="py-[80px] text-center sm:py-[110px]">
               <p className="text-[14px] font-medium text-[#292929]/45 sm:text-[18px]">
                 {hasSelectedCondition
-                  ? "빠진 조건을 다시 선택해주세요."
+                  ? "조건을 다시 선택해주세요."
                   : "아이의 키와 연령을 선택해주세요."}
               </p>
             </div>

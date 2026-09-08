@@ -1,25 +1,27 @@
+import LogoImg from "../../img/logo.png";
+import { Link } from "react-router-dom";
+
 export default function Footer() {
   return (
     <footer className="mt-[100px] border-t border-[#292929]/10 bg-white px-5 py-[45px] text-[#292929] sm:px-8 md:px-10 lg:px-[60px] lg:py-[55px] xl:px-[150px]">
       <div className="flex flex-col gap-[35px] lg:flex-row lg:items-start lg:justify-between">
         {/* 왼쪽 */}
         <div className="max-w-[520px]">
-          <h2 className="font-['Jua'] text-[36px] leading-none text-[#292929] sm:text-[42px] lg:text-[46px]">
-            KIDS WORLD
-          </h2>
+          <Link to={"/"}>
+            <img src={LogoImg} alt="로고" />
+          </Link>
 
-          <p className="mt-[10px] text-[18px] font-bold text-[#FF6B81]">
-            상상체험 키즈월드
-          </p>
-
-          <p className="mt-[18px] text-[16px] font-medium leading-[1.7] text-[#292929]/65">
-            아이들의 상상이 현실이 되는 즐거운 놀이공간
+          <p className="mt-2">
+            부산 해운대구 APEC로 30
+            <br className="sm:hidden" /> 벡스코 제2전시장 3층
           </p>
 
           <div className="mt-[28px] space-y-[8px] text-[16px] font-medium leading-[1.7] text-[#292929]/70">
             <p>
-              부산 해운대구 APEC로 30
-              <br className="sm:hidden" /> 벡스코 제2전시장 3층
+              문의{" "}
+              <a href="tel:070-4801-6034" className="hover:text-[#FF6B81]">
+                070-4801-6034
+              </a>
             </p>
 
             <p>운영시간 10:30 - 18:00</p>
