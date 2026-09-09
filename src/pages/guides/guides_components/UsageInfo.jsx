@@ -12,7 +12,7 @@ export default function UsageInfo() {
             이용정보
           </h2>
 
-          <p className="mt-3 break-keep text-[16px] font-bold leading-[1.6] text-[#FF6B81] sm:text-[18px]">
+          <p className="mt-3 break-keep text-[16px] font-[500] leading-[1.6] text-[#292929]/60 sm:text-[18px]">
             상상체험 키즈월드 이용에 필요한 기본 정보를 안내드립니다.
           </p>
         </div>

@@ -10,8 +10,7 @@ const rules = [
   {
     number: "02",
     title: "외부 음식물은 반입할 수 없어요",
-    description:
-      "물과 이유식을 제외한 모든 외부 음식물은 반입이 제한됩니다.",
+    description: "물과 이유식을 제외한 모든 외부 음식물은 반입이 제한됩니다.",
   },
   {
     number: "03",
@@ -32,7 +31,7 @@ export default function Section5() {
               이용수칙
             </h2>
 
-            <p className="mt-3 text-[14px] font-bold leading-[1.6] text-[#FF6B81] sm:text-[16px] lg:text-[18px]">
+            <p className="mt-3 text-[14px] font-medium leading-[1.6] text-[#292929]/60 sm:text-[16px] lg:text-[18px]">
               안전하고 즐거운 이용을 위해 방문 전 꼭 확인해주세요!
             </p>
           </div>
@@ -42,13 +41,12 @@ export default function Section5() {
             className="group flex w-fit items-center gap-2 text-[14px] font-medium text-[#292929]/70 transition-colors hover:text-[#FF6B81] sm:text-[16px] lg:text-[18px]"
           >
             전체 이용수칙 보기
-
             <ArrowUpRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
           </Link>
         </div>
 
         {/* 목록 좌우 여백 */}
-        <div className="mt-9 px-2 sm:mt-11 sm:px-5 lg:px-10 xl:px-[60px]">
+        <div className="mt-9  sm:mt-11 ">
           {/* 이용수칙 목록 */}
           <div className="border-y border-[#292929]/15">
             {rules.map((rule, index) => (
@@ -76,15 +74,6 @@ export default function Section5() {
                 </p>
               </article>
             ))}
-          </div>
-
-          {/* 안전 안내 */}
-          <div className="mt-6 flex items-start gap-3 rounded-[12px] bg-[#5F8F73]/10 px-5 py-4 sm:items-center sm:px-6">
-            <ShieldCheck className="mt-[2px] h-6 w-6 shrink-0 text-[#5F8F73] sm:mt-0" />
-
-            <p className="break-keep text-[14px] font-medium leading-[1.7] text-[#5F8F73] sm:text-[16px] lg:text-[18px]">
-              안전한 이용을 위해 모든 시설에서 안전요원의 안내를 따라주세요.
-            </p>
           </div>
         </div>
       </div>

@@ -97,7 +97,7 @@ export default function About() {
               상상체험 키즈월드
             </h1>
 
-            <p className="text-[16px] font-bold text-[#FFD050] lg:text-[20px]">
+            <p className="text-[16px] font-[500] text-white/80 sm:text-[18px] lg:text-[20px]">
               상상체험 키즈월드를 소개합니다!
             </p>
           </div>

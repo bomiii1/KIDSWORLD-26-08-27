@@ -298,7 +298,7 @@ export default function Custom() {
               맞춤놀이 찾기
             </h1>
 
-            <p className="mt-3 text-[16px] font-bold text-[#FF6B81] sm:text-[18px]">
+            <p className="mt-3 break-keep text-[16px] font-[500] leading-[1.6] text-[#292929]/60 sm:text-[18px]">
               우리 아이에게 맞는 놀이시설을 찾아보세요.
             </p>
           </div>

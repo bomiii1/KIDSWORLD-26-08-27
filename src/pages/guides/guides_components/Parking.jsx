@@ -11,17 +11,19 @@ export default function Parking() {
             주차안내
           </h2>
 
-          <p className="mt-3 text-[16px] font-bold text-[#FF6B81] sm:text-[18px]">
+          <p className="mt-3 break-keep text-[16px] font-[500] leading-[1.6] text-[#292929]/60 sm:text-[18px]">
             벡스코 주차장 이용 및 주차지원 안내입니다.
           </p>
         </div>
 
         {/* 주차 가능 장소 */}
         <div className="mt-[38px] rounded-[14px] border border-[#FF6B81]/60 px-5 py-5 text-center sm:px-8 sm:py-6">
-          <p className="break-keep text-[16px] font-bold leading-[1.8] text-[#292929] sm:text-[18px]">
+          <p className="break-keep text-[16px] font-[500] leading-[1.8] text-[#292929] sm:text-[18px]">
             벡스코 주차장{" "}
-            <strong className="text-[#FF6B81]">제1전시장 · 제2전시장</strong>에
-            주차할 수 있습니다.
+            <span className="font-[500] text-[#FF6B81]">
+              제1전시장 · 제2전시장
+            </span>
+            에 주차할 수 있습니다.
           </p>
         </div>
 
@@ -35,7 +37,7 @@ export default function Parking() {
 
             <dl className="mt-5 border-t border-[#292929]/15">
               <div className="grid grid-cols-[110px_1fr] gap-5 border-b border-[#292929]/15 py-5 sm:grid-cols-[130px_1fr]">
-                <p className="text-[16px] font-bold text-[#292929]/55 sm:text-[18px]">
+                <p className="text-[16px] font-[500] text-[#292929]/55 sm:text-[18px]">
                   구분
                 </p>
 
@@ -45,7 +47,7 @@ export default function Parking() {
               </div>
 
               <div className="grid grid-cols-[110px_1fr] gap-5 border-b border-[#292929]/15 py-5 sm:grid-cols-[130px_1fr]">
-                <p className="text-[16px] font-bold text-[#292929]/55 sm:text-[18px]">
+                <p className="text-[16px] font-[500] text-[#292929]/55 sm:text-[18px]">
                   기본요금
                 </p>
 
@@ -55,7 +57,7 @@ export default function Parking() {
               </div>
 
               <div className="grid grid-cols-[110px_1fr] gap-5 border-b border-[#292929]/15 py-5 sm:grid-cols-[130px_1fr]">
-                <p className="text-[16px] font-bold text-[#292929]/55 sm:text-[18px]">
+                <p className="text-[16px] font-[500]] text-[#292929]/55 sm:text-[18px]">
                   일일 최대
                 </p>
 
@@ -74,7 +76,7 @@ export default function Parking() {
 
             <dl className="mt-5 border-t border-[#292929]/15">
               <div className="grid grid-cols-[110px_1fr] gap-5 border-b border-[#292929]/15 py-5 sm:grid-cols-[130px_1fr]">
-                <p className="text-[16px] font-bold text-[#292929]/55 sm:text-[18px]">
+                <p className="text-[16px] font-[500] text-[#292929]/55 sm:text-[18px]">
                   정산 방법
                 </p>
 
@@ -84,7 +86,7 @@ export default function Parking() {
               </div>
 
               <div className="grid grid-cols-[110px_1fr] gap-5 border-b border-[#292929]/15 py-5 sm:grid-cols-[130px_1fr]">
-                <p className="text-[16px] font-bold text-[#292929]/55 sm:text-[18px]">
+                <p className="text-[16px] font-[500] text-[#292929]/55 sm:text-[18px]">
                   주차장 문의
                 </p>
 
@@ -101,7 +103,7 @@ export default function Parking() {
               </div>
 
               <div className="grid grid-cols-[110px_1fr] gap-5 border-b border-[#292929]/15 py-5 sm:grid-cols-[130px_1fr]">
-                <p className="text-[16px] font-bold text-[#292929]/55 sm:text-[18px]">
+                <p className="text-[16px] font-[500] text-[#292929]/55 sm:text-[18px]">
                   주차 가능
                 </p>
 
@@ -139,7 +141,7 @@ export default function Parking() {
               주차지원
             </h2>
 
-            <p className="mt-3 text-[16px] font-bold text-[#FF6B81] sm:text-[18px]">
+            <p className="mt-3 break-keep text-[16px] font-[500] leading-[1.6] text-[#292929]/60 sm:text-[18px]">
               방문 시간에 따른 주차지원 시간을 확인해주세요.
             </p>
           </div>

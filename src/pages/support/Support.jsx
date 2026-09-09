@@ -67,7 +67,7 @@ export default function Support() {
               {" "}
               문의{" "}
             </h1>{" "}
-            <p className=" text-[16px] font-bold text-[#FFD050] sm:text-[18px] lg:text-[20px]">
+            <p className="text-[16px] font-[500] text-white/80 sm:text-[18px] lg:text-[20px]">
               {" "}
               자주 묻는 질문과 문의 정보를 확인해주세요!{" "}
             </p>{" "}
@@ -88,7 +88,7 @@ export default function Support() {
                 {" "}
                 Q&A{" "}
               </h2>{" "}
-              <p className="mt-3 text-[16px] font-bold text-[#FF6B81] sm:text-[18px]">
+              <p className="mt-3 break-keep text-[16px] font-[500] leading-[1.6] text-[#292929]/60 sm:text-[18px]">
                 {" "}
                 고객님들이 많이 궁금해하는 내용을 모았어요.{" "}
               </p>{" "}
@@ -110,21 +110,13 @@ export default function Support() {
                     {" "}
                     Q{" "}
                   </span>{" "}
-                  {/* 배경 A */}{" "}
-                  <span
-                    aria-hidden="true"
-                    className="pointer-events-none absolute bottom-[2px] right-[16px] text-[80px] font-bold leading-none text-[#FFD050]/20"
-                  >
-                    {" "}
-                    A{" "}
-                  </span>{" "}
                   <div className="relative z-10 pl-[45px]">
                     {" "}
                     <h3 className="break-keep text-[19px] font-bold leading-[1.5] text-[#292929] sm:text-[21px]">
                       {" "}
                       {item.question}{" "}
                     </h3>{" "}
-                    <p className="mt-[18px] break-keep text-[16px] font-medium leading-[1.8] text-[#292929]/70 sm:text-[18px]">
+                    <p className="mt-[18px] break-keep text-[16px] font-[500] leading-[1.8] text-[#292929]/70 sm:text-[18px]">
                       {" "}
                       {item.answer}{" "}
                     </p>{" "}

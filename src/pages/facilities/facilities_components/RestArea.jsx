@@ -73,99 +73,106 @@ export default function RestArea() {
             휴게공간
           </h2>
 
-          <p className="mt-3 text-[16px] font-bold leading-[1.6] text-[#FF6B81] sm:text-[18px]">
+          <p className="mt-3 break-keep text-[16px] font-medium leading-[1.6] text-[#292929]/60 sm:text-[18px]">
             놀이 중 편안하게 쉬어갈 수 있는 휴게공간을 안내합니다.
           </p>
         </div>
 
         {/* 탭 */}
-        <div className="mt-[40px] grid grid-cols-3 overflow-hidden rounded-t-[14px] border border-b-0 border-[#292929]/10">
+        <div className="mt-[40px] grid grid-cols-3 border-b border-[#292929]/15">
           <button
             type="button"
             onClick={() => handleTabChange("grass")}
-            className={`cursor-pointer py-[18px] text-[16px] font-bold transition-colors duration-300 sm:text-[18px] lg:py-[22px] ${
+            className={`relative cursor-pointer py-[18px] text-[16px] font-bold sm:text-[18px] lg:py-[20px] ${
               activeTab === "grass"
-                ? "bg-[#FF6B81] text-white"
-                : "bg-[#FFD050]/10 text-[#292929]/55 hover:bg-[#FFD050]/25 hover:text-[#292929]"
+                ? "text-[#292929]"
+                : "text-[#292929]/40 hover:text-[#292929]/70"
             }`}
           >
             잔디존
+            {activeTab === "grass" && (
+              <span className="absolute bottom-[-1px] left-0 h-[3px] w-full bg-[#FF6B81]" />
+            )}
           </button>
 
           <button
             type="button"
             onClick={() => handleTabChange("tent")}
-            className={`cursor-pointer border-x border-[#292929]/10 py-[18px] text-[16px] font-bold transition-colors duration-300 sm:text-[18px] lg:py-[22px] ${
+            className={`relative cursor-pointer py-[18px] text-[16px] font-bold sm:text-[18px] lg:py-[20px] ${
               activeTab === "tent"
-                ? "bg-[#FF6B81] text-white"
-                : "bg-[#FFD050]/10 text-[#292929]/55 hover:bg-[#FFD050]/25 hover:text-[#292929]"
+                ? "text-[#292929]"
+                : "text-[#292929]/40 hover:text-[#292929]/70"
             }`}
           >
             텐트존
+            {activeTab === "tent" && (
+              <span className="absolute bottom-[-1px] left-0 h-[3px] w-full bg-[#FF6B81]" />
+            )}
           </button>
 
           <button
             type="button"
             onClick={() => handleTabChange("color")}
-            className={`cursor-pointer py-[18px] text-[16px] font-bold transition-colors duration-300 sm:text-[18px] lg:py-[22px] ${
+            className={`relative cursor-pointer py-[18px] text-[16px] font-bold sm:text-[18px] lg:py-[20px] ${
               activeTab === "color"
-                ? "bg-[#FF6B81] text-white"
-                : "bg-[#FFD050]/10 text-[#292929]/55 hover:bg-[#FFD050]/25 hover:text-[#292929]"
+                ? "text-[#292929]"
+                : "text-[#292929]/40 hover:text-[#292929]/70"
             }`}
           >
             컬러펜스존
+            {activeTab === "color" && (
+              <span className="absolute bottom-[-1px] left-0 h-[3px] w-full bg-[#FF6B81]" />
+            )}
           </button>
         </div>
 
-        {/* 선택된 휴게공간 내용 */}
-        <div>
-          <div className="overflow-hidden rounded-b-[18px] border border-t-0 border-[#292929]/10 bg-white">
-            <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr]">
-              {/* 메인 이미지 */}
-              <div className="h-[280px] overflow-hidden bg-[#EEEEEE] sm:h-[380px] lg:h-[500px]">
-                <img
-                  src={activeArea.images[activeImageIndex]}
-                  alt={`${activeArea.name} 사진 ${activeImageIndex + 1}`}
-                  className="h-full w-full object-cover transition-transform duration-700 ease-out hover:scale-[1.02]"
-                />
+        {/* 선택된 휴게공간 */}
+        <div className="mt-[35px]">
+          <div className="grid grid-cols-1 overflow-hidden rounded-[16px] border border-[#292929]/10 lg:grid-cols-[1.05fr_0.95fr]">
+            {/* 메인 이미지 */}
+            <div className="h-[280px] overflow-hidden bg-[#EEEEEE] sm:h-[380px] lg:h-[500px]">
+              <img
+                src={activeArea.images[activeImageIndex]}
+                alt={`${activeArea.name} 사진 ${activeImageIndex + 1}`}
+                className="h-full w-full object-cover"
+              />
+            </div>
+
+            {/* 내용 */}
+            <div className="flex flex-col justify-center px-[24px] py-[35px] sm:px-[40px] lg:px-[50px] lg:py-[50px]">
+              <h3 className="text-[30px] font-bold text-[#292929] lg:text-[38px]">
+                {activeArea.name}
+              </h3>
+
+              {/* 특징 */}
+              <div className="mt-[16px] flex flex-wrap gap-[8px]">
+                {activeArea.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-[6px] bg-[#292929]/5 px-[12px] py-[7px] text-[15px] font-bold text-[#292929]/60 sm:text-[16px]"
+                  >
+                    {tag}
+                  </span>
+                ))}
               </div>
 
-              {/* 내용 */}
-              <div className="flex flex-col justify-center px-[24px] py-[35px] sm:px-[40px] lg:px-[50px] lg:py-[50px]">
-                <h3 className="text-[30px] font-bold text-[#292929] lg:text-[38px]">
-                  {activeArea.name}
-                </h3>
+              <p className="mt-[22px] break-keep text-[16px] font-medium leading-[1.8] text-[#292929]/60 sm:text-[18px]">
+                {activeArea.description}
+              </p>
 
-                {/* 특징 */}
-                <div className="mt-[16px] flex flex-wrap gap-[8px]">
-                  {activeArea.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-[6px] bg-[#FFD050]/10 px-[12px] py-[7px] text-[16px] font-bold text-[#c9a33a]"
-                    >
-                      {tag}
+              {/* 이용 안내 */}
+              <div className="mt-[30px] space-y-[18px] border-t border-[#292929]/10 pt-[25px]">
+                {activeArea.rules.map((rule, index) => (
+                  <div key={rule} className="flex gap-[16px]">
+                    <span className="shrink-0 pt-[2px] text-[15px] font-bold text-[#292929]/35 sm:text-[16px]">
+                      {String(index + 1).padStart(2, "0")}
                     </span>
-                  ))}
-                </div>
 
-                <p className="mt-[22px] break-keep text-[16px] font-medium leading-[1.8] text-[#292929]/60 sm:text-[18px]">
-                  {activeArea.description}
-                </p>
-
-                {/* 이용 안내 */}
-                <div className="mt-[30px] space-y-[18px] border-t border-[#292929]/10 pt-[25px]">
-                  {activeArea.rules.map((rule, index) => (
-                    <div key={rule} className="flex gap-[16px]">
-                      <span className="shrink-0 pt-[2px] text-[16px] font-bold text-[#FF6B81]">
-                        {String(index + 1).padStart(2, "0")}
-                      </span>
-
-                      <p className="break-keep text-[16px] font-medium leading-[1.7] text-[#292929]/70 sm:text-[18px]">
-                        {rule}
-                      </p>
-                    </div>
-                  ))}
-                </div>
+                    <p className="break-keep text-[16px] font-medium leading-[1.7] text-[#292929]/70 sm:text-[18px]">
+                      {rule}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -181,21 +188,21 @@ export default function RestArea() {
                   type="button"
                   onClick={() => setActiveImageIndex(index)}
                   aria-label={`${activeArea.name} 사진 ${index + 1} 크게 보기`}
-                  className={`group relative h-[110px] cursor-pointer overflow-hidden rounded-[12px] ring-inset transition-all duration-200 sm:h-[170px] lg:h-[210px] ${
+                  className={`group relative h-[110px] cursor-pointer overflow-hidden rounded-[10px] ring-inset sm:h-[170px] lg:h-[210px] ${
                     isSelected
-                      ? "ring-3 ring-[#FF6B81]"
-                      : "ring-0 hover:opacity-85"
+                      ? "ring-2 ring-[#FF6B81]"
+                      : "ring-1 ring-[#292929]/10"
                   }`}
                 >
                   <img
                     src={image}
                     alt={`${activeArea.name} 사진 ${index + 1}`}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    className={`h-full w-full object-cover transition-opacity duration-200 ${
+                      isSelected
+                        ? "opacity-100"
+                        : "opacity-80 group-hover:opacity-100"
+                    }`}
                   />
-
-                  {isSelected && (
-                    <span className="pointer-events-none absolute inset-0 bg-[#FF6B81]/5" />
-                  )}
                 </button>
               );
             })}
@@ -203,8 +210,8 @@ export default function RestArea() {
         </div>
 
         {/* 하단 안내 */}
-        <div className="mt-[40px] border-1 rounded-[20px] items-center flex justify-center border-[#5F8F73] bg-[#5F8F73]/10 py-[20px]">
-          <p className="text-center text-[16px] font-medium leading-[1.8] text-[#5F8F73] sm:text-[18px]">
+        <div className="mt-[40px] rounded-[14px] border border-[#5F8F73]/35 px-5 py-[18px] sm:px-8">
+          <p className="break-keep text-center text-[16px] font-medium leading-[1.8] text-[#5F8F73] sm:text-[18px]">
             잔디존, 텐트존, 컬러펜스존 외에도 통행에 방해가 되지 않는 공간이라면
             자유롭게 돗자리를 펴고 이용하실 수 있습니다.
           </p>

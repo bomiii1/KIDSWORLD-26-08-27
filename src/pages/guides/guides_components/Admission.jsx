@@ -2,7 +2,7 @@ const ticketOptions = [
   {
     id: 1,
     name: "종일권",
-    time: "운영시간 동안 이용",
+    time: "",
     prices: [
       {
         type: "대인",
@@ -62,7 +62,7 @@ export default function Admission() {
             이용요금
           </h2>
 
-          <p className="mt-3 text-[16px] font-bold text-[#FF6B81] sm:text-[18px]">
+          <p className="mt-3 break-keep text-[16px] font-[500] leading-[1.6] text-[#292929]/60 sm:text-[18px]">
             상상체험 키즈월드 이용요금을 확인해주세요.
           </p>
         </div>
@@ -77,11 +77,11 @@ export default function Admission() {
               <div className="grid grid-cols-1 gap-6 md:grid-cols-[0.8fr_1fr_1fr] md:items-center md:gap-8">
                 {/* 이용권 이름 */}
                 <div>
-                  <h3 className="text-[22px] font-bold text-[#292929] sm:text-[26px]">
+                  <h3 className="text-[18px] font-[500] text-[#292929] sm:text-[22px]">
                     {ticket.name}
                   </h3>
 
-                  <p className="mt-1 text-[14px] font-bold text-[#FF6B81] sm:text-[16px]">
+                  <p className="mt-1 text-[12px] font-[500] text-[#FF6B81] sm:text-[14px]">
                     {ticket.time}
                   </p>
                 </div>
@@ -126,15 +126,15 @@ export default function Admission() {
                   {information.title}
                 </h3>
 
-                <strong className="text-[16px] text-[#ebbd3f] bg-[#FFD050]/5 rounded-[10px] px-3 py-2 border-[#FFD050] border-1 sm:text-[18px]">
+                <p className="font-[500] text-[12px] text-[#292929]/60 bg-[#FFD050]/5 rounded-[10px] px-3 py-2 border-[#FFD050] border-1 sm:text-[14px]">
                   {information.highlight}
-                </strong>
+                </p>
               </div>
 
               {/* 대상 */}
               <div className="mt-5">
                 {information.contents.length === 1 ? (
-                  <p className="text-[16px] font-medium leading-[1.8] text-[#292929]/65 sm:text-[18px]">
+                  <p className="text-[16px] font-medium leading-[1.8] text-[#292929]/80 sm:text-[18px]">
                     {information.contents[0]}
                   </p>
                 ) : (
@@ -142,7 +142,7 @@ export default function Admission() {
                     {information.contents.map((content) => (
                       <li
                         key={content}
-                        className="flex gap-3 break-keep text-[16px] font-medium leading-[1.7] text-[#292929]/65 sm:text-[18px]"
+                        className="flex gap-3 break-keep text-[16px] font-medium leading-[1.7] text-[#292929]/80 sm:text-[18px]"
                       >
                         <span className="mt-[11px] h-[5px] w-[5px] shrink-0 rounded-full bg-[#FFD050]" />
 
@@ -154,7 +154,7 @@ export default function Admission() {
               </div>
 
               {/* 증빙 안내 */}
-              <p className="mt-5 break-keep text-[14px] font-bold leading-[1.7] text-[#5F8F73] sm:text-[16px]">
+              <p className="mt-5 break-keep text-[14px] font-[500] leading-[1.7] text-[#5F8F73] sm:text-[16px]">
                 * {information.notice}
               </p>
             </article>
@@ -163,7 +163,7 @@ export default function Admission() {
 
         {/* 이용안내 */}
         <div className="mt-[28px] rounded-[14px] border border-[#FF6B81]/70 px-5 py-5 text-center sm:px-8 sm:py-6">
-          <p className="break-keep text-[14px] font-bold leading-[1.8] text-[#292929] sm:text-[17px]">
+          <p className="break-keep text-[14px] font-[500] leading-[1.8] text-[#292929] sm:text-[17px]">
             영업시간 내{" "}
             <strong className="text-[#FF6B81]">시간제한 없이 이용 가능</strong>
             합니다. 단, 퇴장 시{" "}

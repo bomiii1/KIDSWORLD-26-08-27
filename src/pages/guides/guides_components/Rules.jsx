@@ -75,7 +75,7 @@ export default function Rules() {
             이용수칙
           </h2>
 
-          <p className="mt-3 break-keep text-[16px] font-bold leading-[1.6] text-[#FF6B81] sm:text-[18px]">
+          <p className="mt-3 break-keep text-[16px] font-[500] leading-[1.6] text-[#292929]/60 sm:text-[18px]">
             모두가 안전하고 즐겁게 이용할 수 있도록 이용수칙을 지켜주세요.
           </p>
         </div>
@@ -111,7 +111,7 @@ export default function Rules() {
               준비물
             </h2>
 
-            <p className="mt-3 text-[14px] font-bold text-[#FF6B81] sm:text-[17px]">
+            <p className="mt-3 break-keep text-[16px] font-[500] leading-[1.6] text-[#292929]/60 sm:text-[18px]">
               미리 챙겨오시면 좋아요!
             </p>
           </div>

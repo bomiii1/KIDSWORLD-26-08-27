@@ -8,9 +8,7 @@ export default function AttractionDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const attraction = AttractionsData.find(
-    (item) => item.id === Number(id),
-  );
+  const attraction = AttractionsData.find((item) => item.id === Number(id));
 
   if (!attraction) {
     return (
@@ -35,10 +33,7 @@ export default function AttractionDetail() {
       return "유아 전용";
     }
 
-    if (
-      attraction.guardianAllowed &&
-      attraction.guardianRequiredUnderMonths
-    ) {
+    if (attraction.guardianAllowed && attraction.guardianRequiredUnderMonths) {
       return `${attraction.guardianRequiredUnderMonths}개월 미만 보호자 동반 가능`;
     }
 
@@ -89,34 +84,34 @@ export default function AttractionDetail() {
             <section className="mt-[28px] grid grid-cols-1 gap-[35px] sm:mt-[40px] lg:grid-cols-[1.08fr_0.92fr] lg:items-start lg:gap-[70px]">
               {/* 시설 이미지 */}
               {/* 시설 이미지 */}
-<div className="relative aspect-[4/3] overflow-hidden rounded-[16px] bg-[#F2F2F2] sm:rounded-[20px]">
-  {attraction.AttractionImg ? (
-    <img
-      src={attraction.AttractionImg}
-      alt={attraction.AttractionName}
-      className="h-full w-full object-cover"
-    />
-  ) : (
-    <div className="flex h-full items-center justify-center">
-      <span className="text-[14px] font-medium text-[#292929]/35 sm:text-[16px]">
-        이미지 준비 중
-      </span>
-    </div>
-  )}
+              <div className="relative aspect-[4/3] overflow-hidden rounded-[16px] bg-[#F2F2F2] sm:rounded-[20px]">
+                {attraction.AttractionImg ? (
+                  <img
+                    src={attraction.AttractionImg}
+                    alt={attraction.AttractionName}
+                    className="h-full w-full object-cover"
+                  />
+                ) : (
+                  <div className="flex h-full items-center justify-center">
+                    <span className="text-[14px] font-medium text-[#292929]/35 sm:text-[16px]">
+                      이미지 준비 중
+                    </span>
+                  </div>
+                )}
 
-  {/* 사진 위 위치 정보 */}
-  {attraction.location && (
-    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#292929]/80 to-transparent px-5 pb-4 pt-12 sm:px-6 sm:pb-5">
-      <div className="flex items-start gap-2 text-white">
-        <MapPin className="mt-[2px] h-[18px] w-[18px] shrink-0 text-[#FF6B81]" />
+                {/* 사진 위 위치 정보 */}
+                {attraction.location && (
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#292929]/80 to-transparent px-5 pb-4 pt-12 sm:px-6 sm:pb-5">
+                    <div className="flex items-start gap-2 text-white">
+                      <MapPin className="mt-[2px] h-[18px] w-[18px] shrink-0 text-[#FF6B81]" />
 
-        <p className="break-keep text-[14px] font-bold leading-[1.6] sm:text-[16px]">
-          {attraction.location}
-        </p>
-      </div>
-    </div>
-  )}
-</div>
+                      <p className="break-keep text-[14px] font-bold leading-[1.6] sm:text-[16px]">
+                        {attraction.location}
+                      </p>
+                    </div>
+                  </div>
+                )}
+              </div>
 
               {/* 시설 정보 */}
               <div className="lg:pt-2">
@@ -151,8 +146,6 @@ export default function AttractionDetail() {
                     </div>
                   ))}
                 </dl>
-
-              
               </div>
             </section>
 
@@ -163,7 +156,7 @@ export default function AttractionDetail() {
                   휴게시간
                 </h2>
 
-                <p className="mt-3 break-keep text-[14px] font-bold text-[#FF6B81] sm:text-[18px]">
+                <p className="mt-3 break-keep text-[16px] font-[500] leading-[1.6] text-[#292929]/60 sm:text-[18px]">
                   기구마다 휴게시간을 확인하고 이용에 참고해주세요.
                 </p>
               </div>
@@ -172,7 +165,7 @@ export default function AttractionDetail() {
                 {/* 점심시간 */}
                 <div className="py-6 md:border-r md:border-[#292929]/15 md:px-8 md:py-8 md:first:pl-0">
                   <div className="flex items-center gap-2">
-                    <span className="h-2 w-2 shrink-0 rounded-full bg-[#FFD050]" />
+                    <span className="h-2 w-2 shrink-0 rounded-full bg-[#292929]/55" />
 
                     <h3 className="text-[16px] font-bold text-[#292929]/55 sm:text-[18px]">
                       점심시간
@@ -187,7 +180,7 @@ export default function AttractionDetail() {
                 {/* 점검시간 */}
                 <div className="border-t border-[#292929]/15 py-6 md:border-t-0 md:px-8 md:py-8">
                   <div className="flex items-center gap-2">
-                    <span className="h-2 w-2 shrink-0 rounded-full bg-[#FF6B81]" />
+                    <span className="h-2 w-2 shrink-0 rounded-full bg-[#292929]/55" />
 
                     <h3 className="text-[16px] font-bold text-[#292929]/55 sm:text-[18px]">
                       점검시간
@@ -238,18 +231,16 @@ export default function AttractionDetail() {
 
                 <div className="mt-5 border-y border-[#5F8F73]/25 bg-[#5F8F73]/10 px-5 py-5 sm:px-7 sm:py-6">
                   <ul className="space-y-3">
-                    {attraction.precautions.map(
-                      (precaution, index) => (
-                        <li
-                          key={index}
-                          className="flex gap-3 break-keep text-[14px] font-medium leading-[1.7] text-[#292929]/70 sm:text-[18px]"
-                        >
-                          <span className="mt-[9px] h-[5px] w-[5px] shrink-0 rounded-full bg-[#5F8F73]" />
+                    {attraction.precautions.map((precaution, index) => (
+                      <li
+                        key={index}
+                        className="flex gap-3 break-keep text-[14px] font-medium leading-[1.7] text-[#292929]/70 sm:text-[18px]"
+                      >
+                        <span className="mt-[9px] h-[5px] w-[5px] shrink-0 rounded-full bg-[#5F8F73]" />
 
-                          {precaution}
-                        </li>
-                      ),
-                    )}
+                        {precaution}
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </section>

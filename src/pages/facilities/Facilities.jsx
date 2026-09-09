@@ -33,7 +33,7 @@ export default function Facilities() {
               시설안내
             </h1>
 
-            <p className="text-[16px] font-bold text-[#FFD050] sm:text-[18px] lg:text-[20px]">
+            <p className="text-[16px] font-[500] text-white/80 sm:text-[18px] lg:text-[20px]">
               키즈월드의 다양한 시설을 만나보세요!
             </p>
           </div>

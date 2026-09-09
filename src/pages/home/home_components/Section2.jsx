@@ -23,7 +23,7 @@ export default function Section2() {
             인기시설
           </h2>
 
-          <p className="mt-2 text-[14px] font-bold text-[#FF6B81] sm:text-[16px] lg:text-[18px]">
+          <p className="mt-2 text-[14px] font-[] text-[#292929]/60 sm:text-[16px] lg:text-[18px]">
             인기 있는 놀이시설을 만나보세요!
           </p>
         </div>
@@ -58,7 +58,7 @@ export default function Section2() {
             clickable: true,
           }}
           speed={500}
-          slidesPerView={2}
+          slidesPerView={1.7}
           slidesPerGroup={2}
           spaceBetween={12}
           breakpoints={{

@@ -33,7 +33,7 @@ export default function Guides() {
               이용안내
             </h1>
 
-            <p className="text-[16px] font-['Jua'] text-[#FFD050] sm:text-[18px] lg:text-[20px]">
+            <p className="text-[16px] font-[500] text-white/80 sm:text-[18px] lg:text-[20px]">
               이용에 필요한 정보를 찾아보세요!
             </p>
           </div>

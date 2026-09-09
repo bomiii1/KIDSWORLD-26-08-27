@@ -24,7 +24,7 @@ export default function Attractions() {
               놀이시설
             </h2>
 
-            <p className="mt-3 text-[16px] font-bold text-[#FF6B81] sm:text-[18px]">
+            <p className="mt-3 break-keep text-[16px] font-[500] leading-[1.6] text-[#292929]/60 sm:text-[18px]">
               키즈월드의 다양한 놀이시설을 확인해보세요.
             </p>
           </div>
