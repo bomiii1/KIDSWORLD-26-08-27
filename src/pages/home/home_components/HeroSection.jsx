@@ -25,7 +25,7 @@ export default function HeroSection() {
   return (
     <div className="relative w-full">
       {/* 히어로 영역 */}
-      <section className="relative h-[540px] w-full overflow-hidden bg-[#292929] sm:h-[580px] lg:h-[calc(100svh-190px)] lg:min-h-[570px] lg:max-h-[680px]">
+      <section className="relative overflow-hidden h-[540px] w-full overflow-hidden bg-[#292929] sm:h-[580px] lg:h-[calc(100svh-190px)] lg:min-h-[570px] lg:max-h-[680px]">
         {/* 배경 이미지 */}
         {heroImages.map((image, index) => (
           <div
