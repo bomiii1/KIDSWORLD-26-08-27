@@ -97,7 +97,7 @@ export default function About() {
               상상체험 키즈월드
             </h1>
 
-            <p className="text-[16px] font-[500] text-white/80 sm:text-[18px] lg:text-[20px]">
+            <p className="text-[16px] font-medium text-white/80 sm:text-[18px] lg:text-[20px]">
               상상체험 키즈월드를 소개합니다!
             </p>
           </div>
@@ -124,7 +124,7 @@ export default function About() {
               <img
                 src={aboutImg2}
                 alt="상상체험 키즈월드"
-                className="h-[300px] w-full object-cover object-center sm:h-[500px] lg:h-[550px] opacity-80"
+                className="h-[300px] w-full object-cover object-center opacity-80 sm:h-[500px] lg:h-[550px]"
               />
             </div>
 
@@ -141,10 +141,8 @@ export default function About() {
                     className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
 
-                  {/* 검정 배경 */}
                   <div className="absolute inset-0 bg-[#292929]/45 transition-colors duration-300 group-hover:bg-[#292929]/55" />
 
-                  {/* 사진 아래쪽 글자 */}
                   <p className="absolute inset-x-0 bottom-0 z-10 break-keep p-4 text-left text-[14px] font-bold leading-[1.7] text-white sm:p-5 sm:text-[16px] lg:p-6 lg:text-[18px]">
                     {card.text}
                   </p>
@@ -155,7 +153,7 @@ export default function About() {
         </section>
 
         {/* 연혁 */}
-        <section className="bg-[#FFD050]/10 px-5 py-[75px] sm:px-[30px] sm:py-[85px] md:px-[50px] lg:px-[80px] lg:py-[95px] xl:px-[150px]">
+        <section className="bg-white px-5 py-[75px] sm:px-[30px] sm:py-[85px] md:px-[50px] lg:px-[80px] lg:py-[95px] xl:px-[150px]">
           <div className="mx-auto max-w-[1600px]">
             <div className="relative mt-12 md:mt-16">
               {/* 모바일 세로선 / PC 가로선 */}
@@ -167,13 +165,18 @@ export default function About() {
                     key={item.year}
                     className="relative pl-10 md:pl-0 md:pt-10"
                   >
-                    <span
-                      className={`absolute left-0 top-0 h-4 w-4 rounded-full md:left-0 md:top-0 ${
-                        item.current
-                          ? "bg-[#FF6B81] ring-[6px] ring-[#FF6B81]/15"
-                          : "border-[4px] border-[#FFD050] bg-white"
-                      }`}
-                    />
+                    {/* 연혁 점 */}
+                    {item.current ? (
+                      <span className="absolute left-0 top-0 h-4 w-4 md:left-0 md:top-0">
+                        {/* 퍼지는 바깥 원 */}
+                        <span className="absolute inset-0 animate-ping rounded-full bg-[#FF6B81]/40" />
+
+                        {/* 가운데 점 */}
+                        <span className="absolute inset-0 rounded-full bg-[#FF6B81]" />
+                      </span>
+                    ) : (
+                      <span className="absolute left-0 top-0 h-4 w-4 rounded-full border-[3px] border-[#292929]/25 bg-white md:left-0 md:top-0" />
+                    )}
 
                     <p
                       className={`text-[14px] font-bold sm:text-[16px] ${
@@ -199,7 +202,7 @@ export default function About() {
           </div>
         </section>
 
-        {/* 주요 특징 이미지 배너 */}
+        {/* 주요 특징 */}
         <section className="bg-white px-5 py-[80px] sm:px-[30px] sm:py-[90px] md:px-[50px] lg:px-[80px] lg:py-[110px] xl:px-[150px]">
           <div className="mx-auto max-w-[1600px]">
             <h2 className="sr-only">키즈월드 주요 특징</h2>
@@ -208,9 +211,10 @@ export default function About() {
               {keyPoints.map((point, index) => (
                 <article
                   key={point.id}
-                  className={`group relative min-h-[300px] overflow-hidden sm:min-h-[400px] lg:min-h-[500px] ${
+                  tabIndex={0}
+                  className={`group relative min-h-[330px] overflow-hidden outline-none sm:min-h-[400px] lg:min-h-[500px] ${
                     index !== keyPoints.length - 1
-                      ? "border-b border-white/40 sm:border-b-0 sm:border-r"
+                      ? "border-b border-white/30 sm:border-b-0 sm:border-r"
                       : ""
                   }`}
                 >
@@ -218,23 +222,27 @@ export default function About() {
                   <img
                     src={point.image}
                     alt=""
-                    className="absolute inset-0 h-full w-full object-cover"
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 sm:group-hover:scale-[1.025] sm:group-focus:scale-[1.025]"
                   />
 
-                  {/* 글자가 있는 아래쪽에만 그라데이션 */}
-                  <div className="absolute inset-x-0 bottom-0 h-[72%] bg-gradient-to-t from-[#292929]/95 via-[#292929]/60 to-transparent" />
+                  {/* 오버레이 */}
+                  <div className="absolute inset-0 bg-[#292929]/25 transition-colors duration-300 sm:group-hover:bg-[#292929]/30 sm:group-focus:bg-[#292929]/30" />
 
-                  {/* 내용 */}
-                  <div className="absolute inset-x-0 bottom-0 z-10 p-6 text-white sm:p-5 lg:p-8">
-                    <strong className="inline-block origin-left font-['Jua'] text-[42px] leading-none text-[#FF6B81] drop-shadow-[0_2px_5px_rgba(0,0,0,0.5)] transition-all duration-300 sm:text-[36px] sm:text-white sm:group-hover:scale-105 sm:group-hover:text-[#FF6B81] lg:text-[52px]">
-                      {point.value}
-                    </strong>
+                  {/* 아래쪽 그라데이션 */}
+                  <div className="absolute inset-x-0 bottom-0 h-[60%] bg-gradient-to-t from-[#292929]/70 via-[#292929]/25 to-transparent sm:h-[45%]" />
 
-                    <h3 className="mt-3 text-[18px] font-bold drop-shadow-[0_2px_5px_rgba(0,0,0,0.6)] lg:text-[22px]">
+                  {/* 큰 키워드 */}
+                  <strong className="absolute bottom-[125px] left-6 z-10 font-['Jua'] text-[42px] leading-none text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)] transition-transform duration-300 sm:bottom-7 sm:left-7 sm:text-[38px] sm:group-hover:-translate-y-[115px] sm:group-focus:-translate-y-[115px] lg:bottom-8 lg:left-8 lg:text-[52px] lg:group-hover:-translate-y-[125px] lg:group-focus:-translate-y-[125px]">
+                    {point.value}
+                  </strong>
+
+                  {/* 설명 영역 */}
+                  <div className="absolute bottom-0 left-0 right-0 z-20 w-full bg-white/90 px-6 py-5 text-[#292929] backdrop-blur-[6px] transition-transform duration-300 sm:translate-y-full sm:px-7 sm:py-7 sm:group-hover:translate-y-0 sm:group-focus:translate-y-0 lg:px-8 lg:py-8">
+                    <h3 className="text-[18px] font-bold lg:text-[21px]">
                       {point.title}
                     </h3>
 
-                    <p className="mt-2 break-keep text-[14px] font-medium leading-[1.7] text-white/90 drop-shadow-[0_2px_5px_rgba(0,0,0,0.6)] sm:text-[16px]">
+                    <p className="mt-1.5 break-keep text-[14px] font-medium leading-[1.7] text-[#292929]/65 sm:mt-2 sm:text-[15px] lg:text-[16px]">
                       {point.description}
                     </p>
                   </div>
